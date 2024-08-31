@@ -1,0 +1,82 @@
+// DECKLIST
+
+// bonk-shaman
+// Class: Shaman
+// Format: Standard
+// Year of the Pegasus
+
+// 2 x (1) Murloc Growfin (MIS_307)
+// 1 x (1) Patches the Pilot (VAC_933)
+// 2 x (1) Pop-Up Book (TOY_508)
+// 2 x (1) Thrall's Gift (GIFT_06)
+// 2 x (2) Cactus Cutter (WW_327)
+// 2 x (2) Malted Magma (VAC_323)
+// 2 x (2) Sigil of Skydiving (VAC_925)
+// 1 x (3) Carefree Cookie (VAC_450)
+// 2 x (3) Fairy Tale Forest (TOY_507)
+// 1 x (3) Gorgonzormu (VAC_955)
+// 1 x (3) Skirting Death (VAC_931)
+// 2 x (3) Turn the Tides (TTN_722)
+// 2 x (4) Backstage Bouncer (JAM_014)
+// 1 x (5) Frosty Décor (VAC_305)
+// 2 x (5) Wave of Nostalgia (MIS_701)
+// 2 x (6) Horn of the Windlord (JAM_011)
+// 2 x (6) Razzle-Dazzler (VAC_301)
+// 1 x (0) Zilliax Deluxe 3000 (TOY_330)
+//   1 x (0) Zilliax Deluxe 3000 (TOY_330)
+//   1 x (3) Pylon Module (TOY_330t95)
+//   1 x (4) Ticking Module (TOY_330t98)
+// 
+AAECAZnDAwbHpAbDvgb4wAb8wAa6zgal0wYM5eQF9ugFh/sFs40GpKcGqKcG66kGnLgGv74GpMAG1sAG0dAGAAED87MGx6QG9rMGx6QG6N4Gx6QGAAA=
+// 
+// To use this deck, copy it to your clipboard and create a new deck in Hearthstone
+
+
+// Card↓ 	Mulligan 			Impact 	Drawn 	Kept
+// ↑x (1) Thrall's Gift			26.6 	-0.4 	21.0
+// ↑x (1) Patches the Pilot		17.7 	1.9 	4.3
+// ↑x (6) Razzle-Dazzler		10.4 	-6.5 	0.0
+// ↑x (6) Horn of the Windlord	4.3 	-15.0 	0.0
+// ↑x (3) Gorgonzormu			4.3 	-5.2 	-7.8
+// ↑x (0) Zilliax Deluxe 3000	2.4 	0.5 	6.8
+// ↑x (1) Murloc Growfin		0.2 	-2.1 	-12.3
+// ↓x (3) Fairy Tale Forest		-0.8 	-7.7 	-12.3
+// ↓x (1) Pop-Up Book			-1.5 	-4.4 	-0.8
+// ↓x (5) Wave of Nostalgia		-1.5 	-8.1 	9.1
+// ↓x (5) Frosty Décor			-37.3 	-3.0 	0.0
+// ↓x (4) Backstage Bouncer		-4.0 	-12.3 	4.3
+// ↓x (3) Turn the Tides		-7.8 	-6.5 	-2.3
+// ↓x (3) Skirting Death		-62.3 	-4.3 	0.0
+// ↓x (3) Carefree Cookie		-18.6 	-5.2 	-24.8
+// ↓x (2) Sigil of Skydiving	-3.0 	2.2 	-7.8
+// ↓x (2) Malted Magma			-5.2 	-5.0 	-2.3
+// ↓x (2) Cactus Cutter			-8.5 	-5.7 	-19.5
+
+// PirateShaman
+// Class: Shaman
+// Format: Standard
+// Year of the Pegasus
+//
+// 2 x (1) Lightning Reflexes (TTN_317)
+// 1 x (1) Patches the Pilot (VAC_933)
+// 2 x (1) Thrall's Gift (GIFT_06)
+// 2 x (1) Treasure Distributor (TOY_518)
+// 2 x (2) Adrenaline Fiend (VAC_927)
+// 2 x (2) Conductivity (YOG_522)
+// 2 x (2) Greedy Partner (WW_901)
+// 2 x (2) Sigil of Skydiving (VAC_925)
+// 2 x (2) Trusty Companion (WW_027)
+// 1 x (3) Carefree Cookie (VAC_450)
+// 2 x (3) Hozen Roughhouser (VAC_938)
+// 2 x (3) Skirting Death (VAC_931)
+// 2 x (3) Turn the Tides (TTN_722)
+// 2 x (4) Dangerous Cliffside (VAC_929)
+// 2 x (4) Sand Art Elemental (TOY_513)
+// 2 x (6) Horn of the Windlord (JAM_011)
+// 
+AAECAZnDAwL8wAal0wYO9ugFze4Fh/sFkIMGw48G6ZUG06cG/KgG66kG1sAG2MAG9sAG+MAGrcUGAAA=
+// 
+// To use this deck, copy it to your clipboard and create a new deck in Hearthstone
+
+
+

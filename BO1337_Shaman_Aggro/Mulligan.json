@@ -1,0 +1,166 @@
+// Hyper-Aggro Bonk-Shaman: Mulligan.json for HearthRanger Vision AI
+
+// JSON
+{
+	"GameCardId": "Mulligan",
+	"ConfigComment": "Hyper-Aggro Pirate Shaman v1.5 (29-Aug-24) by BlackOak1337",
+
+	"Mulligan": {
+		"values": [
+		// Perfect Starting Hand
+		  { "comment": "Perfect starting hand: Thrall's Gift, Murloc Growfin, Patches the Pilot, and a 2-drop. This hand ensures a strong early game.",
+			"mulligan": "GIFT_06, MIS_307, VAC_933, WW_327",
+			"condition": "nocoin",
+			"value": "hold"
+		  },
+		  { "comment": "Perfect starting hand with coin: Thrall's Gift, Murloc Growfin, Patches the Pilot, and a 3-drop. Coin allows a turn 2 power play.",
+			"mulligan": "GIFT_06, MIS_307, VAC_933, VAC_925",
+			"condition": "coin",
+			"value": "hold"
+		  },
+		  { "comment": "Prioritize Pirate synergies.",
+			"mulligan": "VAC_933, TOY_518",
+			"condition": "*",
+			"value": "hold"
+		  },
+            // General Mulligan Rules
+//            {   "comment": "Ideal starting hand: Prioritize core early-game minions for aggressive starts.",
+//                "mulligan": "TOY_508, WW_327",
+//                "condition": "*",
+//                "value": "hold"
+//            },
+
+		  { "comment": "Hold Zilliax Deluxe 3000 if you have the coin or a strong 1-drop for synergy.",
+			"mulligan": "TOY_330",
+			"condition": "coin || my_hand(count(), cost = 1) > 1",
+			"value": "hold"
+		  },
+		  { "comment": "Keep low-cost minions to flood the board early.",
+			"mulligan": "MIS_307, WW_327, VAC_925",
+			"condition": "my_hand(count(), cost <= 2) >= 2",
+			"value": "hold"
+		  },
+		  { "comment": "Strong starting hand with the coin and early minion presence.",
+			"mulligan": "MIS_307, WW_327, VAC_925",
+			"condition": "coin && my_hand(count(), cost <= 2) >= 1",
+			"value": "hold"
+		  },
+
+	// Class-Specific Mulligan Rules
+
+		  { "comment": "Against Hunter: Prioritize early aggression to match their pace.",
+			"mulligan": "MIS_307, WW_327, VAC_925, GIFT_06",
+			"condition": "opp_hero(count(), hero_class = hunter) > 0",
+			"value": "hold"
+		  },
+		  { "comment": "Against Warrior: Prioritize early aggression and removal.",
+			"mulligan": "GIFT_06, VAC_323, JAM_014, VAC_925",
+			"condition": "opp_hero(count(), hero_class = warrior) > 0",
+			"value": "hold"
+		  },
+		  { "comment": "Against Shaman: Focus on disruption and early board control.",
+			"mulligan": "GIFT_06, VAC_323, VAC_925, MIS_701",
+			"condition": "opp_hero(count(), hero_class = shaman) > 0",
+			"value": "hold"
+		  },
+		  { "comment": "Against Rogue: Prioritize early game pressure to disrupt their combos.",
+			"mulligan": "MIS_307, WW_327, GIFT_06",
+			"condition": "opp_hero(count(), hero_class = rogue) > 0",
+			"value": "hold"
+		  },
+		  { "comment": "Against Druid: Hold disruption for potential ramp strategies.",
+			"mulligan": "GIFT_06, VAC_323, VAC_925, JAM_014",
+			"condition": "opp_hero(count(), hero_class = druid) > 0",
+			"value": "hold"
+		  },
+		  { "comment": "Against Mage: Pressure early to take advantage of their slower start.",
+			"mulligan": "MIS_307, WW_327, GIFT_06",
+			"condition": "opp_hero(count(), hero_class = mage) > 0",
+			"value": "hold"
+		  },
+		  { "comment": "Against Priest: Disrupt their early setup to avoid late-game control dominance.",
+			"mulligan": "GIFT_06, VAC_323, MIS_701, VAC_301",
+			"condition": "opp_hero(count(), hero_class = priest) > 0",
+			"value": "hold"
+		  },
+		  { "comment": "Against Warlock: Prepare for both aggressive and control variants.",
+			"mulligan": "GIFT_06, VAC_323, VAC_925, JAM_014",
+			"condition": "opp_hero(count(), hero_class = warlock) > 0",
+			"value": "hold"
+		  },
+		  { "comment": "Against Paladin: Focus on early aggression and board control.",
+			"mulligan": "MIS_307, WW_327, GIFT_06, VAC_925",
+			"condition": "opp_hero(count(), hero_class = paladin) > 0",
+			"value": "hold"
+		  },
+		  { "comment": "Against Demon Hunter: Hold early game pressure and minions to counter their fast plays.",
+			"mulligan": "MIS_307, WW_327, GIFT_06, VAC_925",
+			"condition": "opp_hero(count(), hero_class = demonhunter) > 0",
+			"value": "hold"
+		  },
+		  { "comment": "Against Death Knight: Focus on early aggression and board presence to counter their defensive tools.",
+			"mulligan": "MIS_307, WW_327, GIFT_06, VAC_925",
+			"condition": "opp_hero(count(), hero_class = deathknight) > 0",
+			"value": "hold"
+		  },
+
+	// General Discard Rule
+		  { "comment": "Discard all other cards not specifically mentioned in mulligan rules.",
+			"mulligan": "*",
+			"condition": "*",
+			"value": "discard"
+		  }
+		]
+	}
+}
+
+// DECKLIST
+
+// Deck: Pirate Shaman
+// Class: Shaman
+// Format: Standard
+// Year of the Pegasus
+//
+// 2 x (1) Lightning Reflexes (TTN_317)
+// 1 x (1) Patches the Pilot (VAC_933)
+// 2 x (1) Thrall's Gift (GIFT_06)
+// 2 x (1) Treasure Distributor (TOY_518)
+// 2 x (2) Adrenaline Fiend (VAC_927)
+// 2 x (2) Conductivity (YOG_522)
+// 2 x (2) Greedy Partner (WW_901)
+// 2 x (2) Sigil of Skydiving (VAC_925)
+// 2 x (2) Trusty Companion (WW_027)
+// 1 x (3) Carefree Cookie (VAC_450)
+// 2 x (3) Hozen Roughhouser (VAC_938)
+// 2 x (3) Skirting Death (VAC_931)
+// 2 x (3) Turn the Tides (TTN_722)
+// 2 x (4) Dangerous Cliffside (VAC_929)
+// 2 x (4) Sand Art Elemental (TOY_513)
+// 2 x (6) Horn of the Windlord (JAM_011)
+
+
+// Card↓ 	Mulligan 			Impact 	Drawn 	Kept
+// ↑x (1) Thrall's Gift			26.6 	-0.4 	21.0
+// ↑x (1) Patches the Pilot		17.7 	1.9 	4.3
+// ↑x (6) Razzle-Dazzler		10.4 	-6.5 	0.0
+// ↑x (6) Horn of the Windlord	4.3 	-15.0 	0.0
+// ↑x (3) Gorgonzormu			4.3 	-5.2 	-7.8
+// ↑x (0) Zilliax Deluxe 3000	2.4 	0.5 	6.8
+// ↑x (1) Murloc Growfin		0.2 	-2.1 	-12.3
+// ↓x (3) Fairy Tale Forest		-0.8 	-7.7 	-12.3
+// ↓x (1) Pop-Up Book			-1.5 	-4.4 	-0.8
+// ↓x (5) Wave of Nostalgia		-1.5 	-8.1 	9.1
+// ↓x (2) Sigil of Skydiving	-3.0 	2.2 	-7.8
+// ↓x (4) Backstage Bouncer		-4.0 	-12.3 	4.3
+// ↓x (2) Malted Magma			-5.2 	-5.0 	-2.3
+// ↓x (3) Turn the Tides		-7.8 	-6.5 	-2.3
+// ↓x (2) Cactus Cutter			-8.5 	-5.7 	-19.5
+// ↓x (3) Carefree Cookie		-18.6 	-5.2 	-24.8
+// ↓x (5) Frosty Décor			-37.3 	-3.0 	0.0
+// ↓x (3) Skirting Death		-62.3 	-4.3 	0.0
+
+
+
+
+
+

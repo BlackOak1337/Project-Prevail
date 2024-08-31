@@ -1,0 +1,205 @@
+
+// GlobalValues.json for Hyper-Aggro Bonk Shaman in HearthRanger Vision AI
+
+// JSON
+{
+    "GameCardId": "GlobalValues",
+    "ConfigComment": "Hyper-Aggro Bonk Shaman v2.1 (29-Aug-24) with normalized values",
+
+    "FirstTurnValueWeight": {
+        "values": [
+            { "condition": "turn()<5", "value": "1.0" },  // Maximize early turn aggression
+            { "condition": "turn()>4 AND turn()<7", "value": "0.7" }, // Moderate priority in early-mid game
+            { "condition": "turn()>6 AND turn()<10", "value": "0.3" }, // Lower for mid-game
+            { "condition": "*", "value": "0.0" } // Minimal focus in late game
+        ]
+    },
+
+    "SecondTurnValueWeight": {
+        "values": [
+            { "condition": "turn()<5", "value": "0.0" }, // No focus on value generation early
+            { "condition": "turn()>4 AND turn()<7", "value": "0.2" }, // Slight increase to maintain pressure
+            { "condition": "turn()>6 AND turn()<10", "value": "0.6" }, // Stronger focus in mid-game to close the game
+            { "condition": "*", "value": "1.0" } // High focus in late game to end the game
+        ]
+    },
+
+"InHandPlayPriority": {
+    "values": [
+        { "condition": "turn()<5 AND my_hand(count())>my_minions(count())", "value": "1.0" }, // Maximize hand play in early game
+        { "condition": "turn()<5 AND my_hand(count())<my_minions(count())", "value": "0.8" }, // Still favor hand plays slightly if minions are fewer
+        { "condition": "turn()>5 AND my_hand(count())>my_minions(count())", "value": "0.7" }, // Moderate priority on hand in mid-game
+        { "condition": "turn()>5 AND my_hand(count())<my_minions(count())", "value": "0.5" }, // Lower priority in mid-game if minions are more
+        { "condition": "*", "value": "0.6" } // Default moderate priority on hand plays
+    ]
+},
+
+"OnBoardPlayPriority": {
+    "values": [
+        { "condition": "turn()<5 AND my_minions(count())>opp_minions(count())", "value": "0.7" }, // Early game board management if ahead
+        { "condition": "turn()<5 AND my_minions(count())<=opp_minions(count())", "value": "0.4" }, // Lower board focus early if behind
+        { "condition": "turn()>5 AND my_minions(count())>opp_minions(count())", "value": "1.0" }, // High priority on board management in mid-game if ahead
+        { "condition": "turn()>5 AND my_minions(count())<=opp_minions(count())", "value": "0.8" }, // Moderate board focus in mid-game if behind
+        { "condition": "*", "value": "0.9" } // General high priority on board management
+    ]
+},
+
+
+    "GlobalDivineShield": {
+        "values": [
+            { "condition": "*", "value": "0.5" } // Maintain reduced value for Divine Shield unless very critical
+        ]
+    },
+
+    "GlobalDurability": {
+        "values": [
+            { "condition": "my_minions(count(), taunt=true)>0", "value": "1.0" }, // Higher value for Taunt minions
+            { "condition": "my_minions(count())>opp_minions(count())", "value": "0.8" }, // Priority on durability for minion trades
+            { "condition": "*", "value": "0.6" } // General durability focus
+        ]
+    },
+
+    "GlobalStealth": {
+        "values": [
+            { "condition": "*", "value": "0.2" } // Maintain reduced priority for stealth
+        ]
+    },
+
+    "GlobalHeroAttack": {
+        "values": [
+            { "condition": "*", "value": "1.0" } // Maximize face damage with hero attack
+        ]
+    },
+
+    "GlobalMinionAttack": {
+        "values": [
+            { "condition": "*", "value": "1.0" } // Maximize minion attack for aggressive trades
+        ]
+    },
+
+    "GlobalWeaponAttack": {
+        "values": [
+            { "condition": "*", "value": "1.0" } // High priority for weapon attacks to clear minions and deal face damage
+        ]
+    },
+
+    "GlobalTaunt": {
+        "values": [
+            { "condition": "my_minions(count())>opp_minions(count())", "value": "0.2" }, // Lower priority when ahead on board
+            { "condition": "*", "value": "0.5" } // General value to maintain board presence
+        ]
+    },
+
+    "GlobalWindfury": {
+        "values": [
+            { "condition": "turn<=6", "value": "1.0" }, // Higher value for early aggression
+            { "condition": "turn>=7", "value": "0.7" }, // Lower but still valuable in later turns
+            { "condition": "*", "value": "0.9" }
+        ]
+    },
+
+    "GlobalCharge": {
+        "values": [
+            { "condition": "turn<=6", "value": "1.0" }, // Maximize value for early aggression
+            { "condition": "turn>=7", "value": "0.7" }, // Lower value in later turns
+            { "condition": "*", "value": "0.9" }
+        ]
+    },
+
+    "GlobalOverload": {
+        "values": [
+            { "condition": "opp_hero(count(), hero_class=shaman)>0", "value": "0.4" }, // Reduced value against Shaman to counter Overload
+            { "condition": "*", "value": "0.2" } // Minimal focus on overload
+        ]
+    },
+
+    "GlobalMinionIntrinsicValue": {
+        "values": [
+            { "condition": "cost<=2", "value": "1.0" }, // High value on low-cost minions for early aggression
+            { "condition": "cost==3", "value": "0.8" },
+            { "condition": "cost==4", "value": "0.6" },
+            { "condition": "cost>=5", "value": "0.3" } // Lower value on high-cost minions
+        ]
+    },
+
+	"OppGlobalDivineShield": { // General value against Divine Shield
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "1.0" }, // Higher value against Aggro Paladin
+			{ "condition": "opp_played(count(), secret=true)>4", "value": "0.6" }, // Further reduced against secret-heavy decks
+			{ "condition": "*", "value": "0.5" }
+		]
+	},
+	"OppGlobalDurability": {// General value against durability
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=warlock)>0", "value": "1.0" }, // Increased value for Warlock threats
+			{ "condition": "opp_hero(count(), hero_class=warrior)>0", "value": "0.7" }, // Reduced against Warriors
+			{ "condition": "*", "value": "0.6" } 
+		]
+	},
+	"OppGlobalStealth": {
+		"values": [
+			{ "condition": "*", "value": "0.5" } // Lower value to counter stealth minions
+		]
+	},
+	"OppGlobalHeroAttack": { // General value against hero attacks
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=demonhunter)>0", "value": "1.0" }, // High value against Demon Hunter
+			{ "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "1.0" }, // Adjusted for Aggro Paladin
+			{ "condition": "*", "value": "0.8" }
+		]
+	},
+	"OppGlobalMinionAttack": { // General value against minion attacks
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=demonhunter)>0", "value": "1.0" }, // Adjusted for Demon Hunter
+			{ "condition": "opp_hero(count(), hero_class=warlock)>0", "value": "0.9" }, // High value against Warlock minions
+			{ "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "0.8" }, // Adjusted for Aggro Paladin
+			{ "condition": "*", "value": "0.6" }
+		]
+	},
+	"OppGlobalWeaponAttack": {
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=warrior)>0", "value": "1.0" }, // High value against Warrior
+			{ "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "1.0" }, // Adjusted for Aggro Paladin
+			{ "condition": "*", "value": "0.8" } // General value against weapon attacks
+		]
+	},
+	"OppGlobalCharge": {
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "1.0" }, // High value against Aggro Paladin
+			{ "condition": "opp_hero(count(), hero_class=demonhunter)>0", "value": "0.9" }, // Slightly reduced against Demon Hunter
+			{ "condition": "*", "value": "0.8" }
+		]
+	},
+	"OppGlobalOverload": { // Shaman Overload
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=shaman)>0", "value": "0.6" }, // Reduced against Shaman Overload
+			{ "condition": "*", "value": "0.4" } // General value against overload
+		]
+	}
+}
+
+
+
+// DECKLIST
+
+// Pirate Shaman
+// Class: Shaman
+// Format: Standard
+// Year of the Pegasus
+//
+// 2 x (1) Lightning Reflexes (TTN_317)
+// 1 x (1) Patches the Pilot (VAC_933)
+// 2 x (1) Thrall's Gift (GIFT_06)
+// 2 x (1) Treasure Distributor (TOY_518)
+// 2 x (2) Adrenaline Fiend (VAC_927)
+// 2 x (2) Conductivity (YOG_522)
+// 2 x (2) Greedy Partner (WW_901)
+// 2 x (2) Sigil of Skydiving (VAC_925)
+// 2 x (2) Trusty Companion (WW_027)
+// 1 x (3) Carefree Cookie (VAC_450)
+// 2 x (3) Hozen Roughhouser (VAC_938)
+// 2 x (3) Skirting Death (VAC_931)
+// 2 x (3) Turn the Tides (TTN_722)
+// 2 x (4) Dangerous Cliffside (VAC_929)
+// 2 x (4) Sand Art Elemental (TOY_513)
+// 2 x (6) Horn of the Windlord (JAM_011)
