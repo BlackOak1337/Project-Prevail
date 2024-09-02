@@ -1,0 +1,163 @@
+Sludge Warlock v2.1 (30-Jul-24). By BlackOak1337 Improved by AI for optimal performance
+=======================================================================================
+AAECAf0GCN3CBfnGBaGSBoCeBqugBsekBpWzBrrOBgvHwgXIwgWFjgaVlwaWlwaXlwaEngaioAb3owamqAaVygYAAQPzswbHpAb2swbHpAbo3gbHpAYAAA==
+
+AAECAf0GCPnGBaGSBoCeBqugBsekBpWzBpXKBrrOBgvHwgXIwgXdwgWFjgaVlwaWlwaXlwaEngaioAb3owamqAYAAQPzswbHpAb2swbHpAbo3gbHpAYAAA==
+
+AAECAf0GBvnGBaGSBoCeBsekBrrOBubmBgzHwgXIwgXdwgWFjgaVlwaWlwaXlwaEngaioAb3owamqAaVygYAAQPzswbHpAb2swbHpAbo3gbHpAYAAA==
+
+AAECAebJBgT5xgXX+gWAngamqAYNx8IFyMIF3cIFhY4GlZcGlpcGl5cGmJcGm6AGoqAGo6AGq6AG96MGAAA=
+
+   Remove: [1]Miracle Salesman
+Subtitute: [1]Party Fiend++, [1]Tidepool Pupil, [3]Domino Effect
+   Leggos: [3]Gorgonzormu, [5]Sympony of Sins
+
+
+=======================================================================================
+Websites:
+https://www.reddit.com/r/CompetitiveHS/comments/1aebrva/sludgelock_guide/
+
+=======================================================================================
+Key Cards:
+Baritone Imp - This little guy combo'es very well with the fatigue package, which, in my opinion, is one of the strongest to be used in this archetype as it has everything the deck needs: board presence, tokens and board clear.
+Crescendo - Another card of the fatigue package, really saves you against aggro decks and might as well heal your face for 14+ being used with Pop'gar.
+Disposal Assistant - Good presence early on and puts two Barrels on the bottom of the deck, which has some great synergy with Waste Remover and Chaos Creation, other key cards of the deck.
+Sludge on Wheels - This might be the superstar of the deck. It gives you plenty of barrels, is a sticky minion with 5 health and has rush, which can be used to remove little tokens from the opponent. Remember, use this for value, as it already has tempo on it's own. Get every single barrel possible.
+Trolley Problem - Very strong card as it actually reads "Summon two 3/3 with rush and draw two cards or deal 4 damage to the lowest health enemy" as it has some great synergies with Furnace Fuel and the Barrels.
+Crazed Conductor - Good card for summoning some tokens for ourselves, use it whenever you can. Very annoying card to be dealt with.
+Pop'gar the Putrid - Extremely flexible minion that can be used as a very strong defensive of offensive tool.
+Waste Remover - 4 mana 7/7 with an upside for the deck? Sign me in.
+Chaos Creation - A nice new addition of the miniset to the deck. Enables 30+ damage combos.
+=======================================================================================
+MULLIGAN
+Tram Mechanic, Disposal Assistant, Sludge on Wheels, Pop'gar. You can keep Trolley if you have Miracle Salesman or Tram Mechanic. Keep Flame Imp if the other two or three cards are not good. Also, consider keeping Trogg agains faster decks as the three pings can save your board state in the early game and Baritone Imp with Crescendo against faster decks. Crescendo is also a keep against Treant Druid or Paladins.
+----
+Tram Mechanic, Disposal Assistant, Sludge on Wheels, Pop'gar. You can keep Trolley if you have Miracle Salesman or Tram Mechanic. Keep Flame Imp if the other two or three cards are not good. Also, consider keeping Trogg agains faster decks as the three pings can save your board state in the early game and Baritone Imp with Crescendo against faster decks. Crescendo is also a keep against Treant Druid or Paladins.
+
+Imp is a great solo keep, you definitely don't need crescendo (also if you're keeping imp you can keep conductor, especially on coin). Waste remover is often a keep. I very rarely keep popgar, but I will keep forge
+----
+
+=======================================================================================
+GENERAL GAMEPLAN:
+This is an aggressive deck. Therefore, the plan is to kill the oponent as fast as possible, before we run out of steam. Hit the face whenever you can and leave Barrels, Forge of Wills and Sludge on Wheels for controlling the board.
+Try to stack Barrels in the bottom of your deck with Sludge on Wheels and Disposal Assistant. Barrels in your hand are also important and do not be afraid to use them as removal.
+Waste Remover can also get you out of sticky situations by shooting 4 damage missiles if the enemy's board is too hard to deal with.
+=======================================================================================
+COMBOS:
+Fatigue package - keep track on how much damage fatigue will deal to you, as you can Crescendo for up to 6 damage, and it hits the enemy hero as well.
+Up to 30 damage Combo - Chaos Creation to the face in an empty board with 6 Barrels in the bottom of your deck can make up a very satisfying OTK. Granted, those conditions will rarely be met, but you get the idea. There is great potential of damage in one turn with this deck.
+Pop'gar - Optimal use on an empty board right after dropping a threat in turn 3 (Sludge on Wheels, Baritone Imp, etc). Can deal 8 face damage in turn 6. Do not forget about it's discounts. Turn 4 Pop'gar + Crescendo is pretty staple board clear in this deck.
+Waste Remover - As already mentioned, it can shoot 12 damage to the enemy's board, or, even, to the enemy face. Also, do not be afraid to play this without any Barrel in the bottom of the deck. It's a BIG threat that can be copied with Forge of Wills. Few decks in the meta can respond to such play. Against aggro decks, you'll have much more stats and win the SMORc battle.
+=======================================================================================
+CONCLUSION
+This deck got a lot better after the nerfs and new tools added. Gloomstone, Creation and Trogg spiked the win rate in this archetype. The list does not run two Tram Mechanics because the Flame Imps are stronger to fight early for the board and there are more than enough Barrels already. If you feel that you still need more Barrel power, cut a Miracle Salesman.
+Be careful with the Warrior matchup though, as this is the only class that can out armor the damage of the Barrels. I would advise against Blood DK, but this deck is pretty dead.
+This is it, guys. If you have any question, feel free to ask me in the comments and I will gladly try to answer. Have a nice end of season and I hope this guide might help you get the rank you wish.
+=======================================================================================
+
+=======================================================================================
+
+=======================================================================================
+
+
+#   Name: Sludge_Warlock
+#  Class: Warlock
+# Format: Standard
+#  Up to: Year of the Pegasus
+#
+2x (1) Flame Imp (ID: EX1_319)
+2x (1) Fracking (ID: WC_022)
+1x (1) Tram Mechanic (ID: WC_033)
+2x (2) Baritone Imp (ID: WC_012)
+2x (2) Crescendo (ID: WC_019)
+2x (2) Disposal Assistant (ID: WC_023)
+2x (3) Furnace Fuel (ID: WC_025)
+2x (3) Sludge on Wheels (ID: WC_027)
+2x (3) Trogg Gemtosser (ID: WC_029)
+2x (3) Trolley Problem (ID: WC_031)
+2x (4) Crazed Conductor (ID: WC_035)
+1x (4) Pop'gar the Putrid (ID: WC_037)
+1x (4) Pozzik, Audio Engineer (ID: WC_039)
+1x (4) Sheriff Barrelbrim (ID: WC_041)
+2x (4) Waste Remover (ID: WC_043)
+2x (5) Doomguard (ID: CS2_064)
+2x (6) Chaos Creation (ID: WC_045)
+# 
+AAECAaPDAwT0yAWhkgaYlwaAngYNhKAEx8IFyMIF3cIFlZcGlpcGl5cGhJ4GoqAGq6AG96MGpqgG4eYGAAA=
+# 
+# To use this deck, copy it to your clipboard and create a new deck in Hearthstone
+
+### SludgeLock
+# Class: Warlock
+# Format: Standard
+# Year of the Wolf
+#
+# 2x (1) Flame Imp
+# 2x (1) Miracle Salesman
+# 1x (1) Tram Mechanic
+# 2x (2) Baritone Imp
+# 2x (2) Crescendo
+# 2x (2) Disposal Assistant
+# 2x (3) Forge of Wills
+# 2x (3) Furnace Fuel
+# 2x (3) Sludge on Wheels
+# 2x (3) Trogg Gemtosser
+# 2x (3) Trolley Problem
+# 2x (4) Crazed Conductor
+# 2x (4) Gloomstone Guardian
+# 1x (4) Pop'gar the Putrid
+# 2x (4) Waste Remover
+# 2x (6) Chaos Creation
+#
+AAECAd+qBgKYlwaAngYOhKAEx8IFyMIF3cIF1/oFhY4GlZcGlpcGl5cGm6AGoqAGq6AG96MGpqgGAAA=
+#
+# To use this deck, copy it to your clipboard and create a new deck in Hearthstone
+
+
+[ Card Details ]
+legendary warlock minion
+WW_091 Pop'gar the Putrid
+
+epic warlock spell
+WW_436 Trolley Problem 
+
+rare warlock minion 
+WW_043 Sludge on Wheels
+
+common warlock minion 
+WW_042 Waste Remover  
+
+common warlock minion 
+ETC_068 Baritone-Imp
+
+common warlock minion 
+WW_041 Disposal Assistant
+
+rare warlock spell 
+WW_092 Fracking
+
+common warlock spell 
+WW_441 Furnace Fuel
+
+common mage/warlock spell
+DEEP_031 Chaos Creation
+
+common neutral minion
+WW_044 Tram Mechanic
+
+common neutral minion
+WW_331 Miracle Salesman 
+
+
+
+-----
+WW_041 Disposal Assistant
+WW_043 Sludge on Wheels
+
+  then
+
+DEEP_031 Chaos Creation
+WW_042 Waste Remover  
+
+------
+

@@ -1,0 +1,92 @@
+{
+   "GameCardId":"Combo",
+   "ConfigComment":"Warlock Sludge v2.0 (26-Jul-24) by BlackOak1337 for the HearthRanger community.",
+   "ComboList":{
+      "values":[
+         {
+            "comment":"Chaos Creation + Disposal Assistant for board control",
+            "condition":"my_hero(count(), max_mana) >= 7",
+            "combo":"DEEP_031 >> WW_041",
+            "value":"0 >> 60"
+         },
+         {
+            "comment":"Waste Remover with Disposal Assistant for effective removal",
+            "condition":"opp_minions(count()) >= 2",
+            "combo":"WW_042 >> WW_041",
+            "value":"0 >> 60"
+         },
+         {
+            "comment":"Fracking with Disposal Assistant for efficient trades",
+            "condition":"my_hero(count(), max_mana) >= 5",
+            "combo":"WW_092 >> WW_041",
+            "value":"0 >> 60"
+         },
+         {
+            "comment":"Trolley Problem with Sludge on Wheels for maximum value",
+            "condition":"my_hero(count(), max_mana) >= 8",
+            "combo":"WW_436 >> WW_043",
+            "value":"0 >> 70"
+         },
+         {
+            "comment":"Trolley Problem with Furnace Fuel to apply pressure",
+            "condition":"opp_minions(count()) >= 3",
+            "combo":"WW_436 >> WW_441",
+            "value":"0 >> 65"
+         },
+         {
+            "comment":"Trolley Problem with Pop'gar the Putrid for board domination",
+            "condition":"my_hero(count(), health) <= 15",
+            "combo":"WW_436 >> WW_091",
+            "value":"0 >> 75"
+         },
+         {
+            "comment":"Sludge on Wheels with Furnace Fuel for aggressive tempo",
+            "condition":"my_hero(count(), max_mana) >= 6",
+            "combo":"WW_043 >> WW_441",
+            "value":"0 >> 65"
+         },
+         {
+            "comment":"Sludge on Wheels with Pop'gar the Putrid for a late-game push",
+            "condition":"my_hero(count(), max_mana) >= 8",
+            "combo":"WW_043 >> WW_091",
+            "value":"0 >> 70"
+         },
+         {
+            "comment":"Disposal Assistant with Furnace Fuel for mid-game board presence",
+            "condition":"my_hero(count(), max_mana) >= 4",
+            "combo":"WW_041 >> WW_441",
+            "value":"0 >> 60"
+         },
+         {
+            "comment":"Pop'gar the Putrid with Chaos Creation for high value in long games",
+            "condition":"my_hero(count(), health) <= 12",
+            "combo":"WW_091 >> DEEP_031",
+            "value":"0 >> 80"
+         }
+      ]
+   }
+}
+
+//   Name: Sludge_Warlock
+//  Class: Warlock
+// Format: Standard
+//  Up to: Year of the Pegasus
+
+// 2 x (1) Flame Imp (ID: EX1_319)
+// 2 x (1) Fracking (ID: WW_092)
+// 1 x (1) Tram Mechanic (ID: WC_033)
+// 2 x (2) Baritone Imp (ID: WC_012)
+// 2 x (2) Crescendo (ID: WC_019)
+// 2 x (2) Disposal Assistant (ID: WW_041)
+// 2 x (3) Furnace Fuel (ID: WW_441)
+// 2 x (3) Sludge on Wheels (ID: WW_043)
+// 2 x (3) Trogg Gemtosser (ID: WC_029)
+// 2 x (3) Trolley Problem (ID: WW_436)
+// 2 x (4) Crazed Conductor (ID: WC_035)
+// 1 x (4) Pop'gar the Putrid (ID: WW_091)
+// 1 x (4) Pozzik, Audio Engineer (ID: WC_039)
+// 1 x (4) Sheriff Barrelbrim (ID: WC_041)
+// 2 x (4) Waste Remover (ID: WW_042)
+// 2 x (5) Doomguard (ID: CS2_064)
+// 2 x (6) Chaos Creation (ID: DEEP_031)
+// 2 x Void Virtuoso (ETC_081)

@@ -1,0 +1,64 @@
+﻿{
+	"GameCardId": "Mulligan",
+	"ConfigComment": "Sludge Warlock v2.5 (03-Aug-24) by BlackOak1337.",
+
+	"Mulligan": {
+		"values": [
+			// Core Mulligan Rules (maintain high weight)
+			{
+				"comment": "Always keep core cards for early game tempo and synergy.",
+				"mulligan": "ETC_068, WW_044, WW_041, WW_043, WW_091",
+				"condition": "*",
+				"value": "hold",
+			},
+
+			// Additional rules based on provided information
+			{
+				"comment": "Keep Baritone Imp and Crescendo together for maximum synergy.",
+				"mulligan": "ETC_068, ETC_069",
+				"condition": "my_hand(count(), cardid = ETC_068) > 0 OR my_hand(count(), cardid = ETC_069) > 0",
+				"value": "hold",
+			},
+			{
+				"comment": "Keep Trolley Problem if it synergizes with Tram Mechanic or Miracle Salesman.",
+				"mulligan": "WW_436", // Assuming WW_436 is Trolley Problem
+				"condition": "my_hand(count(), cardid = WW_044 | WW_331) > 0", // Assuming WW_331 is Miracle Salesman
+				"value": "hold",
+			},
+			{
+				"comment": "Keep Flame Imp if other early game cards are weak.",
+				"mulligan": "EX1_319",
+				"condition": "my_hand(count(), cardid = ETC_068 | WW_044 | WW_041 | WW_043 | WW_091) < 2",
+				"value": "hold",
+			},
+			// vs Class
+			{
+				"comment": "Consider keeping Trolley Problem against control decks for potential late-game value.",
+				"mulligan": "WW_436",
+				"condition": "opp_hero(count(), hero_class=mage | warrior | priest) > 0",
+				"value": "hold",
+			},
+			{
+				"comment": "Consider keeping Trogg against faster decks.",
+				"mulligan": "DEEP_029",
+				"condition": "opp_hero(count(), hero_class=hunter | rogue | demonhunter | warlock | paladin) > 0",
+				"value": "hold",
+			},
+			// Variants
+			{
+				"comment": "Keep Dark Alley Pact for consistent hand size if early plays are available.",
+				"mulligan": "WW_345",
+				"condition": "my_hand(count(), cardid = WW_044 | WW_041) > 0",
+				"value": "hold",
+			},
+
+			// Discard
+			{
+				"comment":"Discard excess cards.",
+				"mulligan":"*",
+				"condition":"*",
+				"value":"discard"
+			}
+		]
+	}
+}
