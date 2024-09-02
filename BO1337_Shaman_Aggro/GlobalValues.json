@@ -4,46 +4,25 @@
 // JSON
 {
     "GameCardId": "GlobalValues",
-    "ConfigComment": "Hyper-Aggro Bonk Shaman v2.1 (29-Aug-24) with normalized values",
+    "ConfigComment": "Hyper-Aggro Bonk Shaman v2.2 (29-Aug-24) by BlackOak1337",
 
     "FirstTurnValueWeight": {
         "values": [
-            { "condition": "turn()<5", "value": "1.0" },  // Maximize early turn aggression
-            { "condition": "turn()>4 AND turn()<7", "value": "0.7" }, // Moderate priority in early-mid game
-            { "condition": "turn()>6 AND turn()<10", "value": "0.3" }, // Lower for mid-game
+            { "condition": "turn<5", "value": "1.0" },  // Maximize early turn aggression
+            { "condition": "turn>4 AND turn<7", "value": "0.7" }, // Moderate priority in early-mid game
+            { "condition": "turn>6 AND turn<10", "value": "0.3" }, // Lower for mid-game
             { "condition": "*", "value": "0.0" } // Minimal focus in late game
         ]
     },
 
     "SecondTurnValueWeight": {
         "values": [
-            { "condition": "turn()<5", "value": "0.0" }, // No focus on value generation early
-            { "condition": "turn()>4 AND turn()<7", "value": "0.2" }, // Slight increase to maintain pressure
-            { "condition": "turn()>6 AND turn()<10", "value": "0.6" }, // Stronger focus in mid-game to close the game
+            { "condition": "turn<5", "value": "0.0" }, // No focus on value generation early
+            { "condition": "turn>4 AND turn<7", "value": "0.2" }, // Slight increase to maintain pressure
+            { "condition": "turn>6 AND turn<10", "value": "0.6" }, // Stronger focus in mid-game to close the game
             { "condition": "*", "value": "1.0" } // High focus in late game to end the game
         ]
     },
-
-"InHandPlayPriority": {
-    "values": [
-        { "condition": "turn()<5 AND my_hand(count())>my_minions(count())", "value": "1.0" }, // Maximize hand play in early game
-        { "condition": "turn()<5 AND my_hand(count())<my_minions(count())", "value": "0.8" }, // Still favor hand plays slightly if minions are fewer
-        { "condition": "turn()>5 AND my_hand(count())>my_minions(count())", "value": "0.7" }, // Moderate priority on hand in mid-game
-        { "condition": "turn()>5 AND my_hand(count())<my_minions(count())", "value": "0.5" }, // Lower priority in mid-game if minions are more
-        { "condition": "*", "value": "0.6" } // Default moderate priority on hand plays
-    ]
-},
-
-"OnBoardPlayPriority": {
-    "values": [
-        { "condition": "turn()<5 AND my_minions(count())>opp_minions(count())", "value": "0.7" }, // Early game board management if ahead
-        { "condition": "turn()<5 AND my_minions(count())<=opp_minions(count())", "value": "0.4" }, // Lower board focus early if behind
-        { "condition": "turn()>5 AND my_minions(count())>opp_minions(count())", "value": "1.0" }, // High priority on board management in mid-game if ahead
-        { "condition": "turn()>5 AND my_minions(count())<=opp_minions(count())", "value": "0.8" }, // Moderate board focus in mid-game if behind
-        { "condition": "*", "value": "0.9" } // General high priority on board management
-    ]
-},
-
 
     "GlobalDivineShield": {
         "values": [
@@ -121,7 +100,6 @@
             { "condition": "cost>=5", "value": "0.3" } // Lower value on high-cost minions
         ]
     },
-
 	"OppGlobalDivineShield": { // General value against Divine Shield
 		"values": [
 			{ "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "1.0" }, // Higher value against Aggro Paladin
