@@ -1,5 +1,5 @@
 # Project-Prevail
-HearthRanger Decks and Associated Custom JSON code
+
 Hi all this is the start of a large project to create decks that Vision A.I. can play correctly and win you those matches.
 
 PRE-V(ision)-AI-L (A little play on words)
