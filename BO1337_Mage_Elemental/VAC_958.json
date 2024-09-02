@@ -1,0 +1,53 @@
+﻿// VAC_958.json - Adaptive Amalgam for Hearthranger Vision AI
+
+// JSON
+{
+  "GameCardId":"VAC_958",
+  "ConfigComment":"Adaptive Amalgam v1.00 for Elemental Mage (05Aug-24) by BlackOak1337",
+
+  "BeforePlayCardBonus":
+  {
+    "values":
+	[
+      {
+		"comment":" ",
+        "condition":"my_hand(count(), elemental=true)>0",
+        "value":"5",
+      }
+    ],
+  },
+
+  "OnBoardBonus":
+  {
+    "values":
+	[
+      {
+		"comment":" ",
+        "condition":"my_minions(count(), elemental=true)>0",
+        "value":"3",
+      }
+    ],
+  },
+
+  "OnAdaptCardBonus":
+  {
+    "values":
+	[
+      {
+		"comment":" ",
+        "condition":"my_minions(count(), elemental=true)>2", // Prioritize elemental synergy
+        "value":"5",
+      },
+      {
+		"comment":" ",                    		
+        "condition":"my_hero(count(), health)<20", // Prioritize survival
+        "value":"3",
+      },
+      {
+		"comment":" ",
+        "condition":"*",
+        "value":"1",
+      }
+    ],
+  },
+}

@@ -1,0 +1,68 @@
+// VAC_442.json - Lamplighter
+
+// JSON
+{
+    "GameCardId": "VAC_442",
+    "ConfigComment": "Lamplighter: v1.1 (28-Aug-24) by BlackOak1337",
+	
+	"BeforeBattlecryTargetBonus": {
+        "values": [
+            {  "comment": "Increase attack bonus if targeting the opponent's hero directly.",
+               "condition": "my_target(count(), hero=true) > 0",
+               "value": "4"
+			}		
+		]
+	},
+
+//    "InHandPlayPriority": {
+//        "values": [
+//            {
+//                "comment": "Prioritize playing this card if it can help achieve lethal using Vision AI.",
+//                "condition": "my_target(min(health),hero,sum(health)+)",
+//                "value": "15"
+//            },
+//           {
+//                "comment": "Increase priority if an Elemental was played last turn.",
+//                "condition": "my_played(count(), elemental=true, turn=-1) > 0",
+//                "value": "8"
+//            },
+//            {
+//                "comment": "Slightly increase priority if the board has no Elementals.",
+//                "condition": "my_minions(count(), elemental=true) == 0",
+//                "value": "3"
+//            }
+//        ]
+//    },
+
+    "BeforePlayCardBonus": {
+        "values": [
+            { "comment": "Increase bonus if at least two Elementals were played in the last turn.",
+			  "condition": "my_played(count(), elemental=true, turn=-1) >= 2",
+			  "value": "5"
+			},
+			{ "comment": "Reduce priority if Elementals were played in the last two turns.",
+			  "condition": "my_played(count(), elemental=true, turn=-1) > 0 AND my_played(count(), elemental=true, turn=-2) > 0",
+			  "value": "10"
+			},
+            { "comment": "Reduce priority if no Elementals were played in the last two turns.",
+			  "condition": "my_played(count(), elemental=true, turn=-1) == 0 AND my_played(count(), elemental=true, turn=-2) == 0",
+              "value": "-5"
+            }
+        ]
+    }
+
+//    "OnBoardBonus": {
+//        "values": [
+//            {
+//                "comment": "Increase attack bonus if targeting the opponent's hero directly.",
+//                "condition": "my_target(count(), hero=true) > 0",
+//                "value": "4"
+//            },
+//            {
+//                "comment": "Increase bonus if there is at least one damaged Elemental on the board.",
+//                "condition": "my_minions(count(), elemental=true, damaged=true) > 0",
+//                "value": "3"
+//            }
+//        ]
+//    }
+}

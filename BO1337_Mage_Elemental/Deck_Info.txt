@@ -1,0 +1,107 @@
+### Elemental Mage
+AAECAf0EAsGfBsekBg6WtwXyxAWx/gXf/gXUlQbvmwbxmwaYnQayngbTngbMogbipgaozgbt5gYAAQPzswbHpAb2swbHpAbo3gbHpAYAAA==
+
+### Elemental_Mage
+# Class: Mage
+# Format: Standard
+# Year of the Pegasus
+#
+# 2x (1) Fire Fly
+# 2x (1) Flame Geyser
+# 2x (1) Glacial Shard
+# 2x (1) Synthesize
+# 1x (1) Tar Slime
+# 2x (2) Aqua Archivist
+# 2x (2) Flame Revenant
+# 2x (2) Rolling Stone
+# 2x (2) Saloon Brewmaster
+# 2x (2) Shale Spider
+# 2x (3) Lamplighter
+# 2x (4) Overflow Surger
+# 2x (4) Triplewick Trickster
+# 2x (4) Unchained Gladiator
+# 2x (5) Tainted Remnant
+# 1x (0) Zilliax Deluxe 3000
+#   1x (0) Zilliax Deluxe 3000
+#   1x (3) Pylon Module
+#   1x (5) Ticking Module
+# 
+AAECAY0WAsGfBsekBg6WtwXyxAWx/gXf/gXUlQbvmwbxmwaYnQayngbTngbMogbipgaozgbt5gYAAQPzswbHpAb2swbHpAbo3gbHpAYAAA==
+# 
+# To use this deck, copy it to your clipboard and create a new deck in Hearthstone
+
+### Elemental Mage
+AAECAf0EAA/9ngSWtwXyxAXe+AWx/gXL/gXf/gXUlQbxmwaYnQayngaroAbipgaozgbt5gYAAA==
+
+### Elemental Mage
+# Class: Mage
+# Format: Standard
+#
+# 2x (1) Fire Fly
+# 2x (1) Flame Geyser
+# 2x (1) Glacial Shard
+# 2x (1) Synthesize
+# 1x (1) Tar Slime
+# 2x (2) Aqua Archivist
+# 2x (2) Flame Revenant
+# 2x (2) Rolling Stone
+# 2x (2) Saloon Brewmaster
+# 2x (2) Shale Spider
+# 2x (3) Lamplighter
+# 2x (4) Overflow Surger
+# 2x (4) Triplewick Trickster
+# 2x (4) Unchained Gladiator
+# 1x (5) Sleet Skater
+# 2x (5) Tainted Remnant
+#
+AAECAf0EAsGfBrSnBg6WtwXyxAWx/gXf/gXUlQbvmwbxmwaYnQayngbTngbMogbipgaozgbt5gYAAA==
+# To use this deck, copy it to your clipboard and create a new deck in Hearthstone
+# Find this deck on https://hsreplay.net/decks/nPV3q6JjBAAMhh4AN1J5rb/
+
+
+### Elemental Mage
+# Class: Mage
+# Format: Standard
+#
+# 2x (1) Fire Fly
+# 2x (1) Flame Geyser
+# 2x (1) Glacial Shard
+# 2x (1) Synthesize
+# 2x (2) Aqua Archivist
+# 2x (2) Flame Revenant
+# 2x (2) Rolling Stone
+# 2x (2) Shale Spider
+# 2x (3) Lamplighter
+# 1x (3) Sweetened Snowflurry
+# 1x (4) Fireball
+# 2x (4) Overflow Surger
+# 2x (4) Triplewick Trickster
+# 2x (4) Unchained Gladiator
+# 1x (5) Mes'Adune the Fractured
+# 2x (5) Tainted Remnant
+# 1x (6) Incindius
+#
+AAECAf0EBP2eBPebBoCjBr2+Bg2WtwXyxAWx/gXf/gXUlQbxmwaYnQayngbTngbMogbipgaozgbt5gYAAA==
+# To use this deck, copy it to your clipboard and create a new deck in Hearthstone
+# Find this deck on https://hsreplay.net/decks/AwRRjJMkjpSK4pGuRMLfUh/
+
+Elemental Mage Deck code: Elemental Mage Class: Mage Format: Standard Year of the Pegasus #
+ 2x (1) Fire Fly
+ 2x (1) Flame Geyser
+ 2x (1) Glacial Shard
+ 2x (1) Synthesize
+ 1x (1) Tar Slime
+ 2x (2) Aqua Archivist
+ 2x (2) Flame Revenant
+ 2x (2) Rolling Stone
+ 1x (2) Saloon Brewmaster
+ 2x (2) Shale Spider
+ 2x (3) Lamplighter
+ 2x (4) Overflow Surger
+ 1x (4) Triplewick Trickster
+ 2x (4) Unchained Gladiator
+ 2x (5) Sleet Skater
+ 2x (5) Tainted Remnant
+ 1x (6) Puzzlemaster Khadgar
+# AAECAc7wBATvmwbBnwbipgbjzwYNlrcF8sQFsf4F3/4F1JUG8ZsGmJ0Gsp4G054GzKIGtKcGqM4G7eYGAAA= # 
+
