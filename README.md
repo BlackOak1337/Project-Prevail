@@ -1,3 +1,6 @@
+![PREVAIL_Small_Logo](https://github.com/user-attachments/assets/df595a4d-10ce-4cb5-9091-e6d836e7b59a)
+
+
 # Project-Prevail
 
 Hi all this is the start of a large project to create decks that Vision A.I. can play correctly and win you those matches.
