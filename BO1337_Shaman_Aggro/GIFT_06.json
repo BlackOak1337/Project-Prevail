@@ -1,0 +1,120 @@
+// using buil-it only functions and conditions, provide the best options and make sure the best possible selection based on board state and opponent
+// GIFT_06.json custom card for Hyper-Aggro Bonk Shaman in HearthRanger Vision AI
+
+// JSON
+{
+  "GameCardId": "GIFT_06",
+  "ConfigComment": "Thrall's Gift for Hyper-Aggro Bonk Shaman v1.01 (Improved Casting Logic) by BlackOak1337",
+
+//  "InHandBonus": {
+//    "values": [
+//      { "comment": "High priority to play if we have enough mana to cast the discovered spell.",
+//        "condition": "my_hero(count(), mana) >= 5",
+//        "value": "100"
+//      },
+//      { "comment": "Medium priority if we have exactly 5 mana.",
+//        "condition": "my_hero(count(), mana) == 5",
+//        "value": "50"
+//      },
+//      { "comment": "Low priority if mana is less than 5.",
+//        "condition": "my_hero(count(), mana) < 5",
+//        "value": "1"
+//      }
+//    ]
+//  },
+
+  "BeforePlayCardBonus": {
+    "values": [
+      { "comment": "Do not play if mana is insufficient to cast the discovered spell.",
+        "condition": "my_hero(count(), mana) <= 4",
+        "value": "-100"
+      },
+
+      // Hex
+      { "comment": "Hex: Prioritize against Hunter or Paladin with enough mana.",
+        "condition": "my_hero(count(), mana) >= 4 AND opp_hero(count(), hero_class=hunter | paladin) > 0",
+        "value": "12"
+      },
+      { "comment": "Hex: High health enemy minions detected.",
+        "condition": "my_hero(count(), mana) >= 4 AND opp_minions(count(), health >= 4) > 0",
+        "value": "12"
+      },
+      { "comment": "Hex (Core) - General condition.",
+        "condition": "my_hero(count(), mana) >= 4",
+        "value": "1"
+      },
+
+      // Lightning Storm
+      { "comment": "Lightning Storm: Use against exactly 3 low-health minions.",
+        "condition": "my_hero(count(), mana) >= 4 AND opp_minions(count(), health <= 3) == 3",
+        "value": "10"
+      },
+      { "comment": "Lightning Storm: Use if more than 3 low-health minions.",
+        "condition": "my_hero(count(), mana) >= 4 AND opp_minions(count(), health <= 3) > 3",
+        "value": "20"
+      },
+
+      // Bloodlust
+      { "comment": "Bloodlust: Cast if opponent has taunt minions.",
+        "condition": "my_hero(count(), mana) >= 6 AND my_minions(count()) >= 3 AND opp_minions(count(), taunt=true) > 0",
+        "value": "14"
+      },
+      { "comment": "Bloodlust: Strong board presence.",
+        "condition": "my_hero(count(), mana) >= 6 AND my_minions(count()) >= 3 AND my_minions(sum(attack)) >= 10",
+        "value": "14"
+      },
+      { "comment": "Bloodlust (Core) - General condition.",
+        "condition": "my_hero(count(), mana) >= 6 AND my_minions(count()) >= 3",
+        "value": "10"
+      }
+    ]
+  },
+
+  "OnDiscoverCardBonus": {
+    "values": [
+      // Hex
+      { "comment": "Hex: Prioritize if discovered and opponent is Hunter or Paladin.",
+        "condition": "my_discover(count(),cardid=CORE_EX1_246) > 0 AND my_hero(count(), mana) >= 3 AND opp_hero(count(), hero_class=hunter | paladin) > 0",
+        "value": "12"
+      },
+      { "comment": "Hex: Prioritize if discovered and high-health enemy minions present.",
+        "condition": "my_discover(count(),cardid=CORE_EX1_246) > 0 AND my_hero(count(), mana) >= 3 AND opp_minions(count(), health >= 4) > 0",
+        "value": "12"
+      },
+      { "comment": "Hex (Core) - General discovered condition.",
+        "condition": "my_discover(count(),cardid=CORE_EX1_246) > 0 AND my_hero(count(), mana) >= 3",
+        "value": "1"
+      },
+
+      // Lightning Storm
+      { "comment": "Lightning Storm: Use against exactly 3 low-health minions.",
+        "condition": "my_discover(count(),cardid=CORE_EX1_259) > 0 AND my_hero(count(), mana) >= 3 AND opp_minions(count(), health <= 3) == 3",
+        "value": "10"
+      },
+      { "comment": "Lightning Storm: Use if more than 3 low-health minions.",
+        "condition": "my_discover(count(),cardid=CORE_EX1_259) > 0 AND my_hero(count(), mana) >= 3 AND opp_minions(count(), health <= 3) > 3",
+        "value": "20"
+      },
+
+      // Bloodlust
+      { "comment": "Bloodlust: Opponent has taunt minions.",
+        "condition": "my_discover(count(),cardid=CORE_CS2_046) > 0 AND my_hero(count(), mana) >= 5 AND my_minions(count()) >= 3 AND opp_minions(count(), taunt=true) > 0",
+        "value": "14"
+      },
+      { "comment": "Bloodlust: Strong board presence.",
+        "condition": "my_discover(count(),cardid=CORE_CS2_046) > 0 AND my_hero(count(), mana) >= 5 AND my_minions(count()) >= 3 AND my_minions(sum(attack)) >= 10",
+        "value": "14"
+      },
+      { "comment": "Bloodlust (Core) - General discovered condition.",
+        "condition": "my_discover(count(),cardid=CORE_CS2_046) > 0 AND my_hero(count(), mana) >= 5 AND my_minions(count()) >= 3",
+        "value": "10"
+      },
+
+      // Default condition for "None"
+      { "comment": "No preferred card discovered.",
+        "condition": "*",
+        "value": "0"
+      }
+    ]
+  }
+}

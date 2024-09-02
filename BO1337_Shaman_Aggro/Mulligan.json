@@ -1,9 +1,9 @@
-// Hyper-Aggro Bonk-Shaman: Mulligan.json for HearthRanger Vision AI
+// Mulligan.json for Hyper-Aggro Bonk-Shaman for HearthRanger Vision AI
 
 // JSON
 {
 	"GameCardId": "Mulligan",
-	"ConfigComment": "Hyper-Aggro Pirate Shaman v1.5 (29-Aug-24) by BlackOak1337",
+	"ConfigComment": "Hyper-Aggro Bonk-Shaman v1.6 (31-Aug-24) by BlackOak1337",
 
 	"Mulligan": {
 		"values": [
@@ -23,16 +23,15 @@
 			"condition": "*",
 			"value": "hold"
 		  },
-            // General Mulligan Rules
-//            {   "comment": "Ideal starting hand: Prioritize core early-game minions for aggressive starts.",
-//                "mulligan": "TOY_508, WW_327",
-//                "condition": "*",
-//                "value": "hold"
-//            },
-
+	// General Mulligan Rules
+		  { "comment": "Ideal starting hand: Prioritize core early-game minions for aggressive starts.",
+			"mulligan": "TOY_518, WW_327",
+			"condition": "*",
+			"value": "hold"
+		  },
 		  { "comment": "Hold Zilliax Deluxe 3000 if you have the coin or a strong 1-drop for synergy.",
 			"mulligan": "TOY_330",
-			"condition": "coin || my_hand(count(), cost = 1) > 1",
+			"condition": "coin OR my_hand(count(), cost = 1) > 1",
 			"value": "hold"
 		  },
 		  { "comment": "Keep low-cost minions to flood the board early.",
@@ -42,65 +41,64 @@
 		  },
 		  { "comment": "Strong starting hand with the coin and early minion presence.",
 			"mulligan": "MIS_307, WW_327, VAC_925",
-			"condition": "coin && my_hand(count(), cost <= 2) >= 1",
+			"condition": "coin AND my_hand(count(), cost <= 2) >= 1",
 			"value": "hold"
 		  },
 
 	// Class-Specific Mulligan Rules
-
 		  { "comment": "Against Hunter: Prioritize early aggression to match their pace.",
 			"mulligan": "MIS_307, WW_327, VAC_925, GIFT_06",
-			"condition": "opp_hero(count(), hero_class = hunter) > 0",
+			"condition": "opp_hero(count(), hero_class=hunter) > 0",
 			"value": "hold"
 		  },
 		  { "comment": "Against Warrior: Prioritize early aggression and removal.",
 			"mulligan": "GIFT_06, VAC_323, JAM_014, VAC_925",
-			"condition": "opp_hero(count(), hero_class = warrior) > 0",
+			"condition": "opp_hero(count(), hero_class=warrior) > 0",
 			"value": "hold"
 		  },
 		  { "comment": "Against Shaman: Focus on disruption and early board control.",
 			"mulligan": "GIFT_06, VAC_323, VAC_925, MIS_701",
-			"condition": "opp_hero(count(), hero_class = shaman) > 0",
+			"condition": "opp_hero(count(), hero_class=shaman) > 0",
 			"value": "hold"
 		  },
 		  { "comment": "Against Rogue: Prioritize early game pressure to disrupt their combos.",
 			"mulligan": "MIS_307, WW_327, GIFT_06",
-			"condition": "opp_hero(count(), hero_class = rogue) > 0",
+			"condition": "opp_hero(count(), hero_class=rogue) > 0",
 			"value": "hold"
 		  },
 		  { "comment": "Against Druid: Hold disruption for potential ramp strategies.",
 			"mulligan": "GIFT_06, VAC_323, VAC_925, JAM_014",
-			"condition": "opp_hero(count(), hero_class = druid) > 0",
+			"condition": "opp_hero(count(), hero_class=druid) > 0",
 			"value": "hold"
 		  },
 		  { "comment": "Against Mage: Pressure early to take advantage of their slower start.",
 			"mulligan": "MIS_307, WW_327, GIFT_06",
-			"condition": "opp_hero(count(), hero_class = mage) > 0",
+			"condition": "opp_hero(count(), hero_class=mage) > 0",
 			"value": "hold"
 		  },
 		  { "comment": "Against Priest: Disrupt their early setup to avoid late-game control dominance.",
 			"mulligan": "GIFT_06, VAC_323, MIS_701, VAC_301",
-			"condition": "opp_hero(count(), hero_class = priest) > 0",
+			"condition": "opp_hero(count(), hero_class=priest) > 0",
 			"value": "hold"
 		  },
 		  { "comment": "Against Warlock: Prepare for both aggressive and control variants.",
 			"mulligan": "GIFT_06, VAC_323, VAC_925, JAM_014",
-			"condition": "opp_hero(count(), hero_class = warlock) > 0",
+			"condition": "opp_hero(count(), hero_class=warlock) > 0",
 			"value": "hold"
 		  },
 		  { "comment": "Against Paladin: Focus on early aggression and board control.",
 			"mulligan": "MIS_307, WW_327, GIFT_06, VAC_925",
-			"condition": "opp_hero(count(), hero_class = paladin) > 0",
+			"condition": "opp_hero(count(), hero_class=paladin) > 0",
 			"value": "hold"
 		  },
 		  { "comment": "Against Demon Hunter: Hold early game pressure and minions to counter their fast plays.",
 			"mulligan": "MIS_307, WW_327, GIFT_06, VAC_925",
-			"condition": "opp_hero(count(), hero_class = demonhunter) > 0",
+			"condition": "opp_hero(count(), hero_class=demonhunter) > 0",
 			"value": "hold"
 		  },
 		  { "comment": "Against Death Knight: Focus on early aggression and board presence to counter their defensive tools.",
 			"mulligan": "MIS_307, WW_327, GIFT_06, VAC_925",
-			"condition": "opp_hero(count(), hero_class = deathknight) > 0",
+			"condition": "opp_hero(count(), hero_class=deathknight) > 0",
 			"value": "hold"
 		  },
 
@@ -121,6 +119,7 @@
 // Format: Standard
 // Year of the Pegasus
 //
+// Malted Magma (VAC_323)
 // 2 x (1) Lightning Reflexes (TTN_317)
 // 1 x (1) Patches the Pilot (VAC_933)
 // 2 x (1) Thrall's Gift (GIFT_06)
@@ -158,9 +157,4 @@
 // ↓x (3) Carefree Cookie		-18.6 	-5.2 	-24.8
 // ↓x (5) Frosty Décor			-37.3 	-3.0 	0.0
 // ↓x (3) Skirting Death		-62.3 	-4.3 	0.0
-
-
-
-
-
 
