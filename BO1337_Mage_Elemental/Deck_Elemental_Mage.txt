@@ -1,0 +1,328 @@
+https://www.hearthstonetopdecks.com
+https://www.hearthpwn.com/decks
+https://hearthstone-decks.net
+https://metastats.net/hearthstone/deck/
+https://hsreplay.net/meta/
+https://www.hsguru.com
+
+
+### Elemental_Mage
+# Class: Mage
+# Format: Standard
+# Year of the Pegasus
+#
+# 2x (1) Fire Fly
+# 2x (1) Flame Geyser
+# 2x (1) Glacial Shard
+# 2x (1) Synthesize
+# 1x (1) Tar Slime
+# 2x (2) Aqua Archivist
+# 2x (2) Flame Revenant
+# 2x (2) Rolling Stone
+# 2x (2) Saloon Brewmaster
+# 2x (2) Shale Spider
+# 2x (3) Lamplighter
+# 2x (4) Overflow Surger
+# 2x (4) Triplewick Trickster
+# 2x (4) Unchained Gladiator
+# 2x (5) Tainted Remnant
+# 1x (0) Zilliax Deluxe 3000
+#   1x (0) Zilliax Deluxe 3000
+#   1x (3) Pylon Module
+#   1x (5) Ticking Module
+# 
+AAECAY0WAsGfBsekBg6WtwXyxAWx/gXf/gXUlQbvmwbxmwaYnQayngbTngbMogbipgaozgbt5gYAAQPzswbHpAb2swbHpAbo3gbHpAYAAA==
+# 
+# To use this deck, copy it to your clipboard and create a new deck in Hearthstone
+
+### Elemental_Mage_2
+# Class: Mage
+# Format: Standard
+# Year of the Pegasus
+#
+# 2x (1) Arcane Artificer
+# 2x (1) Fire Fly
+# 2x (1) Flame Geyser
+# 2x (1) Synthesize
+# 2x (2) Aqua Archivist
+# 2x (2) Flame Revenant
+# 2x (2) Rolling Stone
+# 2x (3) Lamplighter
+# 2x (3) Molten Rune
+# 2x (4) Fireball
+# 2x (4) Overflow Surger
+# 2x (4) Triplewick Trickster
+# 2x (4) Unchained Gladiator
+# 2x (5) Tainted Remnant
+# 2x (6) Chaos Creation
+# 
+AAECAY0WAA/9ngSWtwXyxAXe+AWx/gXL/gXf/gXUlQbxmwaYnQayngaroAbipgaozgbt5gYAAA==
+# 
+# To use this deck, copy it to your clipboard and create a new deck in Hearthstone
+
+### Elemental_Mage_3
+# Class: Mage
+# Format: Standard
+# Year of the Pegasus
+#
+# 2x (1) Fire Fly
+# 2x (1) Flame Geyser
+# 2x (1) Glacial Shard
+# 2x (1) Synthesize
+# 2x (1) Tar Slime
+# 2x (2) Aqua Archivist
+# 2x (2) Flame Revenant
+# 1x (2) Saloon Brewmaster
+# 2x (2) Shale Spider
+# 2x (3) Lamplighter
+# 2x (4) Overflow Surger
+# 2x (4) Triplewick Trickster
+# 2x (4) Unchained Gladiator
+# 2x (5) Sleet Skater
+# 2x (5) Tainted Remnant
+# 1x (0) Zilliax Deluxe 3000
+#   1x (0) Zilliax Deluxe 3000
+#   1x (3) Pylon Module
+#   1x (5) Ticking Module
+# 
+AAECAY0WAu+bBsekBg7yxAWx/gXf/gXUlQbxmwaYnQayngbTngbBnwbMogbipga0pwaozgbt5gYAAQPzswbHpAb2swbHpAbo3gbHpAYAAA==
+# 
+# To use this deck, copy it to your clipboard and create a new deck in Hearthstone
+
+### Elemental_Mage_W
+# Class: Mage
+# Format: Standard
+# Year of the Pegasus
+#
+# 2x (1) Fire Fly
+# 2x (1) Flame Geyser
+# 2x (1) Glacial Shard
+# 2x (1) Synthesize
+# 1x (1) Tar Slime
+# 2x (2) Aqua Archivist
+# 2x (2) Flame Revenant
+# 2x (2) Rolling Stone
+# 1x (2) Saloon Brewmaster
+# 2x (2) Shale Spider
+# 2x (3) Lamplighter
+# 2x (4) Overflow Surger
+# 2x (4) Triplewick Trickster
+# 2x (4) Unchained Gladiator
+# 2x (5) Sleet Skater
+# 2x (5) Tainted Remnant
+# 
+AAECAY0WAu+bBsGfBg6WtwXyxAWx/gXf/gXUlQbxmwaYnQayngbTngbMogbipga0pwaozgbt5gYAAA==
+# 
+# To use this deck, copy it to your clipboard and create a new deck in Hearthstone
+
+### Elemental_Mage_4+
+# Class: Mage
+# Format: Standard
+# Year of the Pegasus
+#
+# 2x (1) Fire Fly
+# 1x (1) Flame Geyser
+# 2x (1) Glacial Shard
+# 2x (1) Synthesize
+# 1x (1) Tar Slime
+# 2x (2) Aqua Archivist
+# 2x (2) Flame Revenant
+# 2x (2) Rolling Stone
+# 2x (2) Saloon Brewmaster
+# 2x (2) Shale Spider
+# 2x (3) Lamplighter
+# 2x (4) Overflow Surger
+# 2x (4) Triplewick Trickster
+# 2x (4) Unchained Gladiator
+# 1x (5) Sleet Skater
+# 2x (5) Tainted Remnant
+# 1x (0) Zilliax Deluxe 3000
+#   1x (0) Zilliax Deluxe 3000
+#   1x (3) Pylon Module
+#   1x (5) Ticking Module
+# 
+AAECAY0WBLKeBsGfBsekBrSnBg2WtwXyxAWx/gXf/gXUlQbvmwbxmwaYnQbTngbMogbipgaozgbt5gYAAQPzswbHpAb2swbHpAbo3gbHpAYAAA==
+# 
+# To use this deck, copy it to your clipboard and create a new deck in Hearthstone
+
+
+
+Fire Fly - UNG_809
+Flame Geyser - UNG_018
+Glacial Shard - UNG_205
+Synthesize - ETC_535
+Tar Slime - TOY_000
+Aqua Archivist - TTN_095
+Flame Revenant - TTN_479
+Rolling Stone - ETC_742
+Saloon Brewmaster - WW_423
+Shale Spider - DEEP_034
+Lamplighter - VAC_442
+Overflow Surger - WW_424
+Triplewick Trickster - TOY_370
+Unchained Gladiator - TTN_475
+Tainted Remnant - YOG_519
+Zilliax Deluxe 3000 - TOY_330
+Arcane Artificer - LOOT_231
+Molten Rune - TTN_477
+Fireball - CS2_029
+Chaos Creation - DEEP_031
+Sleet Skater - TOY_375
+--------------------------------
+
+using the above mulligan.json for Elemental Mage, convert the following in to json code and add to the above. 
+
+Core Cards to Keep
+Fire Fly: Excellent early game minion, can trigger Elemental synergies.
+Flame Geyser: Removal and potential burst damage.
+Glacial Shard: Removal and utility for freezing minions.
+Synthesize: Card advantage and potential tempo gain.
+Aqua Archivist: Generates card advantage and can be a strong early game minion.
+Flame Revenant: Solid early game minion and can trigger Elemental synergies.
+Rolling Stone: Removal and potential tempo gain.
+Lamplighter: Key card for ramping up Elemental count.
+Overflow Surger: Generates value and can be a strong mid-game play.
+Unchained Gladiator: Strong minion with potential for big plays.
+Tainted Remnant: Removal and potential value generation.
+
+
+using the above mulligan.json for Elemental Mage, where required create complex conditions when converting the following in to json code then add to the above code.  
+using the above mulligan.json for "Elemental Mage" convert the following in to json code then add to the above. 
+using the above mulligan.json for "Elemental Mage" convert the following in to json code then add to the above.  
+
+Cards to Consider Keeping Based on Matchup
+Tar Slime: Strong against aggressive decks.
+Saloon Brewmaster: Can be useful for value generation or tempo plays.
+Shale Spider: Good early game defense and can trigger Elemental synergies.
+Triplewick Trickster: Can be strong against control decks.
+Sleet Skater: Good against aggressive decks and can be a strong finisher.
+Zilliax Deluxe 3000: Strong against decks with many small minions.
+Arcane Artificer: Can be strong in decks focused on spells.
+Molten Rune: Can be a strong removal option.
+Fireball: Strong burst damage and removal.
+Chaos Creation: High-risk, high-reward card that can turn the game around.
+
+Mulligan Decisions Based on Opponent
+Against Aggressive Decks: Prioritize early game minions, removal, and board control. Keep cards like Tar Slime, Glacial Shard, and Flame Geyser.
+Against Control Decks: Focus on developing your board and generating card advantage. Keep cards like Synthesize, Aqua Archivist, and Lamplighter.
+Against Midrange Decks: Balance early game presence with mid-game tempo plays. Keep a mix of minions and removal.
+
+Specific Mulligan Guidelines for Each Deck
+While the general guidelines above apply to all Elemental Mage variants, there are some specific considerations for each deck:
+
+Elemental Mage: Standard build with a balance of early game, mid-game, and late game threats.
+Elemental Mage_2: Focuses on spells and burst damage with cards like Arcane Artificer, Molten Rune, and Fireball.
+Elemental Mage_3: Includes Sleet Skater for additional late game power.
+Elemental Mage_W: A more aggressive version with Sleet Skater as a key finisher.
+Elemental Mage_4+: Includes additional tech cards for specific matchups.
+
+
+Fire Fly - UNG_809
+Flame Geyser - UNG_018
+Glacial Shard - UNG_205
+Synthesize - ETC_535
+Tar Slime - TOY_000
+Aqua Archivist - TTN_095
+Flame Revenant - TTN_479
+Rolling Stone - ETC_742
+Saloon Brewmaster - WW_423
+Shale Spider - DEEP_034
+Lamplighter - VAC_442
+Overflow Surger - WW_424
+Triplewick Trickster - TOY_370
+Unchained Gladiator - TTN_475
+Tainted Remnant - YOG_519
+Zilliax Deluxe 3000 - TOY_330
+Arcane Artificer - LOOT_231
+Molten Rune - TTN_477
+Fireball - CS2_029
+Chaos Creation - DEEP_031
+Sleet Skater - TOY_375
+
+
+
+
+
+
+remove the dulicate hearthstone card names from the following list then using google search add API "card id"  
+
+Fire Fly
+Flame Geyser
+Glacial Shard
+Synthesize
+Tar Slime
+Aqua Archivist
+Flame Revenant
+Rolling Stone
+Saloon Brewmaster
+Shale Spider
+Lamplighter
+Overflow Surger
+Triplewick Trickster
+Unchained Gladiator
+Tainted Remnant
+Zilliax Deluxe 3000
+Arcane Artificer
+Fire Fly
+Flame Geyser
+Synthesize
+Aqua Archivist
+Flame Revenant
+Rolling Stone
+Lamplighter
+Molten Rune
+Fireball
+Overflow Surger
+Triplewick Trickster
+Unchained Gladiator
+Tainted Remnant
+Chaos Creation
+Fire Fly
+Flame Geyser
+Glacial Shard
+Synthesize
+Tar Slime
+Aqua Archivist
+Flame Revenant
+Saloon Brewmaster
+Shale Spider
+Lamplighter
+Overflow Surger
+Triplewick Trickster
+Unchained Gladiator
+Sleet Skater
+Tainted Remnant
+Zilliax Deluxe 3000
+Fire Fly
+Flame Geyser
+Glacial Shard
+Synthesize
+Tar Slime
+Aqua Archivist
+Flame Revenant
+Rolling Stone
+Saloon Brewmaster
+Shale Spider
+Lamplighter
+Overflow Surger
+Triplewick Trickster
+Unchained Gladiator
+Sleet Skater
+Tainted Remnant
+Fire Fly
+Flame Geyser
+Glacial Shard
+Synthesize
+Tar Slime
+Aqua Archivist
+Flame Revenant
+Rolling Stone
+Saloon Brewmaster
+Shale Spider
+Lamplighter
+Overflow Surger
+Triplewick Trickster
+Unchained Gladiator
+Sleet Skater
+Tainted Remnant
+Zilliax Deluxe 3000

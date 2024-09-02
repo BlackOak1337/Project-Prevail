@@ -1,0 +1,79 @@
+{
+    "GameCardId": "VAC_442",
+    "ConfigComment": "Lamplighter: Advanced conditions for Elemental synergy and battlecry damage calculation",
+
+    "InHandPlayPriority": {
+        "values": [
+            {
+                "comment": "Prioritize playing this card if it can help achieve lethal.",
+                "condition": "my_lethal_damage() >= enemy_hero(max(health))",
+                "value": "15"
+            },
+            {
+                "comment": "Increase priority if an Elemental was played last turn.",
+                "condition": "my_played(count(), elemental=true, turn=-1) > 0",
+                "value": "8"
+            },
+            {
+                "comment": "Slightly increase priority if the board has no Elementals.",
+                "condition": "my_minions(count(), elemental=true) == 0",
+                "value": "3"
+            }
+        ]
+    },
+
+    "BeforePlayCardBonus": {
+        "values": [
+            {
+                "comment": "Increase bonus if at least two Elementals were played in the last turn.",
+                "condition": "my_played(count(), elemental=true, turn=-1) >= 2",
+                "value": "5"
+            },
+            {
+                "comment": "Reduce priority if no Elementals were played in the last two turns.",
+                "condition": "my_played(count(), elemental=true, turn=-1) == 0 AND my_played(count(), elemental=true, turn=-2) == 0",
+                "value": "-5"
+            }
+        ]
+    },
+
+    "OnBoardBonus": {
+        "values": [
+            {
+                "comment": "Increase attack bonus if targeting the opponent's hero directly.",
+                "condition": "my_target(count(), hero=true) > 0",
+                "value": "4"
+            },
+            {
+                "comment": "Increase bonus if there is at least one damaged Elemental on the board.",
+                "condition": "my_minions(count(), elemental=true, damaged=true) > 0",
+                "value": "3"
+            }
+        ]
+    },
+
+    "BeforeBattlecryBonus": {
+        "values": [
+            {
+                "comment": "Increase bonus if the battlecry can kill an enemy minion with low health.",
+                "condition": "opp_minions(max(health)) <= my_played(count(), elemental=true, turn<=-1)",
+                "value": "10"
+            },
+            {
+                "comment": "Increase bonus proportionally to the potential damage of the battlecry based on consecutive Elemental plays.",
+                "condition": "*",
+                "value": "my_played(count(), elemental=true, turn<=-1) * 2"
+            }
+        ]
+    },
+
+    "BeforePhysicalAttackBonus": {
+        "values": [
+            {
+                "comment": "Increase bonus if this card attacks a low-health minion that the battlecry couldn't finish off.",
+                "condition": "opp_minions(count(), max(health) <= my_played(count(), elemental=true, turn<=-1) + 1) > 0",
+                "value": "6"
+            }
+        ]
+    }
+}

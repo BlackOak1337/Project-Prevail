@@ -1,0 +1,93 @@
+// mulligan.json for Hyper-Aggro Elemental Mage for Hearthranger Vision AI 
+
+// JSON
+{
+	"GameCardId": "Mulligan",
+	"ConfigComment": "Deck Type: Elemental Mage v3.9 (08-Aug-24) by BlackOak1337",
+
+	"Mulligan": {
+		"values": [
+		  { "comment": "Prioritize low-cost minions",
+			"mulligan": "UNG_205, CS2_029, UNG_018, TTN_479, UNG_028", // Fire Fly, Flame Geyser, Glacial Shard, Flame Revenant, Fire Elemental
+			"condition": "*",
+			"value": "hold"
+		  },
+		  { "comment": "Prefer early game cards with coin",
+			"mulligan": "UNG_809, TTN_095, ETC_535, TOY_000", // Synthesize, Aqua Archivist, Lamplighter, Tar Slime
+			"condition": "coin",
+			"value": "hold"
+		  },
+		  { "comment": "Keep Flame Geyser with multiple one-drops",
+			"mulligan": "CS2_029", // Flame Geyser
+			"condition": "my_hand(count(), cardid=UNG_205 | CS2_029 | UNG_018 | TTN_479 | UNG_028)>= 2",
+			"value": "hold"
+		  },
+		  { "comment": "Keep Flame Geyser and Fire Fly together",
+			"mulligan": "CS2_029", // Flame Geyser
+			"condition": "my_hand(count(), cardid=UNG_205) > 0", // Fire Fly
+			"value": "hold"
+		  },
+		  { "comment": "Prioritize Tar Slime against aggressive decks",
+			"mulligan": "TOY_000", // Tar Slime
+			"condition": "opp_hero(count(), hero_class=hunter | rogue | demonHunter | paladin)>0 AND my_hand(count(), cardid=UNG_205 | CS2_029 | UNG_018)<= 1",
+			"value": "hold"
+		  },
+
+	// Rewmoval Rules:
+		  { "comment": "Keep one removal spell if good curve",
+			"mulligan": "CFM_646", // Frostbolt
+			"condition": "my_hand(count(), cardid=UNG_205 | CS2_029 | UNG_018 | TTN_479 | UNG_028 | UNG_809 | TTN_095 | ETC_535) >= 3",
+			"value": "hold"
+		  },
+		  { "comment": "Prioritize removal against aggressive opponents",
+			"mulligan": "CFM_646", // Frostbolt
+			"condition": "opp_hero(count(), hero_class=hunter | rogue | demonhunter | warlock | paladin)>0",
+			"value": "hold"
+		  },
+		  { "comment": "Lamplighter",
+			"mulligan": "VAC_442", // Lamplighter
+			"condition": "coin OR my_hand(count(), cardid=UNG_205 | CS2_029 | UNG_018 | TTN_479 | UNG_028)>=2", // At least 2 one-drops
+			"value": "hold"
+		  },
+
+	// Playstyle Match-Ups
+		  { "comment": "Against Aggro: Prioritize early removal",
+			"mulligan": "CS2_029, UNG_018, TOY_000, CFM_646", // Flame Geyser, Glacial Shard, Tar Slime, Frostbolt
+			"condition": "opp_hero(count(), hero_class=hunter | rogue | demonhunter | paladin)>0",
+			"value": "hold"
+		  },
+
+		  { "comment": "Against Control: Prioritize card draw",
+			"mulligan": "UNG_809, ETC_535, TTN_095", // Synthesize, Aqua Archivist, Lamplighter
+			"condition": "opp_hero(count(), hero_class=warrior | mage | priest)>0",
+			"value": "hold"
+		  },
+
+	// Against Midrange (Paladin, Shaman, Druid): Balance early pressure and removal
+		  { "comment": "Early minions, Frostbolt, Tar Slime",
+			"mulligan": "UNG_205, CS2_029, UNG_018, CFM_646, TOY_000", 
+			"condition": "opp_hero(count(), hero_class=paladin | shaman | druid)>0",
+			"value": "hold"
+		  },
+
+	// Class Match-Ups
+		  { "comment": "Against Hunter: Prioritize early removal and board control",
+			"mulligan": "CS2_029, UNG_018, TOY_000, CFM_646", // Flame Geyser, Glacial Shard, Tar Slime, Frostbolt
+			"condition": "opp_hero(count(), hero_class=hunter)>0",
+			"value": "hold"
+		  },
+		  { "comment": "Against Rogue: Prioritize early removal and board control",
+			"mulligan": "CS2_029, UNG_018, TOY_000, CFM_646", // Flame Geyser, Glacial Shard, Tar Slime, Frostbolt
+			"condition": "opp_hero(count(), hero_class=rogue)>0",
+			"value": "hold"
+		  },
+
+	// Discard
+		  { "comment": "Discard excess cards.",
+			"mulligan": "*",
+			"condition": "*",
+			"value": "discard"
+		  }
+		]
+	}
+}

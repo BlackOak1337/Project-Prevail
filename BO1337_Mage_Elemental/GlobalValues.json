@@ -1,0 +1,244 @@
+// GlobalValues.json for Hyper-Aggro Elemental Mage for HearthRanger Vision AI
+
+// JSON
+{
+	"GameCardId": "GlobalValues",
+	"ConfigComment": "Hyper-Aggro Elemental Mage v5.7 (29-Aug-24) by BlackOak1337",
+
+	"FirstTurnValueWeight": {
+		"values": [
+			{ "condition": "turn()<5", "value": "1.0" }, // High priority early for aggressive plays
+			{ "condition": "turn()>4 AND turn()<7", "value": "0.8" }, // Moderate priority in early-mid game
+			{ "condition": "turn()>6 AND turn()<10", "value": "0.5" }, // Slightly lower for mid-game
+			{ "condition": "turn()>9", "value": "0.2" } // Lower priority in late game
+		]
+	},
+
+	"SecondTurnValueWeight": {
+		"values": [
+			{ "condition": "turn()<5", "value": "0.0" }, // Lower focus on value generation early
+			{ "condition": "turn()>4 AND turn()<7", "value": "0.2" }, // Increased focus in early-mid game
+			{ "condition": "turn()>6 AND turn()<10", "value": "0.5" }, // Strong focus in mid-game
+			{ "condition": "turn()>9", "value": "0.8" } // Increased focus in late game to finish off opponents
+		]
+	},
+
+	// Search priority
+	"InHandPlayPriority": {
+		"values": [
+//			{ "condition": "my_hand(count(), elemental=true) > 2", "value": "0.8" }, // Prioritize Elemental cards
+//			{ "condition": "my_hand(count(), cost<3) > 3", "value": "0.6" }, // Prioritize low-cost cards
+//			{ "condition": "opp_minions(count(), attack>4)>0", "value": "0.5" }, // Assess threat based on attack, health, and taunt
+//			{ "condition": "opp_minions(count(), health>5)>0", "value": "0.5" }, // Assess threat based on attack, health, and taunt
+//			{ "condition": "opp_minions(count(), taunt=true)> 0", "value": "0.5" }, // Assess threat based on attack, health, and taunt
+//			{ "condition": "turn()<5", "value": "0.8" }, // Higher priority early game
+			{ "condition": "my_hand(count()) > my_minions(count())", "value": "0.9" }, // Higher priority if hand is bigger
+			{ "condition": "my_hand(count()) < my_minions(count())", "value": "0.1" }, // Higher priority if board is bigger
+//			{ "condition": "opp_hero(count(), hero_class=paladin)>0 AND opp_minions(count(), divineshield=true)>1", "value": "0.8" }, // Higher priority against Paladin with multiple Divine Shield minions
+//			{ "condition": "opp_hero(count(), hero_class=warrior)>0 AND opp_minions(count(), taunt=true)>2", "value": "0.7" }, // Higher priority against Warrior with multiple Taunt minions
+			{ "condition": "*", "value": "0.5" } // Lower priority for other cards
+		]
+	},
+
+	"OnBoardPlayPriority": {
+		"values": [
+//			{ "condition": "my_minions(count(), elemental=true) > 2", "value": "0.8" }, // Prioritize Elemental cards
+//			{ "condition": "opp_minions(count(), attack>4)>0", "value": "0.6" }, // Assess threat based on attack, health, and taunt
+//			{ "condition": "opp_minions(count(), health>5)>0", "value": "0.6" }, // Assess threat based on attack, health, and taunt
+//			{ "condition": "opp_minions(count(), taunt=true)> 0", "value": "0.6" }, // Assess threat based on attack, health, and taunt
+//			{ "condition": "turn()<5", "value": "0.6" }, // Higher priority early game
+			{ "condition": "my_hand(count()) > my_minions(count())", "value": "0.1" }, // Higher priority if hand is bigger
+			{ "condition": "my_hand(count()) < my_minions(count())", "value": "0.9" }, // Higher priority if board is bigger
+			{ "condition": "*", "value": "0.5" } // Lower priority for other cards
+		]
+	},
+
+	// Core stats adjustments
+	"GlobalDivineShield": {
+		"values": [
+			{ "condition": "*", "value": "0.8" } // Increased value for Divine Shield
+		]
+	},
+
+	"GlobalDurability": {
+		"values": [
+			{ "condition": "my_minions(count())>opp_minions(count())", "value": "1.0" }, // Adjusted for aggressive minion trading
+			{ "condition": "*", "value": "0.7" } // General durability
+		]
+	},
+
+	"GlobalStealth": {
+		"values": [
+			{ "condition": "*", "value": "0" } // No priority for stealth
+		]
+	},
+
+	"GlobalHeroAttack": {
+		"values": [
+			{ "condition": "*", "value": "0.8" } // High value to support aggressive playstyle
+		]
+	},
+
+	"GlobalMinionAttack": {
+		"values": [
+			{ "condition": "*", "value": "1.0" } // Maximize minion attack for aggressive trades
+		]
+	},
+
+	"GlobalWeaponAttack": {
+		"values": [
+			{ "condition": "*", "value": "0.8" } // Higher priority for weapon attack to clear minions and deal damage
+		]
+	},
+
+	"GlobalTaunt": {
+		"values": [
+			{ "condition": "my_minions(count())>opp_minions(count())", "value": "0.4" }, // Lower priority when ahead on board
+			{ "condition": "*", "value": "0.7" } // General value
+		]
+	},
+
+	"GlobalWindfury": {
+		"values": [
+			{ "condition": "turn<=6", "value": "0.8" }, // Extremely high value early for aggressive pressure
+			{ "condition": "turn>=7", "value": "0.6" }, // Slightly lower but still important in later turns
+			{ "condition": "*", "value": "0.7" }
+		]
+	},
+
+	"GlobalCharge": {
+		"values": [
+			{ "condition": "turn<=6", "value": "0.9" }, // Extremely high value early for setting up lethal
+			{ "condition": "turn>=7", "value": "0.6" }, // Lower value in later turns
+			{ "condition": "*", "value": "0.8" }
+		]
+	},
+
+	"GlobalOverload": {
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=shaman)>0", "value": "-0.4" }, // Lower value against Shaman to counter Overload
+			{ "condition": "*", "value": "0.0" }
+		]
+	},
+
+	"GlobalMinionIntrinsicValue": {
+		"values": [
+			{ "condition": "cost<=2", "value": "0.7" }, // High value on low-cost minions for early aggression
+			{ "condition": "cost==3", "value": "0.6" },
+			{ "condition": "cost==4", "value": "0.5" },
+			{ "condition": "cost>=5", "value": "0.3" } // Lower value on high-cost minions
+		]
+	},
+
+	// Opponent-Based Adjustments
+	"OppGlobalDivineShield": {
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "0.8" }, // Adjusted for Aggro Paladin
+			{ "condition": "opp_played(count(), secret=true)>4", "value": "0.7" }, // Slightly reduced against secret-heavy decks
+			{ "condition": "*", "value": "0.6" } // General value
+		]
+	},
+
+	"OppGlobalDurability": {
+		"values":[
+			{ "condition": "opp_hero(count(), hero_class=warlock)>0", "value": "0.8" }, // Adjusted for Warlocks
+			{ "condition": "opp_hero(count(), hero_class=warrior)>0", "value": "0.7" }, // Slightly lower against Warriors
+			{ "condition": "*", "value": "0.6" } // General value
+		]
+	},
+
+	"OppGlobalStealth": {
+		"values": [
+			{ "condition": "*", "value": "0.8" }
+		]
+	},
+
+	"OppGlobalHeroAttack": {
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "0.8" }, // Adjusted for Aggro Paladin
+			{ "condition": "*", "value": "0.6" } // General value
+		]
+	},
+
+	"OppGlobalMinionAttack": {
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=warlock)>0", "value": "0.7" }, // Higher value against Warlocks
+			{ "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "0.6" }, // Adjusted for Aggro Paladin
+			{ "condition": "*", "value": "0.5" } // General value
+		]
+	},
+
+	"OppGlobalWeaponAttack": {
+		"values": [
+			{ "condition": "*", "value": "0.8" }
+		]
+	},
+
+	"OppGlobalTaunt": {
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=warlock)>0", "value": "0.7" }, // Adjusted for Warlock
+			{ "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "0.6" }, // Adjusted for Aggro Paladin
+			{ "condition": "*", "value": "0.5" } // General value
+		]
+	},
+
+	"OppGlobalWindfury": {
+		"values": [
+			{ "condition": "*", "value": "0.8" }
+		]
+	},
+
+	"OppGlobalHeroHealth": {
+		"values": [
+			{ "condition": "*", "value": "0.8" } // Increased priority on reducing opponent's hero health
+		]
+	},
+
+	"OppGlobalMinionHealth": {
+		"values": [
+			{ "condition": "*", "value": "0.6" }
+		]
+	},
+
+	"OppGlobalLocationHealth": {
+		"values": [
+			{ "condition": "*", "value": "0.8" }
+		]
+	},
+
+	"OppGlobalCharge": {
+		"values": [
+			{ "condition": "*", "value": "0.7" }
+		]
+	},
+
+	"OppGlobalOverload": {
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=shaman)>0", "value": "0.7" },
+			{ "condition": "*", "value": "0.6" }
+		]
+	},
+
+	"OppGlobalMinionIntrinsicValue": {
+		"values": [
+			{ "condition": "opp_minions(count(), demon=true)>2 AND opp_hero(count(), hero_class=warlock)>0", "value": "0.8" }, // Prioritize Warlock demons
+			{ "condition": "opp_minions(count(), beast=true)>2", "value": "0.7" }, // Adjusted for Beast-heavy decks
+			{ "condition": "opp_hero(count(), hero_class=druid)>0", "value": "0.6" },
+			{ "condition": "*", "value": "0.5" } // General value
+		]
+	},
+
+	"OppGlobalLocationIntrinsicValue": {
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=mage)>0", "value": "0.6" },
+			{ "condition": "*", "value": "0.5" }
+		]
+	},
+
+	"KillOppMinionBonus": {
+		"values": [
+			{ "condition": "opp_minions(count(), demon=true)>2 AND opp_hero(count(), hero_class=warlock)>0", "value": "0.6" }, // Higher bonus for killing Warlock demons
+			{ "condition": "*", "value": "0.4" } // General value
+		]
+	}
+}
