@@ -1,0 +1,27 @@
+// concede.json for all deck type and play style for HearthRanger Vision AI
+
+// JSON
+{
+  "GameCardId": "Concede",
+  "ConfigComment": "Deck: All v1.00 (28-Aug-24) by BlackOak1337",
+
+  "ExtraConcdeSettings": {
+    "values": [
+      {
+        "comment": "Concede if opponent has lethal",
+        "condition": "opp_hero(count(), attack) >= my_hero(count(), health)",
+        "value": "1"
+      },
+      {
+        "comment": "Concede if AI has no chance of winning",
+        "condition": "my_deck(count()) == 0 AND opp_hero(count(), health) > my_hero(count(), health)",
+        "value": "1"
+      },
+      {
+        "comment": "Default",
+        "condition": "*",
+        "value": "0.00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,265 @@
+﻿// GlobalValues.json for Hyper-Aggro Paladin for HearthRanger Vision AI
+
+// JSON
+{
+  "GameCardId": "GlobalValues",
+  "ConfigComment": "Hyper-Aggro Paladin v1.6 (03-Sep-24) by BlackOak1337",
+  
+  "FirstTurnValueWeight": {
+    "values": [
+      { "condition": "turn<=3", "value": "1.0" },
+      { "condition": "turn>3 AND turn<=6", "value": "0.85" }, // Slightly increased to maintain aggression
+      { "condition": "turn>6 AND turn<=9", "value": "0.5" },
+      { "condition": "turn>9", "value": "0.3" },
+      { "condition": "opp_minions(count())>3 AND opp_hero(count(), hero_class=mage | hunter | rogue)>0", "value": "0.9" },
+      { "condition": "opp_minions(count())<2 AND opp_hero(count(), hero_class=priest | warlock | druid)>0", "value": "0.6" },
+      { "condition": "opp_hero(count(), hero_class=mage | hunter | rogue)>0 AND opp_hand(count())>3", "value": "0.95" },
+      { "condition": "opp_hero(count(), hero_class=mage | hunter | rogue)>0", "value": "0.85" },
+      { "condition": "opp_hero(count(), hero_class=warrior | paladin)>0 AND opp_hand(count())<3", "value": "0.8" },
+      { "condition": "opp_hero(count(), hero_class=warrior | paladin)>0", "value": "0.7" },
+      { "condition": "opp_hero(count(), hero_class=priest | warlock | druid)>0 AND opp_hand(count())<3", "value": "0.4" },
+      { "condition": "opp_hero(count(), hero_class=priest | warlock | druid)>0", "value": "0.5" }
+    ]
+  },
+
+  "SecondTurnValueWeight": {
+    "values": [
+      { "condition": "turn<5", "value": "0.2" },
+      { "condition": "turn>4 AND turn<=7", "value": "0.4" },
+      { "condition": "turn>6 AND turn<=9", "value": "0.7" },
+      { "condition": "turn>9", "value": "0.8" },
+      { "condition": "my_hand(count(), cardid=GAME_005)>0", "value": "0.8" },
+      { "condition": "*", "value": "1.0" }
+    ]
+  },
+
+    // Global Stats =====================================================================
+    "GlobalDivineShield": {
+        "values": [
+        { "condition": "*", "value": "1.00" } // Increased value for Divine Shield
+        ]
+    },
+    "GlobalDurability": { // General durability
+        "values": [
+            { "condition": "my_minions(count())>opp_minions(count())", "value": "1.0" }, // Adjusted for aggressive minion trading
+            { "condition": "*", "value": "0.8" }
+        ]
+    },
+    "GlobalStealth": {
+        "values": [
+            { "condition": "*", "value": "0" } // No priority for stealth
+        ]
+    },
+    "GlobalHeroAttack": {
+        "values": [
+            { "condition": "*", "value": "0.9" } // High value to support aggressive playstyle
+        ]
+    },
+    "GlobalMinionAttack": {
+        "values": [
+            { "condition": "*", "value": "1.0" } // Maximize minion attack for aggressive trades
+        ]
+    },
+    "GlobalWeaponAttack": {
+        "values": [
+            { "condition": "*", "value": "0.9" } // Higher priority for weapon attack to clear minions and deal damage
+        ]
+    },
+    "GlobalTaunt": {
+        "values": [
+            { "condition": "my_minions(count())>opp_minions(count())", "value": "0.6" }, // Lower priority when ahead on board
+            { "condition": "*", "value": "0.8" } // General value
+        ]
+    },
+    "GlobalOverload": {
+        "values": [
+            { "condition": "opp_hero(count(), hero_class=shaman)>0", "value": "0.2" }, // Lower value against Shaman to counter Overload
+            { "condition": "*", "value": "0.0" }
+        ]
+    },
+	"GlobalFrozen": {
+		"values": [
+			{ "condition": "*", "value": "1" }
+		]
+	},
+    "GlobalWindfury": {
+        "values": [
+        { "condition": "turn<=6", "value": "0.9" }, // Extremely high value early for aggressive pressure
+        { "condition": "turn>=7", "value": "0.7" }, // Slightly lower but still important in later turns
+        ]
+    },	
+	"GlobalHeroHealth": {
+		"values": [
+			{ "condition": "*", "value": "1" }
+		]
+	},	
+	"GlobalMinionHealth": {
+		"values": [
+			{ "condition": "*", "value": "1" }
+		]
+	},	
+	"GlobalLocationHealth": {
+		"values": [
+			{ "condition": "*", "value": "1" }
+		]
+	},
+    "GlobalCharge": {
+        "values": [
+        { "condition": "turn<=6", "value": "1.0" }, // Extremely high value early for setting up lethal
+        { "condition": "turn>=7", "value": "0.7" }, // Lower value in later turns
+        ]
+    },
+  "GlobalMinionIntrinsicValue": {
+    "values": [
+      { "condition": "cost<=2", "value": "1.0" },
+      { "condition": "cost==3", "value": "0.9" },
+      { "condition": "cost==4", "value": "0.7" },
+      { "condition": "cost>=5", "value": "0.5" },
+      { "condition": "my_hand(count, cardid=ICC_038 | GVG_061) > 0", "value": "1.0" } // Higher value for Righteous Protector and Muster for Battle
+    ]
+  },	
+	"GlobalLocationIntrinsicValue": {
+		"values": [
+			{ "condition": "*", "value": "1.0" }
+		]
+	},
+	"GlobalQuestProgressValue": {
+		"values": [
+			{ "condition": "*", "value": "1.0" }
+		]
+	},
+
+    // Opponent-Based Adjustments =======================================================
+    "OppGlobalDivineShield": {
+        "values": [
+            { "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "0.9" }, // Adjusted for Aggro Paladin
+            { "condition": "opp_played(count(), secret=true)>4", "value": "0.8" }, // Slightly reduced against secret-heavy decks
+            { "condition": "*", "value": "0.7" } // General value
+        ]
+    },
+    "OppGlobalDurability": {
+        "values":[
+            { "condition": "opp_hero(count(), hero_class=warlock)>0", "value": "0.7" }, // Adjusted for Warlocks
+            { "condition": "opp_hero(count(), hero_class=warrior)>0", "value": "0.6" }, // Slightly lower against Warriors
+            { "condition": "*", "value": "0.6" } // General value
+        ]
+    },
+    "OppGlobalStealth": {
+        "values": [
+            { "condition": "*", "value": "0.8" }
+        ]
+    },
+    "OppGlobalHeroAttack": {
+        "values": [
+        { "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "0.8" }, // Adjusted for Aggro Paladin
+        { "condition": "*", "value": "0.6" } // General value
+		]
+    },
+	"OppGlobalMinionAttack": {
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=warlock)>0", "value": "0.7" }, // Higher value against Warlocks
+			{ "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "0.6" }, // Adjusted for Aggro Paladin
+			{ "condition": "*", "value": "0.5" } // General value
+		]
+	},
+	"OppGlobalWeaponAttack": {
+		"values": [
+			{ "condition": "*", "value": "0.8" }
+		]
+	},
+	"OppGlobalTaunt": {
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=warlock)>0", "value": "0.6" }, // Adjusted for Warlock
+			{ "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "0.5" }, // Adjusted for Aggro Paladin
+			{ "condition": "*", "value": "0.6" } // General value
+		]
+	},
+	"OppGlobalOverload": {
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=shaman)>0", "value": "0.7" },
+			{ "condition": "*", "value": "0.6" }
+		]
+	},
+	"OppGlobalQuestProgressValue": {
+		"values": [
+			{ "condition": "*", "value": "1" }
+		]
+	},
+	"OppGlobalFrozen": {
+		"values": [
+			{ "condition": "*", "value": "1" }
+		]
+	},	
+  "OppGlobalWindfury": {
+    "values": [
+      { "condition": "opp_hero(count(), hero_class=warrior)>0", "value": "0.6" },
+      { "condition": "*", "value": "0.8" }
+    ]
+  },
+	"OppGlobalHeroHealth": {
+		"values": [
+			{ "condition": "*", "value": "0.8" } // Increased priority on reducing opponent's hero health
+		]
+	},
+	"OppGlobalMinionHealth": {
+		"values": [
+			{ "condition": "*", "value": "0.6" }
+		]
+	},
+	"OppGlobalLocationHealth": {
+		"values": [
+			{ "condition": "*", "value": "0.8" }
+		]
+	},
+	"OppGlobalCharge": {
+    "values": [
+      { "condition": "opp_hero(count(), hero_class=warrior) > 0", "value": "0.7" },
+      { "condition": "*", "value": "0.8" }
+    ]
+	},
+	"OppGlobalMinionIntrinsicValue": {
+		"values": [
+			{ "condition": "opp_minions(count(), demon=true)>2 AND opp_hero(count(), hero_class=warlock)>0", "value": "0.8" }, // Prioritize Warlock demons
+			{ "condition": "opp_minions(count(), beast=true)>2", "value": "0.7" }, // Adjusted for Beast-heavy decks
+			{ "condition": "opp_hero(count(), hero_class=druid)>0", "value": "0.6" },
+			{ "condition": "*", "value": "0.5" } // General value
+		]
+	},
+	"OppGlobalLocationIntrinsicValue": {
+		"values": [
+			{ "condition": "opp_hero(count(), hero_class=mage)>0", "value": "0.6" },
+			{ "condition": "*", "value": "0.5" }
+		]
+	}
+}
+
+// DECKLIST:
+
+//   Deck: Hyper-Aggro Paladin
+//  Class: Paladin
+// Format: Standard
+//  Cycle: Year of the Pegasus
+
+// 1 x [1]Lifesaving Aura
+// 2 x [1]Murmy
+// 2 x [1]Righteous Protector (ICC_038) - 1/1 Taunt Divine Shield
+// 2 x [2]Hi Ho Silverwing
+// 2 x [2]Mining Casualties
+// 1 x [3]Gorgonzormu
+// 1 x [3]Metrognome
+// 2 x [3]Muster for Battle (GVG_061) - Summon three 1/1 Silver Hand Recruits. Equip a 1/4 Weapon.
+// 2 x [3]Showdown!
+// 2 x [3]Trinket Artist
+// 1 x [4]Boogie Down
+// 2 x [4]Crusader Aura
+// 2 x [4]Flash Sale
+// 1 x [4]Tigress Plushy
+// 1 x [5]Toy Captain Tarim
+// 1 x [6]Horn of the Windlord
+// 1 x [7]Amitus, the Peacekeeper
+// 1 x [0]Zilliax Deluxe 3000
+//   1 x [0]Zilliax Deluxe 3000
+//   1 x [3]Pylon Module
+//   1 x [4]Ticking Module
+// 2 x [8]Prismatic Beam
+// 1 x [10]Sea Giant

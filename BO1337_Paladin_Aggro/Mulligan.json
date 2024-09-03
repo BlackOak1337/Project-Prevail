@@ -1,0 +1,186 @@
+// Mulligan.json for Hyper-Aggro Paladin for HearthRanger Vision AI
+
+// JSON
+{
+  "GameCardId":"Mulligan",
+  "ConfigComment":"Hyper-Aggro Paladin v2.2 (03-Aug-24) by BlackOak1337",
+
+  "Mulligan": {
+	"values": [
+	// General Mulligan Rules
+	  { "comment": "Prioritize core early-game minions.",
+		"mulligan": "EX1_008, UNG_960, ICC_038, NEW1_027, LOOT_093",
+		"condition": "nocoin",
+		"value": "hold"
+	  },
+	  { "comment": "**Prioritize Murmy with the coin.** Murmy is a strong 1-mana minion that can generate value. Keeping it with the coin increases the likelihood of a strong early-game presence.",
+		"mulligan": "EX1_008, UNG_960, ICC_038, NEW1_027, LOOT_093, EX1_025",
+		"condition": "coin",
+		"value": "hold"
+	  },
+	  { "comment": "**Prioritize removal against Warrior and Shaman.** These classes often have aggressive early-game strategies. Having removal options can disrupt their plans and maintain board control.",
+		"mulligan": "ETC_318, RLK_921, WW_344, RLK_833",
+		"condition": "opp_hero(count(), hero_class=warrior | shaman) > 0",
+		"value": "hold"
+	  },
+	  { "comment": "Ideal starting hand: Multiple low-cost minions",
+		"mulligan": "EX1_008, UNG_960, ICC_038, NEW1_027, LOOT_093",
+		"condition": "my_hand(count(), cost <= 2) >= 2",
+		"value": "hold"
+	  },
+	  { "comment": "Strong starting hand: Coin and early minion",
+		"mulligan": "EX1_008, UNG_960, ICC_038, NEW1_027, LOOT_093",
+		"condition": "coin AND my_hand(count(), cost <= 2) >= 1",
+		"value": "hold"
+	  },
+	  { "comment": "Hold value cards with proper setup.",
+		"mulligan": "ICC_092, EX1_349, LOOT_149",
+		"condition": "my_hand(count(), cost = 1) > 1",
+		"value": "hold"
+	  },
+
+	// Coin Consideration
+	  { "comment": "Keep weaker early game cards with coin.",
+		"mulligan": "EX1_025, NEW1_027", // Adjust with specific cards
+		"condition": "coin",
+		"value": "hold"
+	  },
+			
+	// Class-Specific Mulligan Rules
+	  { "comment": "**Prioritize removal against Warrior and Shaman.** These classes often have aggressive early-game strategies. Having removal options can disrupt their plans and maintain board control.",
+		"mulligan": "ETC_318, RLK_921, WW_344, RLK_833",
+		"condition": "opp_hero(count(), hero_class=warrior | shaman) > 0",
+		"value": "hold"
+	  },
+	  { "comment": "Hold Rallying Blade against control-oriented classes.",
+		"mulligan": "OG_222",
+		"condition": "opp_hero(count(), hero_class=priest | warlock | mage | rogue) > 0",
+		"value": "hold"
+	  },
+	  { "comment": "Hold removal and disruption against aggressive decks.",
+		"mulligan": "ETC_318, RLK_921, WW_344, RLK_833",
+		"condition": "opp_hero(count(), hero_class=hunter | paladin | shaman) > 0",
+		"value": "hold"
+	  },
+	  { "comment": "Prioritize early aggression against Hunter.",
+		"mulligan": "EX1_008, UNG_960, NEW1_027, LOOT_093",
+		"condition": "opp_hero(count(), hero_class=hunter) > 0",
+		"value": "hold"
+	  },
+	// vs Druid
+	  { "comment": "Prioritize early game pressure against Druid.",
+		"mulligan": "EX1_008, UNG_960, NEW1_027, LOOT_093",
+		"condition": "opp_hero(count(), hero_class=druid) > 0",
+		"value": "hold"
+	  },
+	  { "comment": "Hold removal and disruption against midrange Druid.",
+		"mulligan": "ETC_318, RLK_921, WW_344, RLK_833",
+		"condition": "opp_hero(count(), hero_class=druid) > 0",
+		"value": "hold"
+	  },
+	// vs Warrior
+      { "comment": "Prioritize early aggression against Warrior.",
+		"mulligan": "EX1_008, UNG_960, NEW1_027, LOOT_093",
+		"condition": "opp_hero(count(), hero_class=warrior) > 0",
+		"value": "hold"
+	  },
+	  { "comment": "Consider keeping Lifesaving Aura against Warrior.",
+		"mulligan": "EX1_025",
+		"condition": "opp_hero(count(), hero_class=warrior) > 0 AND coin",
+		"value": "hold"
+	  },
+	// vs Shaman
+	  { "comment": "Hold removal against Shaman.",
+		"mulligan": "ETC_318, RLK_921, WW_344, RLK_833",
+		"condition": "opp_hero(count(), hero_class=shaman) > 0",
+		"value": "hold"
+	  },
+	// vs Rogue
+	  { "comment": "Prioritize early game pressure against Rogue.",
+		"mulligan": "EX1_008, UNG_960, NEW1_027, LOOT_093",
+		"condition": "opp_hero(count(), hero_class=rogue) > 0",
+		"value": "hold"
+	  },
+	  { "comment": "Consider keeping Lifesaving Aura against Rogue.",
+		"mulligan": "EX1_025",
+		"condition": "opp_hero(count(), hero_class=rogue) > 0 AND coin",
+		"value": "hold"
+	  },
+	// vs Priest
+	  { "comment": "Hold removal and disruption against Priest.",
+		"mulligan": "ETC_318, RLK_921, WW_344, RLK_833",
+		"condition": "opp_hero(count(), hero_class=priest) > 0",
+		"value": "hold"
+	  },
+	  { "comment": "Consider keeping Lifesaving Aura against Priest.",
+		"mulligan": "EX1_025",
+		"condition": "opp_hero(count(), hero_class=priest) > 0 AND coin",
+		"value": "hold"
+	  },
+	// vs Mage
+	  { "comment": "Prioritize early game pressure against Mage.",
+		"mulligan": "EX1_008, UNG_960, NEW1_027, LOOT_093",
+		"condition": "opp_hero(count(), hero_class=mage) > 0",
+		"value": "hold"
+	  },
+	  { "comment": "Consider keeping Lifesaving Aura against Mage.",
+		"mulligan": "EX1_025",
+		"condition": "opp_hero(count(), hero_class=mage) > 0 AND coin",
+		"value": "hold"
+	  },
+	// vs Warlock
+	  { "comment": "Hold removal and disruption against Warlock.",
+		"mulligan": "ETC_318, RLK_921, WW_344, RLK_833",
+		"condition": "opp_hero(count(), hero_class=warlock) > 0",
+		"value": "hold"
+	  },
+	  { "comment": "Consider keeping Lifesaving Aura against Warlock.",
+		"mulligan": "EX1_025",
+		"condition": "opp_hero(count(), hero_class=warlock) > 0 AND coin",
+		"value": "hold"
+	  },
+			
+	// Discard
+	  { "comment": "Discard all other cards.",
+		"mulligan": "*",
+		"condition": "*",
+		"value": "discard"
+	  }
+	]
+  }
+}
+
+
+
+// DECKLIST:
+
+//   Deck: Hyper-Aggro Paladin
+//  Class: Paladin
+// Format: Standard
+//  Cycle: Year of the Pegasus
+
+// 1 x [1]Lifesaving Aura
+// 2 x [1]Murmy
+// 2 x [1]Righteous Protector (ICC_038) - 1/1 Taunt Divine Shield
+// 2 x [2]Hi Ho Silverwing
+// 2 x [2]Mining Casualties
+// 1 x [3]Gorgonzormu
+// 1 x [3]Metrognome
+// 2 x [3]Muster for Battle (GVG_061) - Summon three 1/1 Silver Hand Recruits. Equip a 1/4 Weapon.
+// 2 x [3]Showdown!
+// 2 x [3]Trinket Artist
+// 1 x [4]Boogie Down
+// 2 x [4]Crusader Aura
+// 2 x [4]Flash Sale
+// 1 x [4]Tigress Plushy
+// 1 x [5]Toy Captain Tarim
+// 1 x [6]Horn of the Windlord
+// 1 x [7]Amitus, the Peacekeeper
+// 1 x [0]Zilliax Deluxe 3000
+//   1 x [0]Zilliax Deluxe 3000
+//   1 x [3]Pylon Module
+//   1 x [4]Ticking Module
+// 2 x [8]Prismatic Beam
+// 1 x [10]Sea Giant
+
+

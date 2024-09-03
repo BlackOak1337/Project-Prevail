@@ -1,0 +1,80 @@
+### Aggro Paladin
+AAECAZ8FBMHEBcekBrrOBubmBg3JoASi1ASU9QWV9QWFjgaZjgb1lQbOnAbOngbQngbUngaSoAbeugYAAQPzswbHpAb2swbHpAbo3gbHpAYAAA==
+https://www.hearthpwn.com/deckbuilder/standard/paladin#475052:2:1:0;1024960:2:1:0;1645866:1:1:0;1645918:2:1:0;1645931:2:1:0;1645932:2:1:0;1645941:2:1:0;1884978:2:1:0;2078050:2:1:0;2078054:2:1:0;2106222:2:1:0;2106223:2:1:0;2277017:2:1:0;2363149:1:1:0;2392019:2:1:0;2392120:1:1:0;2599359:1:1:0;2392270:1:1:2363149;2392274:1:1:2363149
+
+//   Deck: Aggro Paladin 3
+//  Class: Paladin
+//   Meta: Aggro Paladin
+// Format: Standard
+//
+// 2x (1) Murmy
+// 2x (1) Righteous Protector
+// 2x (2) Cult Neophyte
+// 2x (2) Gold Panner
+// 2x (2) Grimestreet Outfitter
+// 2x (2) Mining Casualties
+// 1x (3) Gorgonzormu
+// 2x (3) Muster for Battle
+// 2x (3) Showdown!
+// 1x (4) Boogie Down
+// 2x (4) Crusader Aura
+// 2x (4) Flash Sale
+// 2x (4) Royal Librarian
+// 1x (5) Leeroy Jenkins
+// 1x (0) Zilliax Deluxe 3000
+//   1x (0) Zilliax Deluxe 3000
+//   1x (3) Pylon Module
+//   1x (4) Ticking Module
+// 2x (8) Prismatic Beam
+// 2x (10) Sea Giant
+
+
+Mulligan Strategy for Aggro Paladin
+The goal of your mulligan is to establish an early board presence and curve out effectively. You want to prioritize low-cost minions that can develop pressure and survive removal.
+
+General Mulligan Guidelines:
+Keep: Murmy, Righteous Protector, Cult Neophyte, Gold Panner, Grimestreet Outfitter, Mining Casualties. These are your core early game minions.
+Consider keeping: Muster for Battle if you have other low-cost minions to follow up.
+Mulligan: High-cost cards like Sea Giant, Prismatic Beam, and Leeroy Jenkins unless you have a strong early game.
+Specific Mulligan Adjustments Based on Opponent:
+Against Aggro Decks: Prioritize early game minions and removal like Muster for Battle. Aim to flood the board quickly and establish control.
+Against Control Decks: Keep a balance of early game minions and potential threats like Gorgonzormu or Showdown!. You want to pressure them early while also having options for later in the game.
+Additional Tips:
+Coin: If you win the coin, you can be more aggressive in your mulligan, keeping slightly weaker early game cards.
+Adjustments: Mulligan strategy can vary depending on the meta and your personal preferences. Experiment with different approaches to find what works best for you.
+
+
+
+
+### Aggro Paladin
+AAECAZ8FBMHEBcekBrrOBubmBg3JoASi1ASU9QWV9QWFjgaZjgb1lQbOnAbOngbQngbUngaSoAbeugYAAQPzswbHpAb2swbHpAbo3gbHpAYAAA==
+
+### AggroPaladin28aug
+# Class: Paladin
+# Format: Standard
+# Year of the Pegasus
+#
+# 2x (1) Murmy
+# 2x (1) Righteous Protector
+# 2x (2) Cult Neophyte
+# 2x (2) Gold Panner
+# 2x (2) Hi Ho Silverwing
+# 2x (2) Mining Casualties
+# 1x (3) Gorgonzormu
+# 2x (3) Muster for Battle
+# 2x (3) Showdown!
+# 2x (3) Warhorse Trainer
+# 1x (4) Boogie Down
+# 2x (4) Crusader Aura
+# 2x (4) Flash Sale
+# 1x (5) Leeroy Jenkins
+# 1x (0) Zilliax Deluxe 3000
+#   1x (0) Zilliax Deluxe 3000
+#   1x (3) Pylon Module
+#   1x (4) Ticking Module
+# 2x (8) Prismatic Beam
+# 2x (10) Sea Giant
+# 
+AAECAZ3DAwTBxAXHpAa6zgbm5gYNx6AEyaAEotQElPUFlfUFmY4GvI8G9ZUGzpwG0J4G1J4GkqAG3roGAAED87MGx6QG9rMGx6QG6N4Gx6QGAAA=
+# 
+# To use this deck, copy it to your clipboard and create a new deck in Hearthstone

@@ -1,0 +1,81 @@
+https://www.hearthstonetopdecks.com
+https://www.hearthpwn.com/decks
+https://hearthstone-decks.net
+https://metastats.net/hearthstone/deck/
+https://hsreplay.net/meta/
+https://www.hsguru.com
+
+
+
+### Flood Paladin - August Start
+# Class: Paladin
+# Format: Standard
+# Year of the Phoenix
+#
+# 1x (0) Zilliax Deluxe 3000
+# 2x (1) Miracle Salesman
+# 2x (1) Murmy
+# 2x (1) Righteous Protector
+# 2x (2) Gold Panner
+# 2x (2) Hi Ho Silverwing
+# 2x (2) Mining Casualties
+# 1x (3) Gorgonzormu
+# 2x (3) Muster for Battle
+# 2x (3) Showdown!
+# 1x (4) Boogie Down
+# 2x (4) Crusader Aura
+# 2x (4) Flash Sale
+# 1x (4) Pozzik, Audio Engineer
+# 1x (5) Toy Captain Tarim
+# 1x (7) Amitus, the Peacekeeper
+# 2x (8) Prismatic Beam
+# 2x (10) Sea Giant
+#
+AAECAZ8FBsekBrrOBsHEBfTIBdOpBo3+BQyFjgbUngbJoATOnAa8jwaSoAaU9QX1lQaV9QXeugaZjgai1AQA
+#
+# To use this deck, copy it to your clipboard and create a new deck in Hearthstone
+
+Mulligan:
+Miracle Salesman
+Murmy
+Righteous Protector
+Gold Panner
+Hi Ho Silverwing
+Gorgonzormu
+
+
+
+
+
+
+
+
+
+###MetaStats - Flood Paladin #55709                                
+AAECAZ8FBsHEBfTIBY3+BcekBtOpBrrOBgzJoASi1ASU9QWV9QWFjgaZjga8jwb1lQbOnAbUngaSoAbeugYA
+
+### Aggro Paladin
+AAECAZ8FCMHEBc6cBsekBtGpBt66BrrOBubmBsn0BgvJoASi1ASU9QWV9QWFjgaZjga8jwb1lQbUngaSoAamswYAAQPzswbHpAb2swbHpAbo3gbHpAYAAA==
+
+
+PALADIN
+0ZILLIAX DELUXE 3000
+1MIRACLE SALESMAN2
+1MURMY2
+1RIGHTEOUS PROTECTOR2
+1SOUTHSEA DECKHAND1
+2GOLD PANNER1
+2HI HO SILVERWING2
+2MINING CASUALTIES2
+3GORGONZORMU
+3MUSTER FOR BATTLE2
+3SHOWDOWN!2
+3TRINKET ARTIST2
+4BOOGIE DOWN1
+4CRUSADER AURA2
+4FLASH SALE1
+4TIGRESS PLUSHY1
+5LEEROY JENKINS
+8PRISMATIC BEAM2
+10SEA GIANT2
+

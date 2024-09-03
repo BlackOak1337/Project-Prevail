@@ -1,0 +1,69 @@
+// using buil-it only functions and conditions, provide the best options and make sure the best possible selection based on board state and opponent
+// JAM_014.json custom card for Hyper-Aggro Bonk Shaman for HearthRanger Vision AI
+
+// JSON
+{
+  "GameCardId": "JAM_014",
+  "ConfigComment": "Backstage Bouncer Hyper-Aggro Bonk Shaman v1.00 (03-Sep-24) by BlackOak1337",
+
+  "BeforeBattlecryTargetBonus": {
+    "values": [
+	// Taunt
+      { "comment": "Make sure trget has lower stats and no taunt.",
+        "condition": "my_minions(count(),taunt=false, health < 5) > 0 AND my_minions(count(), taunt=false, attack <4) > 0",
+        "value": "100"
+      },
+      { "comment": "Make sure trget has lower health and no taunt.",
+        "condition": "my_minions(count(),taunt=false, health < 5) > 0",
+        "value": "70"
+      },
+      { "comment": "Make sure trget has lower health and no taunt.",
+        "condition": "my_minions(count(),taunt=false, attack < 4) > 0",
+        "value": "60"
+      },
+      { "comment": "Make sure target has no taunt.",
+        "condition": "my_minions(count(),taunt=false) > 0",
+        "value": "50"
+      },
+	// No Taunt
+      { "comment": "Make sure target has lower stats and taunt.",
+        "condition": "my_minions(count(),taunt=true, health < 5) > 0 AND my_minions(count(), taunt=false, attack <4) > 0",
+        "value": "4"
+      },
+      { "comment": "Make sure target has lower health taunt.",
+        "condition": "my_minions(count(),taunt=true, health < 5) > 0",
+        "value": "3"
+      },
+      { "comment": "Make sure target has lower health taunt.",
+        "condition": "my_minions(count(),taunt=true, attack < 4) > 0",
+        "value": "2"
+      },
+      { "comment": "Target has taunt!",
+        "condition": "my_minions(count(),taunt=true) > 0",
+        "value": "1"
+      },
+	// Default
+      { "comment": "Default",
+        "condition": "*",
+        "value": "1"
+      }
+    ]
+  }
+}
+
+// Card Functions:
+// InHandBonus
+// OnBoardBonus
+// BeforePlayCardBonus
+// BeforeBattlecryTargetBonus
+// BeforeLocationcryTargetBonus
+// BeforeAbilityTargetBonus
+// BeforeUseHeroPowerBonus
+// BeforePhysicalAttackBonus
+// BeforeOverkilledBonus
+// BeforeHonorablekilledBonus
+// BeforeUpgradeCardBonus
+// BeforeEndTurnBonus
+// OnDiscoverCardBonus
+// OnAdaptCardBonus
+// OnChooseOneCardBonus
