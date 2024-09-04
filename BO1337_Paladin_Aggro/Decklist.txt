@@ -1,75 +1,86 @@
-### Aggro Paladin
-# Class: Paladin
+#   Deck: Hyper-Aggro-Paladin
+#  Class: Paladin
 # Format: Standard
-# Year of the Mammoth
-#
-# 2x (1) Acherus Veteran
-# 2x (1) Argent Squire
-# 2x (1) Lost in the Jungle
-# 1x (1) Patches the Pirate
+#  Cycle: Year of the Pegasus
+#   Dust: 8820
+
+# 2x (1) Murmy
 # 2x (1) Righteous Protector
-# 2x (1) Southsea Deckhand
-# 2x (2) Dire Wolf Alpha
-# 2x (2) Knife Juggler
-# 2x (3) Divine Favor
-# 2x (3) Rallying Blade
-# 2x (3) Unidentified Maul
-# 2x (4) Blessing of Kings
-# 2x (4) Call to Arms
-# 1x (4) Consecration
-# 1x (5) Leeroy Jenkins
-# 1x (6) Sunkeeper Tarim
-# 2x (7) Corridor Creeper
+# 2x (2) Gold Panner
+# 2x (2) Hi Ho Silverwing
+# 2x (2) Mining Casualties
+# 1x (3) Gorgonzormu
+# 2x (3) Muster for Battle
+# 2x (3) Showdown!
+# 2x (3) Trinket Artist
+# 1x (4) Boogie Down
+# 2x (4) Crusader Aura
+# 2x (4) Flash Sale
+# 1x (4) Tigress Plushy
+# 1x (5) Toy Captain Tarim
+# 1x (6) Horn of the Windlord
+# 1x (7) Amitus, the Peacekeeper
+# 1x (0) Zilliax Deluxe 3000
+#   1x (0) Zilliax Deluxe 3000
+#   1x (3) Pylon Module
+#   1x (4) Ticking Module
+# 2x (8) Prismatic Beam
+# 1x (10) Sea Giant
 # 
-AAECAaToAgTcA68EkbwCucECDacF1AX1Ba8H2QexCNmuArjHAuPLApXOAvjSAvvTAtblAgA=
+AAECAZ3DAwii1ATBxAX26AWN/gXHpAbRqQbTqQa6zgYLyaAElPUFlfUFmY4GvI8G9ZUGzpwG1J4GkqAGprMG3roGAAED87MGx6QG9rMGx6QG6N4Gx6QGAAA=
+# 
+# To use this deck, copy it to your clipboard and create a new deck in Hearthstone
 
+To play your Hyper-Aggro Paladin deck effectively, you'll want to maximize your strengths in each phase of the game — early, mid, and late — to apply constant pressure and control the board. Here's a detailed breakdown of the best playstyle for each phase:
+Early Game (Turns 1-3)
 
+Objective: Establish board presence and maintain tempo.
 
-Acherus Veteran		(ICC_092)
-Argent Squire		(EX1_008)
-Lost in the Jungle	(UNG_960)
-Patches the Pirate	(CFM_637)
-Righteous Protector (ICC_038)
-Southsea Deckhand	(NEW1_027)
-Dire Wolf Alpha		(EX1_162)
-Knife Juggler 		(NEW1_019)
-Divine Favor 		(EX1_349)
-Rallying Blade		(OG_222)
-Unidentified Maul 	(LOOT_286) [Recruits: LOOT_286t1, Taunt: LOOT_286t2, Attack: LOOT_286t3, Divine Shield: LOOT_286t4]
-Blessing of Kings	(CS2_092)
-Call to Arms 		(LOOT_093)
-Consecration		(CS2_093)
-Leeroy Jenkins		(EX1_116)
-Sunkeeper Tarim 	(UNG_015)
-Corridor Creeper	(LOOT_149)
+    Mulligan Priority: Focus on low-cost, high-value minions like Murmy, Righteous Protector, and Gold Panner. You want to fill the board quickly to overwhelm your opponent.
+    Key Plays:
+        Turn 1: Play Murmy or Righteous Protector. These cards are sticky due to their Reborn or Divine Shield effects, helping you maintain early board presence.
+        Turn 2: Drop Gold Panner to start drawing extra cards or play Hi Ho Silverwing for additional pressure and card cycling.
+        Turn 3: Consider Muster for Battle to summon multiple minions and gain a weapon, which can help control the board or push face damage.
+    Strategy:
+        Go wide on the board early with multiple low-cost minions.
+        Use Divine Shield minions to protect against early removal spells.
+        Apply pressure directly to the opponent's face or use your minions to trade efficiently, maintaining control of the board.
 
-// DECKLIST:
+Mid Game (Turns 4-7)
 
-//   Deck: Hyper-Aggro Paladin
-//  Class: Paladin
-// Format: Standard
-//  Cycle: Year of the Pegasus
+Objective: Sustain aggression and reinforce your board presence.
 
-// 1 x [1]Lifesaving Aura
-// 2 x [1]Murmy
-// 2 x [1]Righteous Protector (ICC_038) - 1/1 Taunt Divine Shield
-// 2 x [2]Hi Ho Silverwing
-// 2 x [2]Mining Casualties
-// 1 x [3]Gorgonzormu
-// 1 x [3]Metrognome
-// 2 x [3]Muster for Battle (GVG_061) - Summon three 1/1 Silver Hand Recruits. Equip a 1/4 Weapon.
-// 2 x [3]Showdown!
-// 2 x [3]Trinket Artist
-// 1 x [4]Boogie Down
-// 2 x [4]Crusader Aura
-// 2 x [4]Flash Sale
-// 1 x [4]Tigress Plushy
-// 1 x [5]Toy Captain Tarim
-// 1 x [6]Horn of the Windlord
-// 1 x [7]Amitus, the Peacekeeper
-// 1 x [0]Zilliax Deluxe 3000
-//   1 x [0]Zilliax Deluxe 3000
-//   1 x [3]Pylon Module
-//   1 x [4]Ticking Module
-// 2 x [8]Prismatic Beam
-// 1 x [10]Sea Giant
+    Key Plays:
+        Turn 4-5: Use Crusader Aura to buff your minions when attacking, increasing their survivability and damage output. Flash Sale can provide additional minions and a stat buff to existing ones.
+        Turn 4: Play Boogie Down to summon more 1-cost minions from your deck, further establishing a wide board presence.
+        Turn 5: Use Toy Captain Tarim to equalize and neutralize large threats by setting the stats of a problematic enemy minion to match Tarim’s 3/7 body.
+        Turn 6: Horn of the Windlord can help deal with large enemy minions or push substantial face damage.
+        Turn 7: Amitus, the Peacekeeper can protect your board from AoE effects or enable your minions to trade more favorably.
+    Strategy:
+        Maintain your board presence by playing additional minions and using spells or minions to buff them.
+        Utilize Showdown! to summon multiple minions with Rush, allowing you to remove threats and keep up pressure.
+        Look for opportunities to use your minions efficiently, either pushing face damage or trading against your opponent’s threats.
+        Keep in mind that you may need to anticipate and play around your opponent’s potential AoE spells.
+
+Late Game (Turns 8+)
+
+Objective: Close out the game with your remaining threats and finishers.
+
+    Key Plays:
+        Turn 8: Prismatic Beam can clear a wide enemy board if necessary, but ideally, you want to avoid needing it by keeping pressure up throughout the game.
+        Turn 10: Sea Giant is a great finisher if there are many minions on the board, either your own or the opponent's.
+        Late Turns: Use Horn of the Windlord strategically for its Windfury effect to deal significant face damage over two attacks, potentially closing out the game.
+        Zilliax Deluxe 3000 and its modules (like Pylon Module and Ticking Module) can provide you with healing, survivability, and additional board presence if the game goes longer than expected.
+    Strategy:
+        Leverage any remaining buffs and your powerful finishers to close out the game.
+        Use Sea Giant to take advantage of a cluttered board and overwhelm your opponent with a large minion.
+        Zilliax Deluxe 3000 should be used to maintain board presence and provide some last-minute healing or protection.
+
+General Tips
+
+    Maintain Board Presence: Always aim to have a wide board, as your deck relies on overwhelming the opponent with minions.
+    Tempo and Aggression: Focus on tempo by playing multiple minions or minions with impactful abilities each turn.
+    Play Around AoE: Be aware of common AoE spells from your opponent's class and try not to overcommit if you suspect a board wipe.
+    Push Face Damage: When you have established enough board control, prioritize pushing face damage over trading, especially if you can set up a 2-3 turn lethal.
+
+By sticking to these strategies, you can maximize the effectiveness of your Hyper-Aggro Paladin deck and maintain pressure throughout the game, increasing your chances of securing a win.

@@ -1,0 +1,17 @@
+{
+	"GameCardId":"ICC_038",
+	"ConfigComment":"Righteous Protector",
+
+	"InHandPlayPriority":
+	{
+		"values": 
+		[
+			{
+				"comment":"gain value on turn one.",
+				"condition": "my_player(count(), max_mana <= 2) > 0",
+				"value": "900",
+			},	
+		]
+	},
+
+}

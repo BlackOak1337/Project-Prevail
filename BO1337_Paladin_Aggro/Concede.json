@@ -7,14 +7,14 @@
 
   "ExtraConcdeSettings": {
     "values": [
-      {
-        "comment": "Concede if opponent has lethal",
-        "condition": "opp_hero(count(), attack) >= my_hero(count(), health)",
-        "value": "1"
-      },
+//      {
+//        "comment": "Concede if opponent has lethal",
+//        "condition": "opp_hero(count(), attack) >= my_hero(count(), health)",
+//        "value": "1"
+//      },
       {
         "comment": "Concede if AI has no chance of winning",
-        "condition": "my_deck(count()) == 0 AND opp_hero(count(), health) > my_hero(count(), health)",
+        "condition": "my_deck(count()) == 0 AND (opp_hero(count(), health) - my_hero(count(), health)) > 20",
         "value": "1"
       },
       {

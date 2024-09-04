@@ -1,0 +1,16 @@
+{
+	"GameCardId":"WW_344",
+	"ConfigComment": "Hi Ho Silverwing",
+
+	"BeforePlayCardBonus":
+	{
+		"values":
+		[
+			{
+				"comment":"Prioritize playing this.",
+				"condition": "*",
+				"value":"400",
+			},
+		],
+	},
+}
