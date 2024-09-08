@@ -1,0 +1,80 @@
+### Insanity_Warlock
+# Class: Warlock
+# Format: Standard
+# Year of the Pegasus
+#
+# 2x (1) Felstring Harp ETC_084
+# 2x (1) Fracking WW_092
+# 2x (1) Glacial Shard
+# 2x (1) Tidepool Pupil
+# 2x (1) Void Virtuoso ETC_081
+# 2x (1) Voidwalker CS2_065
+# 2x (2) Baritone Imp ETC_068
+# 2x (2) Crescendo ETC_069
+# 2x (2) Eat! The! Imp! VAC_939
+# 2x (2) Elementium Geode
+# 2x (2) Thornveil Tentacle TTN_456
+# 2x (3) Encroaching Insanity YOG_301
+# 1x (3) Photographer Fizzle
+# 2x (3) Trogg Gemtosser
+# 2x (4) Crazed Conductor
+# 1x (4) Pop'gar the Putrid
+# 
+AAECAaPDAwKs0QWAngYO+dMEx8IFyMIF3cIF5sUF9MYF9fgFiZkGhJ4G054GoqAGo6AGwr4GlMoGAAA=
+# 
+# To use this deck, copy it to your clipboard and create a new deck in Hearthstone
+
+=====================================================================================
+Deck Code:
+AAECAf0GBKzRBYCeBqaoBpWzBg3HwgXIwgXdwgXmxQX0xgX1+AWFjgaJmQaEngaioAajoAb3owbCvgYAAA==
+Mana	Card Name	Qty
+1	Felstring Harp	2
+1	Fracking	2
+1	Miracle Salesman	2
+1	Tidepool Pupil	2
+1	Void Virtuoso	2
+2	Baritone Imp	2
+2	Crescendo	2
+2	Elementium Geode	2
+2	Thornveil Tentacle	2
+3	Domino Effect	1
+3	Encroaching Insanity	2
+3	Furnace Fuel	2
+3	Photographer Fizzle	1
+3	Trogg Gemtosser	2
+3	Trolley Problem	1
+4	Crazed Conductor	2
+4	Pop'gar the Putrid	1
+
+Always mulligan: Salesman, Baritome imp, Elemental Geode
+
+Keep Crazed conductor if you have another fatigue card (imp, encroaching insanity) in hand
+
+Vs Aggro: Thornveil tentacle, Domino effect
+
+Vs control: Enroaching insanity
+
+The goal is to use your minions to out tempo opponents, then win the game through a high powered crescendo/enroaching insanity. Especially against slower decks, prioritize hitting face
+
+=========================================================================
+###MetaStats - Insanity Warlock #26633                                
+AAECAf0GBvnGBfGABoCeBpWzBpTKBpXKBgzHwgXIwgXdwgXmxQX0xgX1+AWFjgaJmQaEngaioAajoAbCvgYA
+
+[1]Felstring Harp x2
+[1]Fracking x2
+[1]Miracle Salesman x2
+[1]Party Fiend x1
+[1]Tidepool Pupil x2
+[1]Void Virtuoso x2
+[2]Baritone Imp x2
+[2]Crescendo x2
+[2]Eat! The! Imp! x1
+[2]Elementium Geode x2
+[2]Thornveil Tentacle x2
+[3]Domino Effect x1
+[3]Encroaching Insanity x2
+[3]Reverberations x1
+[3]Trogg Gemtosser x2
+[4]Crazed Conductor x2
+[4]Pop'gar the Putrid x1
+[5]Symphony of Sins x1

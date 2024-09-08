@@ -1,0 +1,28 @@
+// GAME_005.json for The Coin for Hearthranger Vision A.I.
+
+// JSON
+{
+  "GameCardId":"GAME_005",
+  "ConfigComment":"The Coin (GAME_005) - Hyper-Aggro Painlock (Pain Warlock) v1.10 (18-Aug-24) by BlackOak1337",
+
+  "BeforeEndTurnBonus":
+  {
+      "values":
+    [
+//      { "comment":"A coin in a full hand is almost worthless.",
+//        "condition": "my_hand(count()) > 9",
+//        "value":"-100"
+//      },
+      {
+        "comment":"Massive boost for turn 1 and 2.",
+        "condition": "turn <= 2",
+        "value": "100"
+      },
+      {
+        "comment":"Reduced value after turn 2.",
+        "condition": "turn > 2",
+        "value": "1.00"
+      }
+    ],
+  },
+}

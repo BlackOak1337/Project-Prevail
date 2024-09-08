@@ -1,0 +1,22 @@
+// concede.json
+
+// JSON
+{
+  "GameCardId":"Concede",
+  "ConfigComment":"Deck: Painlock v1.0 (18-Aug-24) by BlackOak1337",
+
+  "ExtraConcdeSettings":
+  {
+	"values":
+    [
+	  { "comment":"Concede when I have no cards left.",
+        "condition":"my_deck(count()) < 1 AND my_hand(count()) < 1",
+        "value":"20"
+	  },
+	  { "comment":"Do not concede.",
+	    "condition":"*",
+	    "value":"-1000"
+  	  }
+    ]
+  }
+}

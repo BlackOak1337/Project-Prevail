@@ -1,0 +1,75 @@
+{
+  "GameCardId": "Mulligan",
+  "ConfigComment": "Deck: Hyper-Aggro Painlock v2.2 (25-Aug-24)",
+
+  "Mulligan": {
+    "values": [
+      // Core Mulligan Rules
+      { 
+        "comment": "Prioritize the perfect starting hand for aggressive play",
+        "mulligan": "EX1_319+VAC_940+BOT_222+WC_022", // Flame Imp, Party Fiend, Spirit Bomb, Fracking
+        "condition": "*",
+        "value": "hold"
+      },
+      { 
+        "comment": "Strong early minions without coin",
+        "mulligan": "EX1_319, VAC_940, SCH_713, WC_022", // Flame Imp, Party Fiend, Cult Neophyte, Fracking
+        "condition": "nocoin",
+        "value": "hold"
+      },
+      { 
+        "comment": "Strong early minions and removal with coin",
+        "mulligan": "EX1_319, VAC_940, SCH_713, BOT_222, WC_022", // Flame Imp, Party Fiend, Cult Neophyte, Spirit Bomb, Fracking
+        "condition": "coin",
+        "value": "hold"
+      },
+	  
+      { 
+        "comment": "Early removal if curve is good (no coin)",
+        "mulligan": "BOT_222", // Spirit Bomb
+        "condition": "nocoin AND my_hand(count(), cost<=2)>=2 AND my_hand(avg(cost)) < 2",
+        "value": "hold"
+      },
+      { 
+        "comment": "Early removal if curve is good (with coin)",
+        "mulligan": "BOT_222", // Spirit Bomb
+        "condition": "coin AND my_hand(count(), cost<=3)>=2 AND my_hand(avg(cost)) < 3",
+        "value": "hold"
+      },
+	  
+      // Matchup Rules
+      { 
+        "comment": "Against Aggressive Matchups (focus on early control)",
+        "mulligan": "BOT_222+EX1_319+VAC_940", // Spirit Bomb, Flame Imp, Party Fiend
+        "condition": "opp_hero(count(), hero_class=Hunter || DemonHunter || Paladin || Shaman || Rogue) > 0",
+        "value": "hold"
+      },
+      { 
+        "comment": "Against Control Matchups (ensure a strong start)",
+        "mulligan": "EX1_319+VAC_940+WC_022+SCH_713", // Flame Imp, Party Fiend, Fracking, Cult Neophyte
+        "condition": "opp_hero(count(), hero_class=Priest || Warlock || Mage || Druid) > 0",
+        "value": "hold"
+      },
+      { 
+        "comment": "Against Midrange Matchups (maintain early pressure)",
+        "mulligan": "EX1_319, VAC_940, SCH_713, WC_022", // Flame Imp, Party Fiend, Cult Neophyte, Fracking
+        "condition": "opp_hero(count(), hero_class=Warrior || Paladin) > 0",
+        "value": "hold"
+      },
+      { 
+        "comment": "Against Death Knight (focus on early aggression)",
+        "mulligan": "EX1_319, VAC_940, BOT_222, WC_022", // Flame Imp, Party Fiend, Spirit Bomb, Fracking
+        "condition": "opp_hero(count(), hero_class=Deathknight) > 0",
+        "value": "hold"
+      },
+	   
+      // Discard
+      { 
+        "comment": "Discard the rest of the cards",
+        "mulligan": "*",
+        "condition": "*",
+        "value": "discard"
+      }
+    ],
+  }
+}

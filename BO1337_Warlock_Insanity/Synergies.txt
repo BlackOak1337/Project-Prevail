@@ -1,0 +1,5 @@
+  "-----BARREL OF SLUDGE-----": "",
+  "DEEP_031 Chaos Creation": ["WW_041 Disposal Assistant", "WW_043 Sludge on Wheels"],
+  "WW_042 Waste Remover": ["WW_041 Disposal Assistant", "WW_043 Sludge on Wheels"],
+  "WW_092 Fracking": ["WW_041 Disposal Assistant", "WW_043 Sludge on Wheels"],
+  "WW_436 Trolley Problem": ["WW_043 Sludge on Wheels", "WW_441 Furnace Fuel", "WW_091 Pop'gar the Putrid"],

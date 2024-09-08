@@ -1,0 +1,239 @@
+﻿
+{
+  "GameCardId":"GlobalValues",
+  "ConfigComment":"Insanity Warlock v1.3 (18-Aug-24) by BlackOak1337",
+
+  // Value Generation Focus
+  "FirstTurnValueWeight": {
+    "values": [
+      { "condition": "turn()<5", "value": "2.00" }, // Further increase emphasis on early aggression
+      { "condition": "turn()>4 AND turn()<7", "value": "1.3" }, // Keep strong emphasis during Aggro phase
+      { "condition": "turn()>6 AND turn()<10", "value": "0.8" }, // Moderate aggression during Tempo phase
+      { "condition": "turn()>9", "value": "0.5" } // Reduced emphasis during control phase
+    ]
+  },
+  "SecondTurnValueWeight": {
+    "values": [
+      { "condition": "turn()<5", "value": "0.00" }, // Slightly increased importance of second turn in hyper-aggro
+      { "condition": "turn()>4 AND turn()<7", "value": "0.7" }, // Emphasize second turn during Aggro phase
+      { "condition": "turn()>6 AND turn()<10", "value": "1.2" }, // Increase value during Tempo phase
+      { "condition": "turn()>9", "value": "1.5" } // High importance in control and late-game plays
+    ]
+  },
+
+  // Global Values
+  "GlobalArmor": {
+    "values": [
+      { "condition":"*", "value":"1.1" }, // Reduced slightly to reflect less concern about armor
+      { "condition":"opp_hero(count(),hero_class=Warrior | Paladin)>0", "value":"1.3" } // Adjusted against armor-heavy classes
+    ]
+  },
+  "GlobalCharge": {
+    "values": [
+      { "condition":"turn()<5", "value":"3.5" }, // Maximum value for Charge in hyper-aggro phase
+      { "condition":"*", "value":"2.5" } // Increased base value for Charge outside hyper-aggro
+    ]
+  },
+  "GlobalDivineShield": {
+    "values": [
+      { "condition":"turn()>6", "value":"1.7" }, // Slightly decreased value in later game
+      { "condition":"*", "value":"1.4" }, // Slight increase for early game value
+      { "condition":"opp_hero(count(),hero_class=Paladin)>0", "value":"2.1" } // Increased emphasis against Paladin
+    ]
+  },
+  "GlobalDurability": {
+    "values": [
+      { "condition":"*", "value":"1.2" }, // Balanced value for weapon durability
+      { "condition":"opp_hero(count(),hero_class=Warrior | Rogue | DemonHunter)>0", "value":"1.4" } // Adjusted for weapon-centric classes
+    ]
+  },
+  "GlobalFrozen": {
+    "values": [
+      { "condition":"*", "value":"1.5" }, // Reduced slightly for overall value
+      { "condition":"opp_hero(count(),hero_class=Mage)>0", "value":"1.8" } // Adjusted for Mage
+    ]
+  },
+  "GlobalHeroAttack": {
+    "values": [
+      { "condition": "turn() <= 5", "value": "4.5" }, // Adjusted to slightly lower value during hyper-aggro
+      { "condition": "*", "value": "3.0" } // Reduced to match overall aggressive strategy
+    ]
+  },
+  "GlobalHeroHealth": {
+    "values": [
+      { "condition":"*", "value":"1.6" }, // Reduced emphasis on hero health
+      { "condition":"opp_hero(count(),hero_class=Hunter | Mage | DemonHunter)>0", "value":"1.8" } // Adjusted for burst classes
+    ]
+  },
+  "GlobalLocationHealth": {
+    "values": [
+      { "condition":"*", "value":"0.9" } // Slightly reduced value as locations are less critical
+    ]
+  },
+  "GlobalLocationIntrinsicValue": {
+    "values": [
+      { "condition":"*", "value":"1.1" } // Slightly reduced intrinsic value for locations
+    ]
+  },
+  "GlobalMinionAttack": {
+    "values": [
+      { "condition": "turn()<7", "value": "5.5" }, // Increased emphasis on minion attack in early-mid game
+      { "condition": "*", "value": "4.2" } // Balanced value for later game phases
+    ]
+  },
+  "GlobalMinionHealth": {
+    "values": [
+      { "condition": "*", "value": "2.1" }, // Slightly increased emphasis on minion health
+      { "condition":"opp_hero(count(),hero_class=Priest | Druid)>0", "value":"2.3" } // Increased emphasis against removal-heavy classes
+    ]
+  },
+  "GlobalMinionIntrinsicValue": {
+    "values": [
+      { "condition":"turn()<7", "value":"6.8" }, // Further increased minion value for early-mid game
+      { "condition":"*", "value":"5.8" } // Balanced for late game
+    ]
+  },
+  "GlobalOverload": {
+    "values": [
+      { "condition":"*", "value": "1.2" }, // Slightly reduced importance of Overload
+      { "condition":"opp_hero(count(),hero_class=Shaman)>0", "value": "1.4" } // Adjusted for Shaman synergy
+    ]
+  },
+  "GlobalQuestProgressValue": {
+    "values": [
+      { "condition":"*", "value":"1.0" }
+    ]
+  },
+  "GlobalStealth": {
+    "values": [
+      { "condition":"*", "value":"1.5" }, // Balanced value for Stealth
+      { "condition":"opp_hero(count(),hero_class=Rogue)>0", "value":"1.7" } // Adjusted for Rogue
+    ]
+  },
+  "GlobalTaunt": {
+    "values": [
+      { "condition":"*", "value":"1.4" }, // Balanced value for Taunt
+      { "condition":"opp_hero(count(),hero_class=Druid | Paladin)>0", "value":"1.6" } // Adjusted for Taunt-heavy classes
+    ]
+  },
+  "GlobalWeaponAttack": {
+    "values": [
+      { "condition":"*", "value":"1.5" }, // Slightly reduced value for weapon attack
+      { "condition":"opp_hero(count(),hero_class=Warrior | Rogue | DemonHunter)>0", "value":"1.7" } // Balanced for weapon-centric classes
+    ]
+  },
+  "GlobalWindfury": {
+    "values": [
+      { "condition":"*", "value":"1.5" }, // Balanced value for Windfury
+      { "condition":"opp_hero(count(),hero_class=Shaman)>0", "value":"1.7" } // Adjusted for Shaman synergy
+    ]
+  },
+
+  // Opponent values
+
+  "OppAvailableCorpse": {
+    "values": [
+      { "condition":"*", "value":"1.1" }, // Slightly reduced value for opponent corpses
+      { "condition":"opp_hero(count(),hero_class=DeathKnight)>0", "value":"1.3" } // Balanced against Death Knight
+    ]
+  },
+  "OppDeckPredict": {
+    "values": [
+      { "condition":"*", "value":"1.0" }
+    ]
+  },
+  "OppDeckType": {
+    "values": [
+      { "condition":"*", "value":"1.0" }
+    ]
+  },
+  "OppGlobalCharge": {
+    "values": [
+      { "condition":"*", "value":"1.7" }, // Balanced value for opponent's Charge minions
+      { "condition":"opp_hero(count(),hero_class=Hunter | Warrior | DemonHunter)>0", "value":"1.9" } // Adjusted for aggressive classes
+    ]
+  },
+  "OppGlobalDivineShield": {
+    "values": [
+      { "condition":"*", "value":"2.1" }, // Balanced value for opponent's Divine Shield minions
+      { "condition":"opp_hero(count(),hero_class=Paladin)>0", "value":"2.4" } // Adjusted for Paladin synergy
+    ]
+  },
+  "OppGlobalDurability": {
+    "values": [
+      { "condition":"*", "value":"1.5" }, // Slightly reduced value for opponent's durability
+      { "condition":"opp_hero(count(),hero_class=Warrior | Rogue | DemonHunter)>0", "value":"1.7" } // Adjusted for weapon-centric classes
+    ]
+  },
+  "OppGlobalFrozen": {
+    "values": [
+      { "condition":"*", "value":"1.8" }, // Balanced value for opponent's Frozen status
+      { "condition":"opp_hero(count(),hero_class=Mage)>0", "value":"2.1" } // Adjusted for Mage synergy
+    ]
+  },
+  "OppGlobalHeroAttack": {
+    "values": [
+      { "condition":"*", "value":"1.2" }, // Balanced value for opponent's Hero Attack
+      { "condition":"opp_hero(count(),hero_class=Hunter | Warrior | DemonHunter)>0", "value":"1.4" } // Adjusted for aggressive classes
+    ]
+  },
+  "OppGlobalHeroHealth": {
+    "values": [
+      { "condition":"*", "value":"1.2" }, // Slightly reduced value for opponent's Hero Health
+      { "condition":"opp_hero(count(),hero_class=Priest | Paladin | Warrior)>0", "value":"1.4" } // Adjusted for tanky classes
+    ]
+  },
+  "OppGlobalLocationHealth": {
+    "values": [
+      { "condition":"*", "value":"1.4" } // Balanced value for opponent's Location Health
+    ]
+  },
+  "OppGlobalMinionAttack": {
+    "values": [
+      { "condition":"*", "value":"1.9" }, // Balanced value for opponent's Minion Attack
+      { "condition":"opp_hero(count(),hero_class=Warrior | Paladin | Rogue)>0", "value":"2.1" } // Adjusted for aggressive classes
+    ]
+  },
+  "OppGlobalMinionHealth": {
+    "values": [
+      { "condition":"*", "value":"2.2" }, // Balanced value for opponent's Minion Health
+      { "condition":"opp_hero(count(),hero_class=Priest | Druid)>0", "value":"2.4" } // Adjusted for removal-heavy classes
+    ]
+  },
+  "OppGlobalOverload": {
+    "values": [
+      { "condition":"*", "value":"1.3" }, // Slightly reduced value for opponent's Overload
+      { "condition":"opp_hero(count(),hero_class=Shaman)>0", "value":"1.5" } // Balanced against Shaman
+    ]
+  },
+  "OppGlobalQuestProgressValue": {
+    "values": [
+      { "condition":"*", "value":"1.5" }, // Slightly increased value for opponent's Quest Progress
+      { "condition":"opp_hero(count(),hero_class=Warlock | Priest)>0", "value":"1.7" } // Adjusted for quest-heavy classes
+    ]
+  },
+  "OppGlobalStealth": {
+    "values": [
+      { "condition":"*", "value":"1.8" }, // Balanced value for opponent's Stealth minions
+      { "condition":"opp_hero(count(),hero_class=Rogue)>0", "value":"2.0" } // Adjusted for Rogue synergy
+    ]
+  },
+  "OppGlobalTaunt": {
+    "values": [
+      { "condition":"*", "value":"2.3" }, // Balanced value for opponent's Taunt minions
+      { "condition":"opp_hero(count(),hero_class=Druid | Paladin)>0", "value":"2.5" } // Adjusted for Taunt-heavy classes
+    ]
+  },
+  "OppGlobalWeaponAttack": {
+    "values": [
+      { "condition":"*", "value":"1.8" }, // Balanced value for opponent's Weapon Attack
+      { "condition":"opp_hero(count(),hero_class=Warrior | Rogue | DemonHunter)>0", "value":"2.0" } // Adjusted for weapon-centric classes
+    ]
+  },
+  "OppGlobalWindfury": {
+    "values": [
+      { "condition":"*", "value":"1.9" }, // Balanced value for opponent's Windfury minions
+      { "condition":"opp_hero(count(),hero_class=Shaman)>0", "value":"2.1" } // Adjusted for Shaman synergy
+    ]
+  }
+}

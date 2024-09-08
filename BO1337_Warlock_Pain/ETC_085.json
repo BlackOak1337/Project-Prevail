@@ -1,0 +1,53 @@
+// ETC_085.json Symphony of Sins for Hyper-Aggro Pain-Lock in HearthRanger Vision AI
+
+// JSON
+
+{
+  "GameCardId": "ETC_085",
+  "ConfigComment": "Symphony of Sins, for Hyper-Aggro Painlock v1.02 (Optimized Discover Logic) by BlackOak1337",
+  
+  "OnDiscoverCardBonus": {
+    "values": [
+      { "comment": "High priority for Movement of Desire if low on health and needing lifesteal.",
+        "condition": "my_hero(count(), health) <= 10 AND my_discover(count(), cardid=ETC_085t6) > 0",
+//        "card_id": "ETC_085t6",
+        "value": "100"
+      },
+      { "comment": "High priority for Movement of Envy if the opponent has powerful minions and we need board control.",
+        "condition": "opp_minions(count(), attack >= 5) > 1 AND my_discover(count(), cardid=ETC_085t) > 0",
+//        "card_id": "ETC_085t",
+        "value": "90"
+      },
+      { "comment": "High priority for Movement of Greed if we need card draw to refill our hand.",
+        "condition": "my_hand(count()) <= 2 AND my_discover(count(), cardid=ETC_085t7) > 0",
+//        "card_id": "ETC_085t7",
+        "value": "80"
+      },
+      { "comment": "High priority for Movement of Gluttony if we need armor to survive against burst damage.",
+        "condition": "opp_hero(count(), attack) >= 8 AND my_discover(count(), cardid=ETC_085t4) > 0",
+//        "card_id": "ETC_085t4",
+        "value": "70"
+      },
+      { "comment": "High priority for Movement of Pride if we have a wide board and want to push lethal damage.",
+        "condition": "my_minions(count()) >= 4 AND my_discover(count(), cardid=ETC_085t2) > 0",
+//        "card_id": "ETC_085t2",
+        "value": "60"
+      },
+      { "comment": "Medium priority for Movement of Sloth if there is no immediate threat and the game is in control.",
+        "condition": "opp_minions(count()) == 0 AND my_hero(count(), health) > 15 AND my_discover(count(), cardid=ETC_085t8) > 0",
+//        "card_id": "ETC_085t8",
+        "value": "30"
+      }
+    ]
+  }
+}
+//  "BeforePlayCardBonus": {
+//    "values": [
+//      {
+//        "comment": "Play high priority card if it matches our condition.",
+//        "condition": "best_discover_option_selected()",
+//        "value": "100"
+//      }
+//    ]
+//  }
+//}

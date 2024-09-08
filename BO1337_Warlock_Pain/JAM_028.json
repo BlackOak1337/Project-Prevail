@@ -1,0 +1,31 @@
+// JAM_028.json Blood Treant for Hyper-Aggro Pain-Lock in HearthRanger Vision AI
+
+// JSON
+{ "GameCardId":"JAM_028",
+  "ConfigComment":"Card: Blood Treant (JAM_028) v1.26 (02-Sep-24) by BlackOak1337",
+
+  "BeforePlayCardBonus": {
+		"values": [
+		  { "comment":"Play Blood Treant (turn 1).",
+			"condition":"turn < 2",
+			"value":"100"
+		  },
+		  { "comment":"Play Blood Treant before turn 5.",
+			"condition":"turn <= 4 OR my_hero(count(), health) >= 30",
+			"value":"10"
+		  },
+		  { "comment":"Play Blood Treant if health is 30.",
+			"condition":"turn > 4 AND my_hero(count(), health) >= 25",
+			"value":"2"
+		  },
+		  { "comment":"Play Blood Treant if Imprisoned Horror in hand",
+			"condition":"my_hero(count(), cardid=TTN_462) > 0 AND my_hero(count(), health) >= 20",
+			"value":"2"
+		  },
+		  { "comment":"Default value.",
+			"condition":"*",
+			"value":"-10.00"
+		  }
+		]
+	}  
+}

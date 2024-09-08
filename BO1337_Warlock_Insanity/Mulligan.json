@@ -1,0 +1,204 @@
+﻿// Mulligan.json
+{
+  "GameCardId": "Mulligan",
+  "ConfigComment": "Deck: Insanity Warlock v1.50 (13-Aug-24) by BlackOak1337",
+
+  "Mulligan": {
+    "values": [
+      // Core Mulligan Rules
+      { // Prioritize low-cost minions (No Coin)
+        "comment":"Voidwalker, Tidepool Pupil, Felstring Harp",
+        "mulligan":"CS2_065, TTN_456, ETC_084",
+        "condition":"nocoin && my_hand(count(), cost<=2)<2",
+        "value":"hold",
+        "weight":"9"
+      },
+      { // Prioritize low-cost minions (Coin)
+        "comment":"Voidwalker, Tidepool Pupil, Felstring Harp",
+        "mulligan":"CS2_065, TTN_456, ETC_084",
+        "condition":"coin && my_hand(count(), cost<=3)<2",
+        "value":"hold",
+        "weight":"9"
+      },
+
+      { // Prioritize removal spells.
+        "comment":"Glacial Shard",
+        "mulligan":"UNG_205",
+        "condition":"*",
+        "value":"hold",
+        "weight":"7"
+      },
+      { // Prioritize Insanity generation.
+        "comment":"Encroaching Insanity",
+        "mulligan":"YOG_301",
+        "condition":"*",
+        "value":"hold",
+        "weight":"6"
+      },
+      {
+        "comment":"Prioritize mana ramp.",
+        "mulligan":"DEEP_030",
+        "condition":"*",
+        "value":"hold",
+        "weight":"5"
+      },
+
+      // Mana Curve Consideration
+      {
+        "comment":"Prefer lower cost cards",
+        "mulligan":"*",
+        "condition":"nocoin && my_hand(avg(cost))>2",
+        "value":"discard",
+        "weight":"4"
+      },
+      {
+        "comment":"Prefer lower cost cards",
+        "mulligan":"*",
+        "condition":"coin && my_hand(avg(cost))>2.5",
+        "value":"discard",
+        "weight":"4"
+      },
+      // Synergy-based rules
+      {
+        "comment":"Keep Baritone Imp with early game minions or other Imps.",
+        "mulligan":"ETC_068", // Baritone Imp
+        "condition":"my_hand(count(), cardid=CS2_065 || TTN_456 || ETC_084 || ETC_069) > 0",
+        "value":"hold",
+        "weight":"4"
+      },
+      {
+        "comment":"Keep Crescendo with multiple minions.",
+        "mulligan":"ETC_069", // Crescendo
+        "condition":"my_hand(count())>=3",
+        "value":"hold",
+        "weight":"4"
+      },
+      {
+        "comment":"Keep Eat! The! Imp! with other Imps.",
+        "mulligan":"VAC_939", // Eat! The! Imp!
+        "condition":"my_hand(count(), cardid=ETC_068 || ETC_069)>0",
+        "value":"hold",
+        "weight":"4"
+      },
+
+      // Card-specific rules
+      {
+        "comment":"Keep Crazed Conductor with multiple minions.",
+        "mulligan":"ETC_070", // Crazed Conductor
+        "condition":"my_hand(count())>=3",
+        "value":"hold",
+        "weight":"3"
+      },
+      // Add more card-specific rules as needed
+
+      // Class Matchup-Specific Rules
+      { // Hunter
+        "comment":"Hunter matchup - prioritize early game and removal",
+        "mulligan":"ETC_084, WW_092, CS2_065, VAC_939, TTN_456",
+        "condition":"opp_hero(count(), hero_class=Hunter)>0",
+        "value":"hold",
+        "weight":"7"
+      },
+      { // Druid
+        "comment":"Druid matchup - prioritize early game, removal, and card draw",
+        "mulligan":"ETC_084, WW_092, CS2_065, VAC_939, TTN_456, YOG_301",
+        "condition":"opp_hero(count(), hero_class=Druid)>0",
+        "value":"hold",
+        "weight":"7"
+      },
+      { // Warrior
+        "comment":"Warrior matchup - prioritize early game pressure and removal",
+        "mulligan":"ETC_084, WW_092, CS2_065, VAC_939, TTN_456",
+        "condition":"opp_hero(count(), hero_class=Warrior)>0",
+        "value":"hold",
+        "weight":"7"
+      },
+      { // Shaman
+        "comment":"Shaman matchup - prioritize early game pressure and removal",
+        "mulligan":"ETC_084, WW_092, CS2_065, VAC_939, TTN_456",
+        "condition":"opp_hero(count(), hero_class=Shaman)>0",
+        "value":"hold",
+        "weight":"7"
+      },
+      { // Paladin
+        "comment":"Paladin matchup - prioritize early game pressure and removal",
+        "mulligan":"ETC_084, WW_092, CS2_065, VAC_939, TTN_456",
+        "condition":"opp_hero(count(), hero_class=Paladin)>0",
+        "value":"hold",
+        "weight":"7"
+      },
+      { // Rogue
+        "comment":"Rogue matchup - prioritize early game pressure and removal",
+        "mulligan":"ETC_084, WW_092, CS2_065, VAC_939, TTN_456",
+        "condition":"opp_hero(count(), hero_class=Rogue)>0",
+        "value":"hold",
+        "weight":"7"
+      },
+      { // Priest
+        "comment":"Priest matchup - prioritize removal and card draw",
+        "mulligan":"VAC_939, TTN_456, YOG_301",
+        "condition":"opp_hero(count(), hero_class=Priest)>0",
+        "value":"hold",
+        "weight":"7"
+      },
+      { // Mage
+        "comment":"Mage matchup - prioritize early game pressure and removal",
+        "mulligan":"ETC_084, WW_092, CS2_065, VAC_939, TTN_456",
+        "condition":"opp_hero(count(), hero_class=Mage)>0",
+        "value":"hold",
+        "weight":"7"
+      },
+      { // Warlock
+        "comment":"Warlock matchup - prioritize early game pressure and removal",
+        "mulligan":"ETC_084, WW_092, CS2_065, VAC_939, TTN_456",
+        "condition":"opp_hero(count(), hero_class=Warlock)>0",
+        "value":"hold",
+        "weight":"7"
+      },
+      { // Demon Hunter
+        "comment":"Demon Hunter matchup - prioritize early game pressure and removal",
+        "mulligan":"ETC_084, WW_092, CS2_065, VAC_939, TTN_456",
+        "condition":"opp_hero(count(), hero_class=DemonHunter)>0",
+        "value":"hold",
+        "weight":"7"
+      },
+      { // Death Knight
+        "comment":"Death Knight matchup - prioritize removal and card draw",
+        "mulligan":"VAC_939, TTN_456, YOG_301",
+        "condition":"opp_hero(count(), hero_class=Deathknight)>0",
+        "value":"hold",
+        "weight":"7"
+      },
+
+      // Discard
+      { "comment":"Discard the rest.",
+        "mulligan":"*",
+        "condition":"*",
+        "value":"discard"
+      }
+    ],
+  },
+}
+
+//   Deck: Insanity_Warlock
+//  Class: Warlock
+// Format: Standard
+
+// 2 x (1) Felstring Harp ETC_084
+// 2 x (1) Fracking WW_092
+// 2 x (1) Glacial Shard UNG_205
+// 2 x (1) Tidepool Pupil VAC_304
+// 2 x (1) Void Virtuoso ETC_081
+// 2 x (1) Voidwalker CS2_065
+// 2 x (2) Baritone Imp ETC_068
+// 2 x (2) Crescendo ETC_069
+// 2 x (2) Eat! The! Imp! VAC_939
+// 2 x (2) Elementium Geode DEEP_030
+// 2 x (2) Thornveil Tentacle TTN_456
+// 2 x (3) Encroaching Insanity YOG_301
+// 1 x (3) Photographer Fizzle ETC_113
+// 2 x (3) Trogg Gemtosser DEEP_029
+// 2 x (4) Crazed Conductor ETC_070
+// 1 x (4) Pop'gar the Putrid WW_091
+
+

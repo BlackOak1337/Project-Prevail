@@ -1,0 +1,34 @@
+// EX1_116.json
+
+// JSON
+{
+    "GameCardId":"EX1_116", 
+    "ConfigComment":"Leeroy Jenkins (EX1_116) v1.0",   
+ 
+    "BeforePlayCardBonus":
+    {
+        "values": [
+            {
+                "comment":"Lethal is found and we can do it!",            
+                "condition": "opp_minions(count(),taunt=true) < 1 AND (opp_hero(count(), health) + opp_hero(count(), armor)) < 7 ",
+                "value":"100",
+            },
+            {
+                "comment":"Don't play this unless absolutely needed",         
+                "condition": "*",
+                "value":"-10",
+            }
+        ],
+    },
+     
+    "InHandBonus":
+    {
+        "values": [
+            {
+                "comment":"It's more valuable to hold Leeroy until lethal (Credits to tebessa)",          
+                "condition": "*",
+                "value":"100",
+            }
+        ],
+    }
+}

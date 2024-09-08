@@ -1,0 +1,56 @@
+{
+    "GameCardId":"ETC_081",
+    "ConfigComment":"Void Virtuoso v1.10 by BlackOak1337 (Enhanced)",
+
+    "BeforePlayCardBonus":
+    {
+        "values": [
+            {
+                "comment":"Prioritize keeping Void Virtuoso alive with healthy taunt protection",
+                "condition": "my_minions(count())> 0 AND my_minions(count(),taunt=true, health>3)> 0 AND (opp_minions(sum(attack)) + opp_hero(sum(attack),weapon=true))<3",
+                "value":"100",
+            },
+            {
+                "comment":"Prioritize keeping Void Virtuoso alive without taunt protection",
+                "condition": "my_minions(count())> 0 AND (opp_minions(sum(attack)) + opp_hero(sum(attack),weapon=true))<3",
+                "value":"80",
+            },
+            {
+                "comment":"Don't play if it will die immediately",
+                "condition": "my_minions(count())>0 AND (opp_minions(sum(attack)) + opp_hero(sum(attack),weapon=true))>=3",
+                "value":"-100",
+            },
+			{
+                "comment": "Avoid playing Void Virtuoso against Poisonous",
+                "condition": "opp_minions(count(), poisonous=true) > 0",
+                "value": "-50",
+            },
+            {
+                "comment": "Prioritize Void Virtuoso against Divine Shield minions",
+                "condition": "my_minions(count(), divineshield=true) > 0",
+                "value": "20",
+            },
+            {
+                "comment":"Play from hand if safe",
+                "condition": "my_minions(count())<1 AND (opp_minions(sum(attack)) + opp_hero(sum(attack),weapon=true))<3",
+                "value":"50",
+            },
+            {
+                "comment":"Default value",
+                "condition": "*",
+                "value":"0",
+            }
+        ]
+    },
+
+    "InHandBonus":
+    {
+        "values": [
+            {
+                "comment":"Void Virtuoso is generally valuable in hand",
+                "condition": "*",
+                "value":"20",
+            }
+        ]
+    }
+}

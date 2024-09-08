@@ -1,0 +1,41 @@
+
+
+//      Deck: Painlock
+// Playstyle: Hyper-Aggro
+//     Class: Warlock
+//    Format: Standard
+//  Rotation: Year of the Pegasus
+// Archetype Core Cards
+
+// 2 x (1) Flame Imp (ID: EX1_319)
+// 2 x (1) Mass Production MIS_707)
+// 1 x (1) Party Fiend (ID: VAC_940)
+// 1 x (1) Spirit Bomb (ID: BOT_222)
+// 1 x (2) Cursed Souvenir (ID: VAC_944)
+// 2 x (2) Elementium Geode (ID: DEEP_030)
+// 1 x (2) Feartless Flamejuggler
+// 1 x (3) Malefic Rook (ID: TOY_526)
+// 1 x (3) Trolley Problem (ID: WC_031)
+// 2 x (4) INFERNAL! (ID: MIS_703)
+// 1 x (4) Pop'gar the Putrid (ID: WC_037)
+// 1 x (5) Blood Treant (ID: JAM_028)
+// 2 x (9) Imprisoned Horror (ID: TTN_462)
+
+Deck #1
+// 1 x (2)Feartless Flamejuggler
+// 1 x (1) Fracking (ID: WC_022)
+// 1 x (1) Spirit Bomb (ID: BOT_222)
+// 2 x (2) Cult Neophyte (ID: SCH_713)
+// 1 x (4) Sheriff Barrelbrim (ID: WC_041)
+// 1 x (5) Symphony of Sins (ID: ETC_085)
+// 1 x (0) Zilliax Deluxe 3000 (ID: TOY_330)
+//   1x (0) Zilliax Deluxe 3000
+//   1x (3) Pylon Module
+//   1x (4) Ticking Module
+// 2 x (22) Molten Giant (ID: EX1_620)
+
+1 x Leroy EX1_116
+
+// Deck Code: 
+// AAECAaPDAwb5xgWhkgaAngaEngbHpAanygYMhKAEzuQFzvoFxJ4G0J4Go6AGpqgGnLMGnrgGw7gGlcoG8OYGAAED87MGx6QG9rMGx6QG6N4Gx6QGAAA=
+ 

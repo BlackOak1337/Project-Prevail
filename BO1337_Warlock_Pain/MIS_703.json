@@ -1,0 +1,37 @@
+// MIS_703.json  custom card for Hyper-Aggro Pain-Lock in HearthRanger Vision AI
+
+// JSON
+{
+  "GameCardId": "MIS_703",
+  "ConfigComment": "Card: Infernal! (MIS_703) v1.10 (02-Sep-24) by BlackOak1337",
+
+  "InHandPlayPriority": {
+    "values": [
+      {
+        "comment": "Default Priority",
+        "condition": "*",
+        "value": "10"
+      },
+      {
+        "comment": "Higher Priority if Health is 15 or less",
+        "condition": "my_hero(count(), health<=15)>0",
+        "value": "1"
+      }
+    ]
+  },
+
+  "BeforePlayCardBonus": {
+    "values": [
+      {
+        "comment": "Default Bonus",
+        "condition": "*",
+        "value": "1"
+      },
+      {
+        "comment": "Discourage use if Health is over 15",
+        "condition": "my_hero(count(), health>15)>0",
+        "value": "-10"
+      }
+    ]
+  }
+}

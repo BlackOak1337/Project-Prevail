@@ -1,0 +1,37 @@
+
+// HERO_07bp.json Life Tap for Hyper-Aggro Pain-Lock in HearthRanger Vision AI
+
+// JSON
+
+{
+  "GameCardId": "HERO_07bp",
+  "ConfigComment": "Hero Power: Life Tap (HERO_07bp) v1.00 (02-Sep-24) by BlackOak1337",
+
+// Adjust Lifetap for better control need to changed to a custom card
+	"BeforeUseHeroPowerBonus": {
+		"values": [
+			{
+			  "condition": "my_minions(count(), cardid=ETC_081) > 0",
+			  "value": "1.5" // Increase Lifetap value when Void Virtuoso is on board
+			},
+			{
+			  "condition": "my_hero(max(health)) <= 15",
+			  "value": "0.5"
+			},
+					{
+			  "condition": "my_hero(max(health)) <= 10",
+			  "value": "0"
+			},
+			{ "comment":"Life Tap if Imprisoned Horror in hand",
+			"condition":"my_hero(count(), cardid=TTN_462) > 0 AND my_hero(count(), health) >= 20",
+			"value":"2"
+			},
+			{
+			  "condition": "*",
+			  "value": "1.0" // Default Lifetap value
+			}
+		],
+	},
+}
+
+
