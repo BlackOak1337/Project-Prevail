@@ -1,0 +1,88 @@
+
+// UNG_809t1.json Flame Elemental for Hyper-Aggro Elemental Mage Decks in HearthRanger Vision AI
+
+// JSON
+{
+	"GameCardId": "UNG_809t1",    
+	"ConfigComment": "Flame Elemental for Hyper-Aggro Elemental Mage Decks",
+
+	"InHandBonus": {
+		"values": [
+			{
+				"comment": "Bonus for having a low-cost minion in hand to maintain board presence early.",
+				"condition": "my_hero(count(), max_mana <= 3) > 0",
+				"value": "10"
+			},
+			{
+				"comment": "Slightly reduced value after the early game since its impact diminishes.",
+				"condition": "my_hero(count(), max_mana > 5) > 0",
+				"value": "-5"
+			}
+		]
+	},
+
+	"BeforePlayCardBonus": {
+		"values": [
+			{
+				"comment": "Play Flame Elemental aggressively for early board control if mana is low.",
+				"condition": "my_hero(count(), max_mana <= 3) > 0",
+				"value": "15"
+			},
+			{
+				"comment": "Avoid playing if opponent's minions are significantly stronger (attack > 3).",
+				"condition": "opp_minions(count(), attack > 3) > 0",
+				"value": "-10"
+			},
+			{
+				"comment": "Avoid playing if it cannot trade favorably (opponent has taunt minions with 2+ attack).",
+				"condition": "opp_minions(count(), taunt=true, attack >= 2) > 0",
+				"value": "-8"
+			},
+			{
+				"comment": "Increase priority if you have a buff card or effect in hand.",
+				"condition": "my_hand(count(), spell=true, cardid='EX1_581') > 0", 
+				"value": "10"
+			}
+		]
+	},
+
+	"OnBoardBonus": {
+		"values": [
+			{
+				"comment": "Provide a bonus for having an Elemental on board for Elemental synergy.",
+				"condition": "my_minions(count(), elemental=true) > 0",
+				"value": "5"
+			}
+		]
+	},
+
+	"BeforePhysicalAttackBonus": {
+		"values": [
+			{
+				"comment": "Increase attack value if the Flame Elemental can kill an opposing minion.",
+				"condition": "opp_minions(count(), health <= 1) > 0",
+				"value": "12"
+			},
+			{
+				"comment": "Decrease attack value if attacking would result in the Flame Elemental's death.",
+				"condition": "opp_minions(count(), attack >= 2) > 0",
+				"value": "-15"
+			},
+			{
+				"comment": "Increase attack value if it can contribute to lethal damage to the opponent's hero.",
+				"condition": "opp_hero(max(health)) <= 1",
+				"value": "20"
+			},
+			{
+				"comment": "Avoid attacking into Divine Shield minions if no favorable outcome.",
+				"condition": "opp_minions(count(), divineshield=true, health > 1) > 0",
+				"value": "-10"
+			},
+			{
+				"comment": "Favor attacking minions over hero if it improves board control.",
+				"condition": "opp_minions(count()) > 0",
+				"value": "8"
+			}
+		]
+	}
+}
