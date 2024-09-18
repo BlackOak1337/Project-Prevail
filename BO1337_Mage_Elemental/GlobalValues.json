@@ -3,48 +3,48 @@
 // JSON
 {
 	"GameCardId": "GlobalValues",
-	"ConfigComment": "Hyper-Aggro Elemental Mage v5.8 (18-Sep-24) by BlackOak1337",
+	"ConfigComment": "Hyper-Aggro Elemental Mage v5.9 (18-Sep-24) by BlackOak1337",
 
 	"FirstTurnValueWeight": {
 		"values": [
 			{ "condition": "turn()<5", "value": "1.0" },
-			{ "condition": "turn()>4 AND turn()<7", "value": "0.8" },
+			{ "condition": "turn()>4 AND turn()<7", "value": "0.7" },
 			{ "condition": "turn()>6 AND turn()<10", "value": "0.5" },
-			{ "condition": "turn()>9", "value": "0.2" }
+			{ "condition": "turn()>9", "value": "0.3" }
 		]
 	},
 
 	"SecondTurnValueWeight": {
 		"values": [
-			{ "condition": "turn()<5", "value": "0.0" },
-			{ "condition": "turn()>4 AND turn()<7", "value": "0.2" },
+			{ "condition": "turn()<5", "value": "0.1" },
+			{ "condition": "turn()>4 AND turn()<7", "value": "0.3" },
 			{ "condition": "turn()>6 AND turn()<10", "value": "0.5" },
-			{ "condition": "turn()>9", "value": "0.8" }
+			{ "condition": "turn()>9", "value": "0.7" }
 		]
 	},
-
+	
 	"GlobalDivineShield": {
 		"values": [
-			{ "condition": "*", "value": "0.8" }
+			{ "condition": "*", "value": "0.7" }
 		]
 	},
 
 	"GlobalDurability": {
 		"values": [
 			{ "condition": "my_minions(count())>opp_minions(count())", "value": "1.0" },
-			{ "condition": "*", "value": "0.7" }
+			{ "condition": "*", "value": "0.6" }
 		]
 	},
 
 	"GlobalStealth": {
 		"values": [
-			{ "condition": "*", "value": "0.0" }
+			{ "condition": "*", "value": "0.1" }
 		]
 	},
 
 	"GlobalHeroAttack": {
 		"values": [
-			{ "condition": "*", "value": "0.8" }
+			{ "condition": "*", "value": "0.9" }
 		]
 	},
 
@@ -56,52 +56,50 @@
 
 	"GlobalWeaponAttack": {
 		"values": [
-			{ "condition": "*", "value": "0.8" }
+			{ "condition": "*", "value": "0.7" }
 		]
 	},
 
 	"GlobalTaunt": {
 		"values": [
-			{ "condition": "my_minions(count())>opp_minions(count())", "value": "0.4" },
-			{ "condition": "*", "value": "0.7" }
+			{ "condition": "my_minions(count())>opp_minions(count())", "value": "0.5" },
+			{ "condition": "*", "value": "0.6" }
 		]
 	},
 
 	"GlobalWindfury": {
 		"values": [
-			{ "condition": "turn<=6", "value": "0.8" },
-			{ "condition": "turn>=7", "value": "0.6" },
-			{ "condition": "*", "value": "0.7" }
+			{ "condition": "turn<=6", "value": "0.9" },
+			{ "condition": "turn>=7", "value": "0.7" }
 		]
 	},
 
 	"GlobalCharge": {
 		"values": [
-			{ "condition": "turn<=6", "value": "0.9" },
-			{ "condition": "turn>=7", "value": "0.6" },
-			{ "condition": "*", "value": "0.8" }
+			{ "condition": "turn<=6", "value": "1.0" },
+			{ "condition": "turn>=7", "value": "0.8" }
 		]
 	},
 
 	"GlobalOverload": {
 		"values": [
-			{ "condition": "opp_hero(count(), hero_class=shaman)>0", "value": "0.0" },
+			{ "condition": "opp_hero(count(), hero_class=shaman)>0", "value": "0.1" },
 			{ "condition": "*", "value": "0.0" }
 		]
 	},
 
 	"GlobalMinionIntrinsicValue": {
 		"values": [
-			{ "condition": "cost<=2", "value": "0.7" },
-			{ "condition": "cost==3", "value": "0.6" },
-			{ "condition": "cost==4", "value": "0.5" },
-			{ "condition": "cost>=5", "value": "0.3" }
+			{ "condition": "cost<=2", "value": "0.8" },
+			{ "condition": "cost==3", "value": "0.7" },
+			{ "condition": "cost==4", "value": "0.6" },
+			{ "condition": "cost>=5", "value": "0.4" }
 		]
 	},
 
 	"OppGlobalDivineShield": {
 		"values": [
-			{ "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "0.8" },
+			{ "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "0.9" },
 			{ "condition": "opp_played(count(), secret=true)>4", "value": "0.7" },
 			{ "condition": "*", "value": "0.6" }
 		]
@@ -124,7 +122,7 @@
 	"OppGlobalHeroAttack": {
 		"values": [
 			{ "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "0.8" },
-			{ "condition": "*", "value": "0.6" }
+			{ "condition": "*", "value": "0.7" }
 		]
 	},
 
@@ -138,7 +136,7 @@
 
 	"OppGlobalWeaponAttack": {
 		"values": [
-			{ "condition": "*", "value": "0.8" }
+			{ "condition": "*", "value": "0.7" }
 		]
 	},
 
@@ -158,7 +156,7 @@
 
 	"OppGlobalHeroHealth": {
 		"values": [
-			{ "condition": "*", "value": "0.8" }
+			{ "condition": "*", "value": "0.7" }
 		]
 	},
 
