@@ -1,0 +1,70 @@
+{
+    "GameCardId": "Combo",
+    "ConfigComment": "Deck: Pirate Demon Hunter - Aggro [Standard & Wild] v1.1 (09-Aug-24) by BlackOak1337",
+
+    "ComboList":
+	{
+        "values": [
+            {
+                "comment": "Coin, Scarab Keychain",
+                "condition": "*",
+                "combo": "GAME_005 >> TOY_006",
+                "value": "0 >> 20"
+            },
+            {
+                "comment": "Coin, Taste of Chaos",
+                "condition": "*",
+                "combo": "GAME_005 >> ETC_394",
+                "value": "0 >> 30"
+            },
+            {
+                "comment": "Bloodsail Recruiter, Southsea Captain",
+                "condition": "*",
+                "combo": "VAC_430 >> NEW1_027",
+                "value": "10 >> 20"
+            },
+            {
+                "comment": "Adrenaline Fiend, Quick Pick",
+                "condition": "*",
+                "combo": "VAC_927 >> DEEP_014",
+                "value": "20 >> 30"
+            },
+            {
+                "comment": "Hozen Roughhouser, Southsea Captain",
+                "condition": "*",
+                "combo": "VAC_938 >> NEW1_027",
+                "value": "30 >> 40"
+            },
+            {  // any minion
+                "comment": "Marin the Manager, value minions",
+                "condition": "*",
+                "combo": "VAC_702 >> NEW1_027",
+				"combo": "VAC_702 >> VAC_938",
+				"combo": "VAC_702 >> VAC_927",
+				"combo": "VAC_702 >> VAC_430",
+                "value": "40 >> 50"
+            },
+        ],
+    },
+}
+// Deck List: Pirate_Demon_Hunter_Wild
+// Class: Demon Hunter
+// Format: Standard & Wild
+// Playstyle: Aggro
+// 2 x (0)Through Fel and Flames
+// 2 x (1)Scarab Keychain
+// 2 x (1)Sock Puppet Slitherspear
+// 2 x (1)Taste of Chaos
+// 2 x (1)Treasure Distributor
+// 2 x (2)Adrenaline Fiend
+// 2 x (2)Bloodsail Recruiter
+// 2 x (2)Quick Pick
+// 2 x (2)Sigil of Skydiving
+// 2 x (3)Hozen Roughhouser
+// 2 x (3)Southsea Captain
+// 2 x (4)Dangerous Cliffside
+// 1 x (4)Kayn Sunfury
+// 2 x (4)Resort Valet
+// 1 x (6)Harth Stonebrew
+// 1 x (7)Marin the Manager
+// 1 x (7)Nozdormu the Eternal

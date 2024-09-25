@@ -1,0 +1,130 @@
+{
+  "GameCardId": "Mulligan",
+  "ConfigComment": "Deck: Pirate Demon Hunter - Aggro [Standard & Wild] v1.2 (25-Sep-24) by BlackOak1337",
+  "Mulligan": {
+    "values": [
+      {
+        "comment": "Prioritize low-cost minions for early aggression",
+        "mulligan": "JAM_017, TOY_006, MIS_710, ETC_394, TOY_518, VAC_927, VAC_430, DEEP_014",
+        "condition": "*",
+        "value": "hold"
+      },
+
+      // Perfect Start
+      {
+        "comment": "Ideal starting hand with coin",
+        "mulligan": "JAM_017, TOY_006, MIS_710, ETC_394",
+        "condition": "coin",
+        "value": "hold"
+      },
+      {
+        "comment": "Ideal starting hand without coin",
+        "mulligan": "JAM_017, TOY_006, MIS_710",
+        "condition": "nocoin",
+        "value": "hold"
+      },
+
+      // Ideal Start
+      {
+        "comment": "Ideal start: Two 1-drops and a removal spell",
+        "mulligan": "ETC_394",
+        "condition": "my_hand(count(), cardid=JAM_017 | TOY_006 | MIS_710)>=2",
+        "value": "hold"
+      },
+      {
+        "comment": "Ideal start: Three 1-drops",
+        "mulligan": "*",
+        "condition": "my_hand(count(), cardid=JAM_017 | TOY_006 | MIS_710)>=3",
+        "value": "hold"
+      },
+      {
+        "comment": "Ideal start: Two 1-drops and a 2-drop",
+        "mulligan": "VAC_927, VAC_430, DEEP_014",
+        "condition": "my_hand(count(), cardid=JAM_017 | TOY_006 | MIS_710)>=2",
+        "value": "hold"
+      },
+
+      // Synergy
+      {
+        "comment": "Keep Bloodsail Recruiter for card draw",
+        "mulligan": "VAC_430",
+        "condition": "*",
+        "value": "hold"
+      },
+      {
+        "comment": "Keep Southsea Captain for synergy",
+        "mulligan": "NEW1_027",
+        "condition": "my_hand(count(), cardid=VAC_430)>0",
+        "value": "hold"
+      },
+      {
+        "comment": "Consider Hozen Roughhouser for mid-range",
+        "mulligan": "VAC_938",
+        "condition": "coin OR my_hand(count(), cardid=JAM_017 | TOY_006 | MIS_710)>=2",
+        "value": "hold"
+      },
+      {
+        "comment": "Prioritize removal against aggressive opponents",
+        "mulligan": "ETC_394",
+        "condition": "opp_hero(count(), hero_class=hunter | rogue | demonhunter | warlock | paladin)>0",
+        "value": "hold"
+      },
+      {
+        "comment": "Keep one removal spell if good curve",
+        "mulligan": "CFM_646",
+        "condition": "my_hand(count(), cardid=JAM_017 | TOY_006 | MIS_710 | ETC_394 | TOY_518 | VAC_927 | VAC_430 | DEEP_014)>=3",
+        "value": "hold"
+      },
+      {
+        "comment": "Prioritize early game pressure against aggro",
+        "mulligan": "JAM_017, TOY_006, MIS_710, ETC_394",
+        "condition": "opp_hero(count(), hero_class=hunter | rogue | demonhunter)>0",
+        "value": "hold"
+      },
+      {
+        "comment": "Prioritize card draw and value against control",
+        "mulligan": "VAC_430, NEW1_027, VAC_938",
+        "condition": "opp_hero(count(), hero_class=warrior | mage | priest)>0",
+        "value": "hold"
+      },
+      {
+        "comment": "Balance early pressure and removal against midrange",
+        "mulligan": "JAM_017, TOY_006, MIS_710, ETC_394, VAC_430",
+        "condition": "opp_hero(count(), hero_class=paladin | shaman | druid)>0",
+        "value": "hold"
+      },
+      {
+        "comment": "Discard excess cards.",
+        "mulligan": "*",
+        "condition": "*",
+        "value": "discard"
+      }
+    ]
+  }
+}
+
+//# Pirate Demon Hunter
+//# Class: Demon Hunter
+//# Format: Standard
+//# Year of the Pegasus
+
+//# 2x (0) Through Fel and Flames (JAM_017)
+//# 2x (1) Acupuncture (VAC_419)
+//# 2x (1) Brain Masseuse (DEEP_014)
+//# 2x (1) Burning Heart (MIS_710)
+//# 2x (1) Sock Puppet Slitherspear (TOY_006)
+//# 2x (1) Treasure Distributor (TOY_518)
+//# 2x (2) Adrenaline Fiend (VAC_927)
+//# 2x (2) Quick Pick (VAC_421)
+//# 2x (2) Sigil of Skydiving (VAC_925)
+//# 2x (2) Spirit of the Team (MIS_712)
+//# 1x (3) Hot Coals (VAC_440)
+//# 2x (3) Hozen Roughhouser (VAC_938)
+//# 2x (3) Southsea Captain (NEW1_027)
+//# 2x (4) Dangerous Cliffside (VAC_929)
+//# 1x (4) Kayn Sunfury (BT_430)
+//# 1x (5) Aranna, Thrill Seeker (VAC_501)
+//# 1x (0) Zilliax Deluxe 3000 (TOY_330)
+//#   1x (0) Zilliax Deluxe 3000 (TOY_330)
+//#   1x (3) Pylon Module (TOY_330t95)
+//#   1x (4) Ticking Module (TOY_330t98)

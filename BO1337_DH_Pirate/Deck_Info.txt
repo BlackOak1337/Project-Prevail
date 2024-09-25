@@ -1,0 +1,723 @@
+
+// Pirate_Demon_Hunter_Wild
+// Class: Demon Hunter
+// Format: Standard & Wild
+// Playstyle: Aggro
+// 2 x (0)Through Fel and Flames
+// 2 x (1)Scarab Keychain
+// 2 x (1)Sock Puppet Slitherspear
+// 2 x (1)Taste of Chaos
+// 2 x (1)Treasure Distributor
+// 2 x (2)Adrenaline Fiend
+// 2 x (2)Bloodsail Recruiter
+// 2 x (2)Quick Pick
+// 2 x (2)Sigil of Skydiving
+// 2 x (3)Hozen Roughhouser
+// 2 x (3)Southsea Captain
+// 2 x (4)Dangerous Cliffside
+// 1 x (4)Kayn Sunfury
+// 2 x (4)Resort Valet
+// 1 x (6)Harth Stonebrew
+// 1 x (7)Marin the Manager
+// 1 x (7)Nozdormu the Eternal
+
+
+# 
+AAECAea5AwS2igSongbmqQa6wQYNr6AE5OQFsvUF7p4Gy58G/KgG17gG1sAG2MAG9sAGrcUGl8oGy8oGAAA=
+# 
+# To use this deck, copy it to your clipboard and create a new deck in Hearthstone
+
+
+
+### Pirate_Demon_Hunter_Wild
+# Class: Demon Hunter
+# Format: Standard
+# Year of the Pegasus
+#
+# 2x (0) Through Fel and Flames
+# 2x (1) Miracle Salesman
+# 2x (1) Sock Puppet Slitherspear
+# 2x (1) Taste of Chaos
+# 2x (1) Treasure Distributor
+# 2x (2) Adrenaline Fiend
+# 2x (2) Bloodsail Recruiter
+# 2x (2) Quick Pick
+# 2x (2) Sigil of Skydiving
+# 2x (3) Hozen Roughhouser
+# 2x (3) Southsea Captain
+# 2x (4) Dangerous Cliffside
+# 1x (4) Kayn Sunfury
+# 2x (4) Resort Valet
+# 1x (6) Harth Stonebrew
+# 1x (7) Marin the Manager
+# 1x (7) Nozdormu the Eternal
+# 
+AAECAea5AwS2igSongbmqQa6wQYNr6AE5OQFsvUFhY4G7p4G/KgG17gG1sAG2MAG9sAGrcUGl8oGy8oGAAA=
+# 
+# To use this deck, copy it to your clipboard and create a new deck in Hearthstone
+
+
+
+
+### Pirate Demon Hunter
+# Class: Demon Hunter
+# Format: Standard
+# Year of the Pegasus
+#
+# 1x (0) Through Fel and Flames
+# 2x (1) Acupuncture
+# 2x (1) Brain Masseuse
+# 2x (1) Burning Heart
+# 2x (1) Illidari Studies
+# 2x (1) Treasure Distributor
+# 2x (2) Adrenaline Fiend
+# 1x (2) Quick Pick
+# 2x (2) Sigil of Skydiving
+# 2x (2) Spirit of the Team
+# 2x (3) Hot Coals
+# 2x (3) Hozen Roughhouser
+# 2x (3) Paraglide
+# 2x (4) Dangerous Cliffside
+# 1x (4) Kayn Sunfury
+# 1x (4) Royal Librarian
+# 1x (5) Aranna, Thrill Seeker
+# 1x (0) Zilliax Deluxe 3000
+#   1x (0) Zilliax Deluxe 3000
+#   1x (3) Pylon Module
+#   1x (4) Ticking Module
+# 
+AAECAea5Awbk5AWongbOngbungbHpAbEuAYM4fgF6Z4G7Z8G/KgG17oG1sAG2MAG38AG9sAGkMEG1cEGrcUGAAED87MGx6QG9rMGx6QG6N4Gx6QGAAA=
+# 
+# To use this deck, copy it to your clipboard and create a new deck in Hearthstone
+
+
+
+Card	Mulligan Impact↓	Drawn Impact	Kept Impact
+# ↑x (4)
+Kayn Sunfury
+66.7
+16.7
+0.0
+# ↑x (1)
+Sock Puppet Slitherspear
+66.7
+16.7
+66.7
+# ↑x (0)
+Through Fel and Flames
+16.7
+-8.3
+66.7
+# ↑x (1)
+Treasure Distributor
+16.7
+-4.8
+16.7
+# x (7)
+Nozdormu the Eternal
+0.0
+-33.3
+0.0
+# x (6)
+Harth Stonebrew
+0.0
+0.0
+0.0
+# x (3)
+Hozen Roughhouser
+0.0
+9.5
+-33.3
+# x (4)
+Resort Valet
+0.0
+-16.7
+0.0
+
+
+
+↓↑
+
+Alll versions of the deck
+
+
+Card							Mulligan	Drawn	Kept
+Name							Impact		Impact	Impact
+# ↑x (13)Ur'zul Giant			75.0		7.5		75.0
+# ↑x (4)Dispossessed Soul		68.8		-15.7	0.0
+# ↑x (3)Satyr Overseer			66.7		16.7	66.7
+# ↑x (10)Sire Denathrius		60.0		20.0	60.0
+# ↑x (6)Li'Na, Shop Manager		54.5		-25.5	0.0
+# ↑x (4)Razorglaive Sentinel	50.0		-30.0	50.0
+# ↑x (5)Sigil of Reckoning		50.0		0.0		0.0
+# ↑x (6)Sensory Deprivation		44.4		-5.6	44.4
+# ↑x (2)Nerub'ar Weblord		40.0		6.7		0.0
+# ↑x (1)Fury (Rank 1)			38.9		8.7		44.4
+# ↑x (5)Emperor Thaurissan		38.1		4.8		54.8
+# ↑x (10)Yogg-Saron, Hope's End	38.0		19.0	0.0
+# ↑x (2)Breath of Dreams		33.3		33.3	0.0
+# ↑x (3)Voracious Reader		33.3		-11.1	33.3
+# ↑x (4)
+Desert Nestmatron
+33.3
+33.3
+0.0
+# ↑x (1)
+Shifter Zerus
+30.0
+30.0
+0.0
+# ↑x (3)
+Hot Coals
+29.5
+-5.5
+0.0
+# ↑x (7)
+Argus, the Emerald Star
+27.3
+1.2
+0.0
+# ↑x (2)
+SECURITY!!
+25.0
+6.2
+0.0
+# ↑x (4)
+E.T.C., Band Manager
+22.6
+5.8
+0.0
+# ↑x (3)
+Zola the Gorgon
+21.4
+-15.3
+0.0
+# ↑x (5)
+Warglaives of Azzinoth
+20.7
+-4.7
+13.4
+# ↑x (2)
+Saloon Brewmaster
+20.0
+-7.1
+0.0
+# ↑x (1)
+Wings of Hate (Rank 1)
+18.8
+17.5
+0.0
+# ↑x (6)
+Climbing Hook
+18.5
+0.9
+18.5
+# ↑x (1)
+Crimson Sigil Runner
+18.3
+2.2
+33.3
+# ↑x (4)
+Murlocula
+17.5
+2.5
+75.0
+# ↑x (4)
+Glide
+16.0
+-8.2
+33.3
+# ↑x (3)
+Prince Renathal
+15.8
+-6.8
+-5.6
+# ↑x (5)
+Kobold Stickyfinger
+14.0
+-3.2
+14.0
+# ↑x (7)
+Corridor Creeper
+12.5
+10.2
+12.5
+# ↑x (2)
+Felfire Deadeye
+12.1
+1.7
+0.0
+# ↑x (3)
+Acrobatics
+11.9
+12.7
+16.7
+# ↑x (4)
+Dread Corsair
+11.5
+-4.6
+0.0
+# ↑x (1)
+Illidan's Gift
+9.4
+-17.0
+-50.0
+# ↑x (2)
+Shark Puncher
+8.4
+-8.1
+8.4
+# ↑x (3)
+Weight of the World
+7.7
+5.0
+-16.7
+# ↑x (1)
+Corridor Sleeper
+7.7
+7.7
+15.4
+# ↑x (3)
+Brann Bronzebeard
+7.6
+-0.7
+-4.2
+# ↑x (2)
+Chaos Strike
+7.4
+-2.4
+12.0
+# ↑x (2)
+Umberwing
+7.2
+1.7
+10.9
+# ↑x (1)
+Treasure Distributor
+6.8
+0.8
+6.7
+# ↑x (3)
+Gorgonzormu
+6.8
+-2.1
+-1.6
+# ↑x (3)
+Ace Hunter Kreen
+6.3
+1.0
+12.5
+# ↑x (3)
+Stiltstepper
+6.3
+-6.3
+0.0
+# ↑x (1)
+Demon Companion
+5.0
+-4.0
+1.7
+# ↑x (1)
+Illidari Studies
+5.0
+-2.2
+-4.5
+# ↑x (1)
+Peasant
+4.6
+7.0
+-2.7
+# ↑x (4)
+Kryxis the Voracious
+4.2
+6.2
+25.0
+# ↑x (3)
+Abyssal Depths
+4.2
+1.2
+4.2
+# ↑x (2)
+Amalgam of the Deep
+4.1
+-4.8
+5.4
+# ↑x (4)
+Griftah, Trusted Vendor
+4.0
+-8.6
+0.0
+# ↑x (2)
+Lesser Opal Spellstone
+3.7
+-11.8
+10.0
+# ↑x (1)
+Battlefiend
+3.3
+-1.5
+2.9
+# ↑x (2)
+Plated Beetle
+2.9
+-7.7
+21.4
+# ↑x (2)
+Parachute Brigand
+2.8
+-1.4
+3.5
+# ↑x (1)
+Miracle Salesman
+2.7
+-3.2
+2.6
+# ↑x (1)
+Bloodsail Corsair
+2.6
+-5.5
+8.0
+# ↑x (1)
+Patches the Pilot
+2.2
+-1.0
+1.9
+# ↑x (3)
+Hozen Roughhouser
+2.1
+-0.7
+2.8
+# ↑x (1)
+Brain Masseuse
+2.1
+-1.3
+2.5
+# ↑x (4)
+Hoard Pillager
+1.9
+-12.6
+18.5
+# ↑x (5)
+Leeroy Jenkins
+1.7
+-1.4
+0.0
+# ↑x (7)
+Nozdormu the Eternal
+1.5
+-1.1
+0.0
+# ↑x (1)
+Sigil of Alacrity
+1.5
+-7.3
+3.2
+# ↑x (2)
+Sigil of Skydiving
+1.4
+-0.8
+1.8
+# ↑x (7)
+Mr. Smite
+1.3
+-4.4
+11.6
+# ↑x (2)
+Spirit of the Team
+1.2
+-1.6
+-0.3
+# ↑x (2)
+Wayward Sage
+0.8
+5.3
+0.1
+# ↑x (4)
+Frenzied Felwing
+0.4
+-1.4
+2.0
+# ↑x (0)
+Zilliax Deluxe 3000
+0.3
+-0.3
+0.3
+# ↑x (2)
+Drink Server
+0.2
+-7.4
+-0.2
+# ↑x (2)
+Travel Agent
+0.1
+-5.5
+9.5
+
+
+
+
+Card			 			Impact	Drawn	Kept Impact↓
+# ↑x (13) Ur'zul Giant			75.0	7.5		75.0	|
+# ↑x (4) Murlocula				17.5	2.5		75.0
+# ↑x (3) Satyr Overseer			66.7	16.7	66.7
+# ↑x (10) Sire Denathrius		60.0	20.0	60.0
+# ↑x (5) Emperor Thaurissan		38.1	4.8		54.8
+# ↑x (5) Taelan Fordring		-5.2	-0.2	54.8
+# ↑x (4) Razorglaive Sentinel	50.0	-30.0	50.0
+# ↑x (1)
+Fury (Rank 1)
+38.9
+8.7
+44.4
+# ↑x (6)
+Sensory Deprivation
+44.4
+-5.6
+44.4
+# ↑x (4)
+Glide
+16.0
+-8.2
+33.3
+# ↑x (1)
+Crimson Sigil Runner
+18.3
+2.2
+33.3
+# ↑x (3)
+Voracious Reader
+33.3
+-11.1
+33.3
+# ↑x (3)
+Skirting Death
+-15.4
+-3.7
+27.3
+# ↑x (4)
+Kryxis the Voracious
+4.2
+6.2
+25.0
+# ↑x (2)
+Plated Beetle
+2.9
+-7.7
+21.4
+# ↑x (4)
+Halveria Darkraven
+-7.0
+-4.3
+19.0
+# ↑x (6)
+Climbing Hook
+18.5
+0.9
+18.5
+# ↑x (4)
+Hoard Pillager
+1.9
+-12.6
+18.5
+# ↑x (3)
+Acrobatics
+11.9
+12.7
+16.7
+# ↑x (4)
+Going Down Swinging
+-0.4
+1.8
+16.3
+# ↑x (1)
+Corridor Sleeper
+7.7
+7.7
+15.4
+# ↑x (5)
+Kobold Stickyfinger
+14.0
+-3.2
+14.0
+# ↑x (5)
+Warglaives of Azzinoth
+20.7
+-4.7
+13.4
+# ↑x (3)
+Golden Scarab
+-3.3
+-9.6
+13.3
+# ↑x (7)
+Corridor Creeper
+12.5
+10.2
+12.5
+# ↑x (3)
+Ace Hunter Kreen
+6.3
+1.0
+12.5
+# ↑x (2)
+Cult Neophyte
+-6.5
+-6.8
+12.0
+# ↑x (2)
+Chaos Strike
+7.4
+-2.4
+12.0
+# ↑x (7)
+Mr. Smite
+1.3
+-4.4
+11.6
+# ↑x (2)
+Umberwing
+7.2
+1.7
+10.9
+# ↑x (2)
+Dryscale Deputy
+-1.0
+-3.8
+10.4
+# ↑x (2)
+Lesser Opal Spellstone
+3.7
+-11.8
+10.0
+# ↑x (2)
+Travel Agent
+0.1
+-5.5
+9.5
+# ↑x (2)
+Shark Puncher
+8.4
+-8.1
+8.4
+# ↑x (1)
+Bloodsail Corsair
+2.6
+-5.5
+8.0
+# ↑x (1)
+Treasure Distributor
+6.8
+0.8
+6.7
+# ↑x (2)
+Tuskarrrr Trawler
+-0.5
+-10.9
+5.6
+# ↑x (2)
+Amalgam of the Deep
+4.1
+-4.8
+5.4
+# ↑x (3)
+Abyssal Depths
+4.2
+1.2
+4.2
+# ↑x (2)
+Parachute Brigand
+2.8
+-1.4
+3.4
+# ↑x (1)
+Miracle Salesman
+3.2
+-3.2
+3.4
+# ↑x (1)
+Sigil of Alacrity
+1.5
+-7.3
+3.2
+# ↑x (1)
+Battlefiend
+3.3
+-1.5
+2.9
+# ↑x (3)
+Hozen Roughhouser
+2.1
+-0.7
+2.8
+# ↑x (1)
+Brain Masseuse
+2.1
+-1.3
+2.5
+# ↑x (1)
+Taste of Chaos
+-1.7
+-6.1
+2.2
+# ↑x (4)
+Frenzied Felwing
+0.4
+-1.4
+2.0
+# ↑x (1)
+Patches the Pilot
+2.2
+-1.0
+1.9
+# ↑x (2)
+Sigil of Skydiving
+1.4
+-0.8
+1.8
+# ↑x (3)
+Pufferfist
+-8.2
+-5.7
+1.7
+# ↑x (1)
+Demon Companion
+5.0
+-4.0
+1.7
+# ↑x (1)
+Twin Slice
+-5.8
+-6.0
+1.7
+# ↑x (1)
+Adaptive Amalgam
+-3.6
+-5.8
+1.6
+# ↑x (1)
+Sock Puppet Slitherspear
+-0.6
+-3.8
+1.6
+# ↑x (3)
+Magnifying Glaive
+-1.1
+-0.2
+1.3
+# ↑x (4)
+Dangerous Cliffside
+-0.9
+-0.9
+1.2
+# ↑x (0)
+Zilliax Deluxe 3000
+0.3
+-0.3
+0.3
+# ↑x (2)
+Wayward Sage
+0.8
+5.3
+0.1
+# x (3)
+Flag Runner
