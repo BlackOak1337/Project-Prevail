@@ -1,37 +1,40 @@
-
-// HERO_07bp.json Life Tap for Hyper-Aggro Pain-Lock in HearthRanger Vision AI
+// HERO_07bp.json for Life Tap in Universal Hyper-Aggro WarLock Decks using HearthRanger Vision AI
 
 // JSON
-
 {
   "GameCardId": "HERO_07bp",
-  "ConfigComment": "Hero Power: Life Tap (HERO_07bp) v1.00 (02-Sep-24) by BlackOak1337",
+  "ConfigComment": "Life Tap for Universal Hyper-Aggro WarLock v1.20 (02-Oct-24) by BlackOak1337",
 
-// Adjust Lifetap for better control need to changed to a custom card
-	"BeforeUseHeroPowerBonus": {
-		"values": [
-			{
-			  "condition": "my_minions(count(), cardid=ETC_081) > 0",
-			  "value": "1.5" // Increase Lifetap value when Void Virtuoso is on board
-			},
-			{
-			  "condition": "my_hero(max(health)) <= 15",
-			  "value": "0.5"
-			},
-					{
-			  "condition": "my_hero(max(health)) <= 10",
-			  "value": "0"
-			},
-			{ "comment":"Life Tap if Imprisoned Horror in hand",
-			"condition":"my_hero(count(), cardid=TTN_462) > 0 AND my_hero(count(), health) >= 20",
-			"value":"2"
-			},
-			{
-			  "condition": "*",
-			  "value": "1.0" // Default Lifetap value
-			}
-		],
-	},
+  "BeforeUseHeroPowerBonus": {
+    "values": [
+      { "comment": "Maximize Life Tap value if Void Virtuoso is on board (to avoid damage).",
+        "condition": "my_minions(count(), cardid=ETC_081) > 0",
+        "value": "2.0"
+      },
+      { "comment": "Increase Life Tap value when health is between 10 and 15 for aggressive draws.",
+        "condition": "my_hero(max(health)) > 10 AND my_hero(max(health)) <= 15",
+        "value": "1.5"
+      },
+      { "comment": "Reduce Life Tap value significantly when health is 10 or less to avoid lethal risk.",
+        "condition": "my_hero(max(health)) <= 10",
+        "value": "-50"
+      },
+      { "comment": "Boost Life Tap value when Imprisoned Horror is in hand and health is 20 or more for better tempo.",
+        "condition": "my_hand(count(), cardid=TTN_462) > 0 AND my_hero(max(health)) >= 20",
+        "value": "2.5"
+      },
+      { "comment": "Increase Life Tap value when the board is flooded and cards are needed for momentum.",
+        "condition": "my_minions(count()) >= 3 AND opp_hero(max(health)) <= 20",
+        "value": "1.5"
+      },
+      { "comment": "Reduce Life Tap value when holding many cards to avoid overdraw.",
+        "condition": "my_hand(count()) > 7",
+        "value": "-1.0"
+      },
+      { "comment": "Default Life Tap value for aggressive play when above 15 health.",
+        "condition": "my_hero(max(health)) > 15",
+        "value": "1.0"
+      }
+    ]
+  }
 }
-
-

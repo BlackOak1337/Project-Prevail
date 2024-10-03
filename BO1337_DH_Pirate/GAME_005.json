@@ -1,0 +1,53 @@
+// GAME_005.json : Custom Card Code for Hyper-Aggro Decks used in HearthRanger Vision AI
+
+// JSON
+{
+	"GameCardId": "GAME_005",
+	"ConfigComment": "The Coin [Hyper-Aggro Deck] v1.0 (03-Oct-24) by BlackOak1337.",
+
+	"BeforeEndTurnBonus": {
+		"values": [
+			// General coin value adjustments
+		  { "comment": "Coin is generally valuable in early game for tempo gain.",
+			"condition": "turn()<4",
+			"value": "50"
+		  },
+		  { "comment": "Coin becomes less valuable as the game progresses.",
+			"condition": "turn()>=4",
+			"value": "-20"
+		  },
+
+			// Matchup-specific adjustments
+		  { "comment": "Coin is highly valuable against control decks for tempo gain.",
+			"condition": "opp_hero(count(), hero_class=mage | priest | warlock)>0 AND turn()<6",
+			"value": "80"
+		  },
+		  { "comment": "Coin is less valuable against aggressive decks.",
+			"condition": "opp_hero(count(), hero_class=hunter | paladin | shaman | warrior)>0 AND turn() < 4",
+			"value": "-30"
+		  },
+
+			// Board-based adjustments
+		  { "comment": "Coin is more valuable if we have a strong board.",
+			"condition": "my_minions(sum(attack))>opp_minions(sum(health))",
+			"value": "30"
+		  },
+		  { "comment": "Coin is less valuable if we have a weak board.",
+			"condition": "my_minions(sum(attack))<opp_minions(sum(health))",
+			"value": "-30"
+		  },
+
+			// Hand-based adjustments
+		  {	"comment": "Coin is less valuable if we have a strong hand.",
+			"condition": "my_hand(count(),cost<4)>3",
+			"value": "-20"
+		  },
+
+			// Hero health adjustments
+		  { "comment": "Coin is more valuable when our hero is low on health.",
+			"condition": "my_hero(max(health)) > 20",
+			"value": "20"
+		  }
+		]
+	}
+}

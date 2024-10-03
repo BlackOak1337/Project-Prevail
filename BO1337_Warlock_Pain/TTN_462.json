@@ -1,0 +1,54 @@
+// TTN_462.json for Imprisoned Horror for Painlock using HearthRanger Vision AI
+
+// JSON
+{
+  "GameCardId": "TTN_462",
+  "ConfigComment": "Imprisoned Horror for Painlock v1.41 (02-Oct-24) by BlackOak1337",
+
+  "InHandPlayPriority": {
+    "values": [
+	  { "comment": "Play Imprisoned Horror immediately when its cost is 0 (free) and prioritize over other cards or hero power.",
+        "condition": "my_hand(count(), cardid=TTN_462, cost<1)<2 AND my_hero(count(),mana)>=0",
+        "value": "10000"
+      },
+      { "comment": "Play Imprisoned Horror immediately when its cost is 0 (free) and prioritize over other cards or hero power.",
+        "condition": "my_hand(count(), cardid=TTN_462, cost<1)<1 AND my_hero(count(),mana)>=0",
+        "value": "10000"
+      },
+      { "comment": "Default in-hand priority for Imprisoned Horror.",
+        "condition": "*",
+        "value": "1.3"
+      }
+    ]
+  },
+
+  "BeforePlayCardBonus": {
+    "values": [
+	  { "comment": "Ensure immediate casting of Imprisoned Horror when its cost is 0 (free).",
+        "condition": "my_hand(count(), cardid=TTN_462, cost<1)<2 AND my_hero(count(),mana)>=0",
+        "value": "10000"
+      },
+      { "comment": "Ensure immediate casting of Imprisoned Horror when its cost is 0 (free).",
+        "condition": "my_hand(count(), cardid=TTN_462, cost<1)<1 AND my_hero(count(),mana)>=0",
+        "value": "10000"
+      },
+      { "comment": "Default play bonus for Imprisoned Horror.",
+        "condition": "*",
+        "value": "1"
+      }
+    ]
+  },
+
+  "BeforeEndTurnBonus": {
+    "values": [
+	  { "comment": "Do not end turn if Imprisoned Horror with 0 cost is in hand.",
+        "condition": "my_hand(count(), cardid=TTN_462, cost<1)<2",
+        "value": "-10000"
+      },
+      { "comment": "Do not end turn if Imprisoned Horror with 0 cost is in hand.",
+        "condition": "my_hand(count(), cardid=TTN_462, cost<1)<1",
+        "value": "-10000"
+      }
+    ]
+  }
+}

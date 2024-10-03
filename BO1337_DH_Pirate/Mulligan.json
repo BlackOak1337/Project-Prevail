@@ -1,3 +1,6 @@
+// Mulligan.json for Aggro Pirate Demon Hunter for HearthRanger Vision AI
+
+// JSON
 {
   "GameCardId": "Mulligan",
   "ConfigComment": "Deck: Pirate Demon Hunter - Aggro [Standard & Wild] v1.2 (25-Sep-24) by BlackOak1337",
@@ -103,28 +106,24 @@
   }
 }
 
-//# Pirate Demon Hunter
-//# Class: Demon Hunter
-//# Format: Standard
-//# Year of the Pegasus
-
-//# 2x (0) Through Fel and Flames (JAM_017)
-//# 2x (1) Acupuncture (VAC_419)
-//# 2x (1) Brain Masseuse (DEEP_014)
-//# 2x (1) Burning Heart (MIS_710)
-//# 2x (1) Sock Puppet Slitherspear (TOY_006)
-//# 2x (1) Treasure Distributor (TOY_518)
-//# 2x (2) Adrenaline Fiend (VAC_927)
-//# 2x (2) Quick Pick (VAC_421)
-//# 2x (2) Sigil of Skydiving (VAC_925)
-//# 2x (2) Spirit of the Team (MIS_712)
-//# 1x (3) Hot Coals (VAC_440)
-//# 2x (3) Hozen Roughhouser (VAC_938)
-//# 2x (3) Southsea Captain (NEW1_027)
-//# 2x (4) Dangerous Cliffside (VAC_929)
-//# 1x (4) Kayn Sunfury (BT_430)
-//# 1x (5) Aranna, Thrill Seeker (VAC_501)
-//# 1x (0) Zilliax Deluxe 3000 (TOY_330)
-//#   1x (0) Zilliax Deluxe 3000 (TOY_330)
-//#   1x (3) Pylon Module (TOY_330t95)
-//#   1x (4) Ticking Module (TOY_330t98)
+// Decklist: Pirate Demon Hunter
+// 2x (0) Through Fel and Flames (JAM_017)
+// 2x (1) Acupuncture (VAC_419)
+// 2x (1) Brain Masseuse (DEEP_014)
+// 2x (1) Burning Heart (MIS_710)
+// 2x (1) Sock Puppet Slitherspear (TOY_006)
+// 2x (1) Treasure Distributor (TOY_518)
+// 2x (2) Adrenaline Fiend (VAC_927)
+// 2x (2) Quick Pick (VAC_421)
+// 2x (2) Sigil of Skydiving (VAC_925)
+// 2x (2) Spirit of the Team (MIS_712)
+// 1x (3) Hot Coals (VAC_440)
+// 2x (3) Hozen Roughhouser (VAC_938)
+// 2x (3) Southsea Captain (NEW1_027)
+// 2x (4) Dangerous Cliffside (VAC_929)
+// 1x (4) Kayn Sunfury (BT_430)
+// 1x (5) Aranna, Thrill Seeker (VAC_501)
+// 1x (0) Zilliax Deluxe 3000 (TOY_330)
+//   1x (0) Zilliax Deluxe 3000 (TOY_330)
+//   1x (3) Pylon Module (TOY_330t95)
+//   1x (4) Ticking Module (TOY_330t98)

@@ -1,70 +1,134 @@
-{
-    "GameCardId": "Combo",
-    "ConfigComment": "Deck: Pirate Demon Hunter - Aggro [Standard & Wild] v1.1 (09-Aug-24) by BlackOak1337",
+// Combo.json for Aggro Demon Hunter for HearthRanger Vision AI
 
-    "ComboList":
-	{
-        "values": [
-            {
-                "comment": "Coin, Scarab Keychain",
-                "condition": "*",
-                "combo": "GAME_005 >> TOY_006",
-                "value": "0 >> 20"
-            },
-            {
-                "comment": "Coin, Taste of Chaos",
-                "condition": "*",
-                "combo": "GAME_005 >> ETC_394",
-                "value": "0 >> 30"
-            },
-            {
-                "comment": "Bloodsail Recruiter, Southsea Captain",
-                "condition": "*",
-                "combo": "VAC_430 >> NEW1_027",
-                "value": "10 >> 20"
-            },
-            {
-                "comment": "Adrenaline Fiend, Quick Pick",
-                "condition": "*",
-                "combo": "VAC_927 >> DEEP_014",
-                "value": "20 >> 30"
-            },
-            {
-                "comment": "Hozen Roughhouser, Southsea Captain",
-                "condition": "*",
-                "combo": "VAC_938 >> NEW1_027",
-                "value": "30 >> 40"
-            },
-            {  // any minion
-                "comment": "Marin the Manager, value minions",
-                "condition": "*",
-                "combo": "VAC_702 >> NEW1_027",
-				"combo": "VAC_702 >> VAC_938",
-				"combo": "VAC_702 >> VAC_927",
-				"combo": "VAC_702 >> VAC_430",
-                "value": "40 >> 50"
-            },
-        ],
-    },
+// JSON
+{
+  "GameCardId": "Combo",
+  "ConfigComment": "Aggro Demon Hunter v1.3 (03-Oct-24) by BlackOak1337",
+
+  "ComboList": {
+    "values": [
+      {
+        "comment": "Coin into early 1-drop minion to establish board presence",
+        "condition": "turn() < 4",  // Prioritize this in the first few turns
+        "combo": "GAME_005 >> TOY_006",  // Coin into Sock Puppet Slitherspear
+        "value": "0 >> 25"
+      },
+      {
+        "comment": "Coin into Burning Heart for early damage",
+        "condition": "turn() < 4",  // Early game aggressive damage
+        "combo": "GAME_005 >> MIS_710",  // Coin into Burning Heart
+        "value": "0 >> 30"
+      },
+      {
+        "comment": "Adrenaline Fiend into Quick Pick for extra value, especially on low health",
+        "condition": "my_hero(max(health)) < 20",  // Only play this when health is lower for more value
+        "combo": "VAC_927 >> VAC_421",  // Adrenaline Fiend into Quick Pick
+        "value": "20 >> 45"
+      },
+      {
+        "comment": "Hozen Roughhouser into Southsea Captain for strong pirate synergy",
+        "condition": "my_minions(count(), pirate=true) > 1",  // Focus synergy with pirate-heavy board
+        "combo": "VAC_938 >> NEW1_027",  // Hozen Roughhouser into Southsea Captain
+        "value": "30 >> 55"
+      },
+      {
+        "comment": "Bloodsail Recruiter into Southsea Captain to buff pirates, focus on aggression",
+        "condition": "turn() < 6 AND my_minions(count(), pirate=true) > 0",  // Play aggressively in early turns
+        "combo": "VAC_430 >> NEW1_027",  // Bloodsail Recruiter into Southsea Captain
+        "value": "20 >> 50"
+      },
+      {
+        "comment": "Sock Puppet Slitherspear into Treasure Distributor for extra value and card generation",
+        "condition": "my_hand(count()) < 4",  // Prioritize when hand size is small to maximize value
+        "combo": "TOY_006 >> TOY_518",  // Sock Puppet Slitherspear into Treasure Distributor
+        "value": "15 >> 40"
+      },
+      {
+        "comment": "Spirit of the Team with low-cost minions to maintain tempo",
+        "condition": "turn() < 5 AND my_minions(count()) < 3",  // Early game for tempo
+        "combo": "MIS_712 >> TOY_006",  // Spirit of the Team with Sock Puppet Slitherspear
+        "value": "10 >> 35"
+      },
+      {
+        "comment": "Sigil of Skydiving into low-cost minions to establish early board presence",
+        "condition": "turn() < 5",  // Early-game board establishment
+        "combo": "VAC_925 >> TOY_006",  // Sigil of Skydiving into Sock Puppet Slitherspear
+        "value": "5 >> 30"
+      },
+      {
+        "comment": "Dangerous Cliffside into Adrenaline Fiend for mid-game control",
+        "condition": "turn() > 5 AND turn() < 8",  // Mid-game combo
+        "combo": "VAC_929 >> VAC_927",  // Dangerous Cliffside into Adrenaline Fiend
+        "value": "25 >> 50"
+      },
+      {
+        "comment": "Through Fel and Flames into Burning Heart to finish off opponents",
+        "condition": "opp_hero(max(health)) < 10",  // Prioritize this when opponent is low on health
+        "combo": "JAM_017 >> MIS_710",  // Through Fel and Flames into Burning Heart
+        "value": "40 >> 60"
+      },
+
+      // Complex two-turn combos
+      {
+        "comment": "Adrenaline Fiend this turn into Quick Pick next turn for maximum value",
+        "condition": "turn() < 5 AND my_hand(count(), cardid=VAC_421) > 0",  // Combo over two turns for value
+        "combo": "VAC_927 >-> VAC_421",  // Adrenaline Fiend this turn, Quick Pick next turn
+        "value": "30 >-> 50"
+      },
+      {
+        "comment": "Sock Puppet Slitherspear this turn into Treasure Distributor next turn for card draw",
+        "condition": "my_hand(count(), cardid=TOY_518) > 0 AND my_hand(count(), cardid=TOY_006) > 0",  // Two-turn setup
+        "combo": "TOY_006 >-> TOY_518",  // Sock Puppet Slitherspear this turn, Treasure Distributor next turn
+        "value": "25 >-> 40"
+      },
+      {
+        "comment": "Hozen Roughhouser this turn into Southsea Captain next turn for pirate buff",
+        "condition": "my_minions(count(), pirate=true) > 0",  // Two-turn pirate synergy
+        "combo": "VAC_938 >-> NEW1_027",  // Hozen Roughhouser this turn, Southsea Captain next turn
+        "value": "35 >-> 55"
+      },
+      {
+        "comment": "Sigil of Skydiving into Adrenaline Fiend for a powerful follow-up",
+        "condition": "turn() > 3 AND turn() < 7 AND my_hand(count(), cardid=VAC_927) > 0",  // Use Sigil, then Fiend next turn
+        "combo": "VAC_925 >-> VAC_927",  // Sigil of Skydiving into Adrenaline Fiend
+        "value": "20 >-> 45"
+      },
+      {
+        "comment": "Kayn Sunfury into Through Fel and Flames for burst damage and face push",
+        "condition": "opp_hero(count(), hero_class=paladin | druid | warrior | shaman)>0 AND opp_hero(max(health)) <= 20",  // Prioritize against taunt-heavy opponents
+        "combo": "BT_430 >> JAM_017",  // Kayn Sunfury into Through Fel and Flames
+        "value": "50 >> 70"
+      }
+    ]
+  }
 }
-// Deck List: Pirate_Demon_Hunter_Wild
+
+
+// Decklist: Aggro Demon Hunter
 // Class: Demon Hunter
-// Format: Standard & Wild
+// Format: Ladder (Pegasus)
 // Playstyle: Aggro
-// 2 x (0)Through Fel and Flames
-// 2 x (1)Scarab Keychain
-// 2 x (1)Sock Puppet Slitherspear
-// 2 x (1)Taste of Chaos
-// 2 x (1)Treasure Distributor
-// 2 x (2)Adrenaline Fiend
-// 2 x (2)Bloodsail Recruiter
-// 2 x (2)Quick Pick
-// 2 x (2)Sigil of Skydiving
-// 2 x (3)Hozen Roughhouser
-// 2 x (3)Southsea Captain
-// 2 x (4)Dangerous Cliffside
-// 1 x (4)Kayn Sunfury
-// 2 x (4)Resort Valet
-// 1 x (6)Harth Stonebrew
-// 1 x (7)Marin the Manager
-// 1 x (7)Nozdormu the Eternal
+// Season: 126
+// Meta Deck: Aggro Demon Hunter
+// Dust: ~7500
+
+// 2x (0) Through Fel and Flames (JAM_017)
+// 2x (1) Acupuncture (VAC_419)
+// 2x (1) Brain Masseuse (DEEP_014)
+// 2x (1) Burning Heart (MIS_710)
+// 2x (1) Sock Puppet Slitherspear (TOY_006)
+// 2x (1) Treasure Distributor (TOY_518)
+// 2x (2) Adrenaline Fiend (VAC_927)
+// 2x (2) Quick Pick (VAC_421)
+// 2x (2) Sigil of Skydiving (VAC_925)
+// 2x (2) Spirit of the Team (MIS_712)
+// 1x (3) Hot Coals (VAC_440)
+// 2x (3) Hozen Roughhouser (VAC_938)
+// 2x (3) Southsea Captain (NEW1_027)
+// 2x (4) Dangerous Cliffside (VAC_929)
+// 1x (4) Kayn Sunfury (BT_430)
+// 1x (5) Aranna, Thrill Seeker (VAC_501)
+// 1x (0) Zilliax Deluxe 3000 (TOY_330)
+//   1x (0) Zilliax Deluxe 3000 (TOY_330)
+//   1x (3) Pylon Module (TOY_330t95)
+//   1x (4) Ticking Module (TOY_330t98)

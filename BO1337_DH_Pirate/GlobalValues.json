@@ -1,308 +1,298 @@
-{
-    "GameCardId": "GlobalValues",
-    "ConfigComment": "Deck: Pirate Demon Hunter - Aggro [Standard & Wild] v1.1 (09-Aug-24) by BlackOak1337",
-    "FirstTurnValueWeight": {
-        "values": [  // Higher priority for a strong start
-            { "condition":"*", "value":"2.0" }
-        ]
-    },
-    "SecondTurnValueWeight": {
-        "values": [ // Maintain momentum
-            { "condition":"*", "value":"1.5" }
-        ]
-    },
-    "GlobalDivineShield": {
-        "values": [ // Useful but not critical
-            { "condition":"*", "value":"2.0" }
-        ]
-    },
-    "GlobalDurability": {
-        "values": [ // Less critical than attack
-            { "condition":"*", "value":"1.0" }
-        ]
-    },
-    "GlobalStealth": {
-        "values": [ // Allows minions to avoid removal
-            { "condition":"*", "value":"1.5" }
-        ]
-    },
-    "GlobalHeroAttack": {
-        "values": [
-            {
-                "condition": "*",
-                "value": "2.0" // High priority for dealing face damage
-            }
-        ]
-    },
-    
-//	"GlobalMinionAttack": {
-//		"values": [  // High priority for early aggro
-//			{ "condition":"my_hero(count(), max_mana<3)>0", "value":"3.5" },
-//			{ "condition": "*", "value": "2.0" }
-//		]
-//	},
-	"GlobalMinionAttack": {
-	  "values": [
-		{ "condition":"my_minions(count())-opp_minions(count())>0 AND my_hero(count(), max_mana<3)>0", "value": "3.5" },
-		{ "condition":"my_hero(max(health))<21 AND opp_minions(sum(health))>my_minions(sum(health))", "value":"2.5" },
-		{ "condition": "*", "value": "2.0" }
-	  ]
-    },
+// GlobalValues.json for Aggro Pirate Demon Hunter for HearthRanger Vision AI
 
-    "GlobalWeaponAttack": {
-        "values": [
-            {
-                "condition": "*",
-                "value": "2.0" // High priority for dealing face damage
-            }
-        ]
-    },
-    "GlobalTaunt": {
-        "values": [
-            {
-                "condition": "*",
-                "value": "0.5" // Lower priority
-            }
-        ]
-    },
-    "GlobalOverload": {
-        "values": [
-            {
-                "condition": "*",
-                "value": "1.0" // Can be useful but situational
-            }
-        ]
-    },
-    "GlobalQuestProgressValue": {
-        "values": [
-            {
-                "condition": "*",
-                "value": "1.0" // Not a primary concern for aggro
-            }
-        ]
-    },
-    "GlobalFrozen": {
-        "values": [
-            {
-                "condition": "*",
-                "value": "0.5" // Less concern about being frozen
-            }
-        ]
-    },
-    "GlobalWindfury": {
-        "values": [
-            {
-                "condition": "*",
-                "value": "1.5" // Double attack potential is beneficial
-            }
-        ]
-    },
-    "GlobalHeroHealth": {
-        "values": [
-            {
-                "condition": "*",
-                "value": "0.5" // Less concern about own health
-            }
-        ]
-    },
-	 "GlobalMinionHealth": {
+// JSON
+{
+	"GameCardId": "GlobalValues",
+	"ConfigComment": "Aggro Pirate Demon Hunter v1.5 (03-Oct-24) by BlackOak1337",
+
+	"FirstTurnValueWeight": {
 		"values": [
-			{ "condition": "*", "value": "1.2" } // Increased from 1.0
+			{ "condition": "turn()<5", "value": "1.0" },
+			{ "condition": "turn()>4 AND turn()<7", "value": "0.8" },
+			{ "condition": "turn()>6 AND turn()<10", "value": "0.6" },
+			{ "condition": "turn()>9", "value": "0.4" }
 		]
 	},
-    "GlobalLocationHealth": {
-        "values": [
-            {
-                "condition": "*",
-                "value": "1.0" // Less concern unless location-centric deck
-            }
-        ]
-    },
-    "GlobalCharge": {
-        "values": [
-            {
-                "condition": "*",
-                "value": "2.5" // High priority for immediate attack
-            }
-        ]
-    },
-    "GlobalMinionIntrinsicValue": {
-        "values": [
-            {
-                "condition": "*",
-                "value": "4.0" // General value for all minions
-            }
-        ]
-    },
-    "GlobalLocationIntrinsicValue": {
-        "values": [
-            {
-                "condition": "*",
-                "value": "3.0" // General location value
-            }
-        ]
-    },
-	
+
+	"SecondTurnValueWeight": {
+		"values": [
+			{ "condition": "turn()<5", "value": "0.0" },
+			{ "condition": "turn()>4 AND turn()<7", "value": "0.2" },
+			{ "condition": "turn()>6 AND turn()<10", "value": "0.4" },
+			{ "condition": "turn()>9", "value": "0.6" }
+		]
+	},
+  
+  "GlobalDivineShield": {
+    "values": [
+      { "condition": "*", "value": "0.6" } // Useful but not critical
+    ]
+  },
+  
+  "GlobalDurability": {
+    "values": [
+      { "condition": "*", "value": "0.7" } // Lower priority than direct attack
+    ]
+  },
+  
+  "GlobalStealth": {
+    "values": [
+      { "condition": "*", "value": "0.9" } // Allows minions to avoid removal
+    ]
+  },
+  
+  "GlobalHeroAttack": {
+    "values": [
+      { "condition": "*", "value": "1.0" } // High priority for face damage
+    ]
+  },
+  
+  "GlobalMinionAttack": {
+    "values": [
+      { "condition": "my_minions(count())-opp_minions(count())>0 AND my_hero(count(), max_mana<3)>0", "value": "1.2" },  // Aggressive early trades
+      { "condition": "my_hero(max(health))<21 AND opp_minions(sum(health))>my_minions(sum(health))", "value": "1.0" },  // Adjust for survival in mid-game
+      { "condition": "*", "value": "1.1" }  // Focus on minion aggression
+    ]
+  },
+  
+  "GlobalWeaponAttack": {
+    "values": [
+      { "condition": "*", "value": "1.1" } // Maintain pressure with weapon attacks
+    ]
+  },
+  
+  "GlobalTaunt": {
+    "values": [
+      { "condition": "*", "value": "0.3" } // Lower priority, focus on aggression
+    ]
+  },
+  
+  "GlobalOverload": {
+    "values": [
+      { "condition": "*", "value": "0.5" } // Can be useful but situational
+    ]
+  },
+  
+  "GlobalQuestProgressValue": {
+    "values": [
+      { "condition": "*", "value": "0.4" } // Not primary concern for aggro
+    ]
+  },
+  
+  "GlobalFrozen": {
+    "values": [
+      { "condition": "*", "value": "0.3" } // Less concern about being frozen
+    ]
+  },
+  
+  "GlobalWindfury": {
+    "values": [
+      { "condition": "*", "value": "0.8" } // Double attack potential is beneficial
+    ]
+  },
+  
+  "GlobalHeroHealth": {
+    "values": [
+      { "condition": "*", "value": "0.5" } // Less concern about own health
+    ]
+  },
+  
+  "GlobalMinionHealth": {
+    "values": [
+      { "condition": "*", "value": "0.7" } // Adjusted for early trades
+    ]
+  },
+  
+  "GlobalLocationHealth": {
+    "values": [
+      { "condition": "*", "value": "0.4" } // Location health generally lower priority
+    ]
+  },
+  
+  "GlobalCharge": {
+    "values": [
+      { "condition": "*", "value": "1.0" } // Immediate attack potential is high priority
+    ]
+  },
+  
+  "GlobalMinionIntrinsicValue": {
+    "values": [
+      { "condition": "*", "value": "0.9" } // General value for all minions
+    ]
+  },
+  
+  "GlobalLocationIntrinsicValue": {
+    "values": [
+      { "condition": "*", "value": "0.6" } // General location value
+    ]
+  },
+  
   // Opponent Global Values
   "OppGlobalSecret": {
     "values": [
-      { "condition": "opp_hero(count(), hero_class=Hunter, Mage)>0", "value": "1.2" },
-      { "condition": "*", "value": "1.0" }
+      { "condition": "opp_hero(count(), hero_class=hunter | mage)>0", "value": "0.9" },
+      { "condition": "*", "value": "0.8" }
     ]
-  }, 
+  },
+  
   "OppGlobalArmor": {
     "values": [
-      { "condition": "opp_hero(count(), hero_class=Warrior)>0", "value": "1.5" },
-      { "condition": "*", "value": "1.0" }
+      { "condition": "opp_hero(count(), hero_class=warrior)>0", "value": "0.9" },
+      { "condition": "*", "value": "0.8" }
     ]
   },
+  
   "OppGlobalWeaponAttack": {
     "values": [
-      { "condition": "opp_hero(count(), hero_class=Warrior)>0", "value": "1.2" },
-      { "condition": "*", "value": "1.0" }
+      { "condition": "opp_hero(count(), hero_class=warrior)>0", "value": "0.8" },
+      { "condition": "*", "value": "0.7" }
     ]
   },
+  
   "OppGlobalRemoval": {
     "values": [
-      { "condition": "opp_hero(count(), hero_class=Priest)>0", "value": "1.2" },
-      { "condition": "*", "value": "1.0" }
+      { "condition": "opp_hero(count(), hero_class=priest)>0", "value": "0.9" },
+      { "condition": "*", "value": "0.8" }
     ]
   },
   
-"OppGlobalDivineShield": {
+  "OppGlobalDivineShield": {
     "values": [
-      { "condition": "opp_hero(count(), hero_class=Paladin)>0", "value": "1.8" },
-      { "condition": "*", "value": "1.5" }
+      { "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "0.9" },
+      { "condition": "*", "value": "0.8" }
     ]
   },
-    "OppGlobalDurability": {
-        "values": [
-            {
-                "condition": "*",
-                "value": "1.0" // Moderate counter value
-            }
-        ]
-    },
-
+  
+  "OppGlobalDurability": {
+    "values": [
+      { "condition": "*", "value": "0.7" }
+    ]
+  },
+  
   "OppGlobalStealth": {
     "values": [
-      { "condition": "opp_hero(count(), hero_class=Rogue)>0", "value": "1.5" },
-      { "condition": "*", "value": "1.0" }
-    ]
-  },
-  "OppGlobalHeroAttack": {
-    "values": [
-      { "condition": "opp_hero(count(), hero_class=Hunter)>0", "value": "1.2" },
-      { "condition": "*", "value": "1.0" }
-    ]
-  },
-
-    "OppGlobalMinionAttack": {
-        "values": [
-            {
-                "condition": "*",
-                "value": "1.0" // Moderate counter value
-            }
-        ]
-    },
-    "OppGlobalWeaponAttack": {
-        "values": [
-            {
-                "condition": "*",
-                "value": "1.0" // Moderate counter value
-            }
-        ]
-    },
-  "OppGlobalTaunt": {
-    "values": [
-      { "condition": "opp_hero(count(), hero_class=Paladin)>0", "value": "2.2" },
-      { "condition": "*", "value": "2.0" }
-    ]
-  },
-   "OppGlobalOverload": {
-    "values": [
-      { "condition": "opp_hero(count(), hero_class=Shaman)>0", "value": "1.2" },
-      { "condition": "*", "value": "0.5" }
-    ]
-  },
-
-    "OppGlobalQuestProgressValue": {
-        "values": [
-            {
-                "condition": "*",
-                "value": "1.0" // Moderate value for opponent quests
-            }
-        ]
-    },
-    "OppGlobalFrozen": {
-        "values": [ // Less concern about opponent frozen
-            { "condition":"*", "value":"0.5" }
-        ]
-    },
-    "OppGlobalWindfury": {
-        "values": [ // Important to counter opponent windfury
-            { "condition":"*", "value":"1.5" }
-        ]
-    },
-    "OppGlobalCharge": {
-        "values": [ // Counter value for charge
-            { "condition":"*", "value":"1.5" }
-        ]
-    },
-  "OppGlobalHealing": {
-    "values": [
-     { "condition": "opp_hero(count(), hero_class=Priest)>0", "value": "2.5" },
-      { "condition": "opp_hero(count(), hero_class=Paladin)>0", "value": "1.8" },
-      { "condition": "*", "value": "1.5" }
-    ]
-  },	
-    "OppGlobalLifeSteal": {
-    "values": [
-      { "condition": "opp_hero(count(), hero_class=Warlock)>0", "value": "1.2" },
-      { "condition": "*", "value": "1.0" }
+      { "condition": "opp_hero(count(), hero_class=rogue)>0", "value": "0.9" },
+      { "condition": "*", "value": "0.8" }
     ]
   },
   
-    "OppGlobalMinionHealth": {
-        "values": [ // Moderate concern
-            { "condition":"*", "value":"1.0" }
-        ]
-    },
-    "OppGlobalLocationHealth": {
-        "values": [ // Moderate concern
-            { "condition":"*", "value":"1.0" }
-        ]
-    },
-    "OppGlobalMinionIntrinsicValue": {
-        "values": [ // Moderate counter value
-            { "condition":"*", "value":"2.5" }
-        ]
-    },
-    "OppGlobalLocationIntrinsicValue": {
-        "values": [ // Moderate counter value
-            { "condition": "*", "value":"2.0" }
-        ]
-    }
+  "OppGlobalHeroAttack": {
+    "values": [
+      { "condition": "opp_hero(count(), hero_class=hunter)>0", "value": "0.9" },
+      { "condition": "*", "value": "0.8" }
+    ]
+  },
+  
+  "OppGlobalMinionAttack": {
+    "values": [
+      { "condition": "*", "value": "0.7" }
+    ]
+  },
+  
+  "OppGlobalTaunt": {
+    "values": [
+      { "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "0.9" },
+      { "condition": "*", "value": "0.8" }
+    ]
+  },
+  
+  "OppGlobalOverload": {
+    "values": [
+      { "condition": "opp_hero(count(), hero_class=shaman)>0", "value": "0.8" },
+      { "condition": "*", "value": "0.7" }
+    ]
+  },
+  
+  "OppGlobalQuestProgressValue": {
+    "values": [
+      { "condition": "*", "value": "0.7" }
+    ]
+  },
+  
+  "OppGlobalFrozen": {
+    "values": [
+      { "condition": "*", "value": "0.4" }
+    ]
+  },
+  
+  "OppGlobalWindfury": {
+    "values": [
+      { "condition": "*", "value": "0.8" }
+    ]
+  },
+  
+  "OppGlobalCharge": {
+    "values": [
+      { "condition": "*", "value": "0.8" }
+    ]
+  },
+  
+  "OppGlobalHealing": {
+    "values": [
+      { "condition": "opp_hero(count(), hero_class=priest)>0", "value": "0.9" },
+      { "condition": "opp_hero(count(), hero_class=paladin)>0", "value": "0.8" },
+      { "condition": "*", "value": "0.7" }
+    ]
+  },
+  
+  "OppGlobalLifeSteal": {
+    "values": [
+      { "condition": "opp_hero(count(), hero_class=warlock)>0", "value": "0.8" },
+      { "condition": "*", "value": "0.7" }
+    ]
+  },
+  
+  "OppGlobalMinionHealth": {
+    "values": [
+      { "condition": "*", "value": "0.6" }
+    ]
+  },
+  
+  "OppGlobalLocationHealth": {
+    "values": [
+      { "condition": "*", "value": "0.6" }
+    ]
+  },
+  
+  "OppGlobalMinionIntrinsicValue": {
+    "values": [
+      { "condition": "*", "value": "0.8" }
+    ]
+  },
+  
+  "OppGlobalLocationIntrinsicValue": {
+    "values": [
+      { "condition": "*", "value": "0.7" }
+    ]
+  }
 }
-// Deck List: Pirate Demon Hunter
-// Class: Demon Hunter
-// Format: Standard & Wild
-// Playstyle: Aggro
-// 2 x (0)Through Fel and Flames
-// 2 x (1)Scarab Keychain
-// 2 x (1)Sock Puppet Slitherspear
-// 2 x (1)Taste of Chaos
-// 2 x (1)Treasure Distributor
-// 2 x (2)Adrenaline Fiend
-// 2 x (2)Bloodsail Recruiter
-// 2 x (2)Quick Pick
-// 2 x (2)Sigil of Skydiving
-// 2 x (3)Hozen Roughhouser
-// 2 x (3)Southsea Captain
-// 2 x (4)Dangerous Cliffside
-// 1 x (4)Kayn Sunfury
-// 2 x (4)Resort Valet
-// 1 x (6)Harth Stonebrew
-// 1 x (7)Marin the Manager
-// 1 x (7)Nozdormu the Eternal
+// Decklist: Pirate Demon Hunter
+//    Class: Demon Hunter
+//   Format: Ladder (Pegasus)
+//Playstyle: Aggro 
+//   Season: 126
+//Meta Deck: Aggro Demon Hunter
+//     Link: Source 
+//     Dust:
+ 
+// 2x (0) Through Fel and Flames (JAM_017)
+// 2x (1) Acupuncture (VAC_419)
+// 2x (1) Brain Masseuse (DEEP_014)
+// 2x (1) Burning Heart (MIS_710)
+// 2x (1) Sock Puppet Slitherspear (TOY_006)
+// 2x (1) Treasure Distributor (TOY_518)
+// 2x (2) Adrenaline Fiend (VAC_927)
+// 2x (2) Quick Pick (VAC_421)
+// 2x (2) Sigil of Skydiving (VAC_925)
+// 2x (2) Spirit of the Team (MIS_712)
+// 1x (3) Hot Coals (VAC_440)
+// 2x (3) Hozen Roughhouser (VAC_938)
+// 2x (3) Southsea Captain (NEW1_027)
+// 2x (4) Dangerous Cliffside (VAC_929)
+// 1x (4) Kayn Sunfury (BT_430)
+// 1x (5) Aranna, Thrill Seeker (VAC_501)
+// 1x (0) Zilliax Deluxe 3000 (TOY_330)
+//   1x (0) Zilliax Deluxe 3000 (TOY_330)
+//   1x (3) Pylon Module (TOY_330t95)
+//   1x (4) Ticking Module (TOY_330t98)
 

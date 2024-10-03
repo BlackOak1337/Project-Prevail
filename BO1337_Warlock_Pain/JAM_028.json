@@ -1,31 +1,61 @@
-// JAM_028.json Blood Treant for Hyper-Aggro Pain-Lock in HearthRanger Vision AI
+// JAM_028.json Blood Treant for Hyper-Aggro PainLock using HearthRanger Vision AI
 
 // JSON
 { "GameCardId":"JAM_028",
-  "ConfigComment":"Card: Blood Treant (JAM_028) v1.26 (02-Sep-24) by BlackOak1337",
+  "ConfigComment":"Blood Treant for Hyper-Aggro PainLLock v1.31 (02-Oct-24) by BlackOak1337",
 
-  "BeforePlayCardBonus": {
+	"InHandPlayPriority": {
 		"values": [
 		  { "comment":"Play Blood Treant (turn 1).",
-			"condition":"turn < 2",
-			"value":"100"
+			"condition":"turn()==1",
+			"value":"10000"
 		  },
 		  { "comment":"Play Blood Treant before turn 5.",
-			"condition":"turn <= 4 OR my_hero(count(), health) >= 30",
-			"value":"10"
+			"condition":"turn()< 5",
+			"value":"1000"
 		  },
-		  { "comment":"Play Blood Treant if health is 30.",
-			"condition":"turn > 4 AND my_hero(count(), health) >= 25",
-			"value":"2"
-		  },
-		  { "comment":"Play Blood Treant if Imprisoned Horror in hand",
-			"condition":"my_hero(count(), cardid=TTN_462) > 0 AND my_hero(count(), health) >= 20",
-			"value":"2"
+		  { "comment":"Play Blood Treant if health is above 20.",
+			"condition":"my_hero(max(health))>20",
+			"value":"200"
 		  },
 		  { "comment":"Default value.",
 			"condition":"*",
-			"value":"-10.00"
+			"value":"1.2"
 		  }
 		]
-	}  
+	},
+
+	"BeforePlayCardBonus": {
+		"values": [
+		  { "comment":"Play Blood Treant (turn 1).",
+			"condition":"turn()==1",
+			"value":"10000"
+		  },
+		  { "comment":"Play Blood Treant before turn 5.",
+			"condition":"turn()< 5",
+			"value":"1000"
+		  },
+		  { "comment":"Play Blood Treant if health is above 20.",
+			"condition":"my_hero(max(health))>20",
+			"value":"200"
+		  },
+		  { "comment":"Default value.",
+			"condition":"*",
+			"value":"1.2"
+		  }
+		]
+	},
+
+	"BeforeEndTurnBonus": {
+		"values": [
+		  { "comment": "Do not end turn if Imprisoned Horror with 0 cost is in hand.",
+			"condition": "my_hand(count(), cardid=JAM_028)<2",
+			"value": "-1000"
+		  },
+		  { "comment": "Do not end turn if Imprisoned Horror with 0 cost is in hand.",
+			"condition": "my_hand(count(), cardid=JAM_028)<1",
+			"value": "-10000"
+		  }
+		]
+	}
 }
